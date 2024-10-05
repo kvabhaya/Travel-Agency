@@ -1,35 +1,44 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+import {useEffect} from 'react'
+import Footer from "./component/Footer.tsx";
+// import Hero from "./components/Hero";
+// import Navbar from "./components/Navbar";
+// import Recommend from "./components/Recommend";
+// import ScrollToTop from "./components/ScrollToTop";
+// import Services from "./components/Services";
+// import Testimonials from "./components/Testimonials";
+import scrollreveal from "scrollreveal";
+export default function App() {
+    useEffect(() => {
+        const sr = scrollreveal({
+            origin: "top",
+            distance: "80px",
+            duration: 2000,
+            reset: true,
+        });
+        sr.reveal(
+            `
+        nav,
+        #hero,
+        #services,
+        #recommend,
+        #testimonials,
+        footer
+        `,
+            {
+                opacity: 0,
+                interval: 300,
+            }
+        );
+    }, []);
+    return (
+        <div>
+            {/*<ScrollToTop />*/}
+            {/*<Navbar />*/}
+            {/*<Hero />*/}
+            {/*<Services />*/}
+            {/*<Recommend />*/}
+            {/*<Testimonials />*/}
+            <Footer />
+        </div>
+    );
 }
-
-export default App
