@@ -14,10 +14,16 @@ export default function Footer() {
                     <a href="#services">About</a>
                 </li>
                 <li>
-                    <a href="#recommend">Places</a>
+                    <a href="#recommend">Destination</a>
+                </li>
+                <li>
+                    <a href="#packages">Packages</a>
                 </li>
                 <li>
                     <a href="#testimonials">Testimonials</a>
+                </li>
+                <li>
+                    <a href="#">Contact Us</a>
                 </li>
             </ul>
             <ul className="social__links">
