@@ -27,13 +27,19 @@ export default function Navbar() {
             <a href="#home">Home</a>
           </li>
           <li>
-            <a href="#services">About</a>
+            <a href="#services">About Us</a>
           </li>
           <li>
-            <a href="#recommend">Places</a>
+            <a href="#recommend">Destinations</a>
+          </li>
+          <li>
+            <a href="#packages">Packages</a>
           </li>
           <li>
             <a href="#testimonials">Testimonials</a>
+          </li>
+          <li>
+            <a href="#">Contact Us</a>
           </li>
         </ul>
         <button>Connect</button>
@@ -56,8 +62,18 @@ export default function Navbar() {
             </a>
           </li>
           <li>
+            <a href="#packages" onClick={() => setNavbarState(false)}>
+              Packages
+            </a>
+          </li>
+          <li>
             <a href="#testimonials" onClick={() => setNavbarState(false)}>
               Testimonials
+            </a>
+          </li>
+          <li>
+            <a href="#" onClick={() => setNavbarState(false)}>
+              Contact Us
             </a>
           </li>
         </ul>
@@ -70,6 +86,7 @@ const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   .brand {
     .container {
       cursor: pointer;

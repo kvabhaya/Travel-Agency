@@ -7,6 +7,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import Services from "./components/Services";
 import Testimonials from "./components/Testimonials";
 import scrollreveal from "scrollreveal";
+import Packages from "./components/Packages";
 export default function App() {
   useEffect(() => {
     const sr = scrollreveal({
@@ -22,6 +23,7 @@ export default function App() {
         #services,
         #recommend,
         #testimonials,
+        #packages,
         footer
         `,
         {
@@ -37,6 +39,7 @@ export default function App() {
         <Hero />
         <Services />
         <Recommend />
+        <Packages />
         <Testimonials />
         <Footer />
       </div>
