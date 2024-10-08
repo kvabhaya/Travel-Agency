@@ -8,6 +8,7 @@ import Services from "./components/Services";
 import Testimonials from "./components/Testimonials";
 import scrollreveal from "scrollreveal";
 import Packages from "./components/Packages";
+import Contact from "./components/Contact";
 export default function App() {
   useEffect(() => {
     const sr = scrollreveal({
@@ -41,6 +42,7 @@ export default function App() {
         <Recommend />
         <Packages />
         <Testimonials />
+        <Contact />
         <Footer />
       </div>
   );
