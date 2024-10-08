@@ -11,7 +11,7 @@ export default function Navbar() {
         <div className="brand">
           <div className="container">
             <img src={logo} alt="" />
-            Travelo
+            SkyWingTravel
           </div>
           <div className="toggle">
             {navbarState ? (
@@ -47,32 +47,32 @@ export default function Navbar() {
       <ResponsiveNav state={navbarState}>
         <ul>
           <li>
-            <a href="#home" onClick={() => setNavbarState(false)}>
+            <a href="#home" tabIndex="0" role="menuitem" onClick={() => setNavbarState(false)}>
               Home
             </a>
           </li>
           <li>
-            <a href="#services" onClick={() => setNavbarState(false)}>
+            <a href="#services" tabIndex="0" role="menuitem" onClick={() => setNavbarState(false)}>
               About
             </a>
           </li>
           <li>
-            <a href="#recommend" onClick={() => setNavbarState(false)}>
+            <a href="#recommend" tabIndex="0" role="menuitem" onClick={() => setNavbarState(false)}>
               Places
             </a>
           </li>
           <li>
-            <a href="#packages" onClick={() => setNavbarState(false)}>
+            <a href="#packages" tabIndex="0" role="menuitem" onClick={() => setNavbarState(false)}>
               Packages
             </a>
           </li>
           <li>
-            <a href="#testimonials" onClick={() => setNavbarState(false)}>
+            <a href="#testimonials" tabIndex="0" role="menuitem" onClick={() => setNavbarState(false)}>
               Testimonials
             </a>
           </li>
           <li>
-            <a href="#" onClick={() => setNavbarState(false)}>
+            <a href="#contact" tabIndex="0" role="menuitem" onClick={() => setNavbarState(false)}>
               Contact Us
             </a>
           </li>
@@ -86,6 +86,7 @@ const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 10px 30px 0 30px;
 
   .brand {
     .container {
@@ -97,6 +98,11 @@ const Nav = styled.nav`
       font-size: 1.2rem;
       font-weight: 900;
       text-transform: uppercase;
+      img{
+        height: 50px;
+        width: auto;
+        max-width: 100%;
+      }
     }
     .toggle {
       display: none;
@@ -104,7 +110,7 @@ const Nav = styled.nav`
   }
   ul {
     display: flex;
-    gap: 1rem;
+    gap: 3rem;
     list-style-type: none;
     li {
       a {
@@ -145,6 +151,11 @@ const Nav = styled.nav`
       justify-content: space-between;
       align-items: center;
       width: 100%;
+      .container{
+        img{
+          height: 40px;
+        }
+      }
       .toggle {
         display: block;
       }
@@ -164,11 +175,12 @@ const ResponsiveNav = styled.div`
   z-index: 1;
   top: ${({ state }) => (state ? "50px" : "-400px")};
   background-color: white;
-  height: 30vh;
+  height: 45vh;
   width: 100%;
   align-items: center;
   transition: 0.3s ease-in-out;
   ul {
+    margin-top: 10px;
     list-style-type: none;
     width: 100%;
     li {
