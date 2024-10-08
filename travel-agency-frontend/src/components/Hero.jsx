@@ -9,28 +9,29 @@ export default function Hero() {
       </div>
       <div className="content">
         <div className="title">
-          <h1>TRAVEL TO EXPLORE</h1>
+          <h1>Journey Through Beauty</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
-            natus, enim ipsam magnam odit deserunt itaque? Minima earum velit
-            tenetur!
+            captivating exploration of the island's rich landscapes,
+            vibrant culture, and historic treasures. From golden beaches to misty highlands,
+            this journey uncovers the natural and cultural wonders of Sri Lanka,
+            offering an unforgettable experience for travelers.
           </p>
         </div>
-        <div className="search">
-          <div className="container">
-            <label htmlFor="">Where you want to go</label>
-            <input type="text" placeholder="Search Your location" />
-          </div>
-          <div className="container">
-            <label htmlFor="">Check-in</label>
-            <input type="date" />
-          </div>
-          <div className="container">
-            <label htmlFor="">Check-out</label>
-            <input type="date" />
-          </div>
-          <button>Explore Now</button>
-        </div>
+        {/*<div className="search">*/}
+        {/*  <div className="container">*/}
+        {/*    <label htmlFor="">Where you want to go</label>*/}
+        {/*    <input type="text" placeholder="Search Your location" />*/}
+        {/*  </div>*/}
+        {/*  <div className="container">*/}
+        {/*    <label htmlFor="">Check-in</label>*/}
+        {/*    <input type="date" />*/}
+        {/*  </div>*/}
+        {/*  <div className="container">*/}
+        {/*    <label htmlFor="">Check-out</label>*/}
+        {/*    <input type="date" />*/}
+        {/*  </div>*/}
+        {/*  <button>Explore Now</button>*/}
+        {/*</div>*/}
       </div>
     </Section>
   );
