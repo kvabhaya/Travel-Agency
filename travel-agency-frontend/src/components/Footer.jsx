@@ -23,7 +23,7 @@ export default function Footer() {
                     <a href="#testimonials">Testimonials</a>
                 </li>
                 <li>
-                    <a href="#">Contact Us</a>
+                    <a href="#contact">Contact </a>
                 </li>
             </ul>
             <ul className="social__links">
