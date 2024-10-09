@@ -52,7 +52,7 @@ export default function Packages() {
 
 const Section = styled.section`
     padding: 5rem 2rem;
-    background-color: #f0f0f0; /* Light gray background */
+    background-color: #f0f0f0;
 
     .title {
         text-align: center;
@@ -61,12 +61,12 @@ const Section = styled.section`
         h2 {
             font-size: 2.5rem;
             font-weight: bold;
-            color: #2d4059; /* Dark blue for title */
+            color: #2d4059; 
         }
 
         p {
             font-size: 1.2rem;
-            color: #6a7f9a; /* Soft gray-blue for subtitle */
+            color: #6a7f9a; 
         }
     }
 
@@ -79,7 +79,7 @@ const Section = styled.section`
         .package {
             padding: 2rem;
             background-color: #bdc3c7;
-            border-radius: 20px; /* Rounded corners */
+            border-radius: 20px; 
             box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
             transition: all 0.3s ease;
             cursor: pointer;
@@ -96,13 +96,13 @@ const Section = styled.section`
                 object-fit: cover;
                 margin-bottom: 1rem;
                 border-radius: 50%;
-                border: 2px solid #40c4ff; /* Border matching the hover color */
+                border: 2px solid #40c4ff; 
             }
 
             h3 {
                 margin-bottom: 1rem;
                 font-size: 1.8rem;
-                color: #2d4059; /* Dark blue title */
+                color: #2d4059; 
             }
 
             p {
@@ -112,7 +112,7 @@ const Section = styled.section`
         }
 
         .active {
-            background-color: #2d4059; /* Dark blue for active */
+            background-color: #2d4059; 
             color: white;
             box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 25px;
             transform: translateY(-0.8rem);
@@ -126,7 +126,7 @@ const Section = styled.section`
             }
 
             p {
-                color: #f1f1f1; /* Light gray text for active */
+                color: #f1f1f1; 
             }
         }
     }
