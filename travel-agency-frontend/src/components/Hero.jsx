@@ -39,15 +39,16 @@ export default function Hero() {
 
 const Section = styled.section`
   position: relative;
-  margin-top: 2rem;
+  margin-top: 1rem;
   width: 100%;
   height: 100%;
 
   .background {
     height: 100%;
     img {
+        height: 80vh;
       width: 100%;
-      filter: brightness(60%);
+      filter: brightness(40%);
     }
   }
   .content {
@@ -128,6 +129,7 @@ const Section = styled.section`
     .background {
       background-color: palegreen;
       img {
+          width: 100%;
         height: 100%;
       }
     }
