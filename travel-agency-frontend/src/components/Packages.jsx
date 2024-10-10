@@ -180,30 +180,90 @@ const Section = styled.section`
     .package-details {
         margin-top: 4rem;
         padding: 2rem;
-        background-color: #ffffff;
+        background: linear-gradient(145deg, #ffffff, #f2f6ff);
         border-radius: 20px;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        color: #34495e;
 
         h2 {
             font-size: 2.5rem;
             color: #2d4059;
             margin-bottom: 1rem;
+            text-align: center;
         }
 
         p {
             font-size: 1.2rem;
-            color: #2d4059;
+            color: #34495e;
             margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        /* Price styling */
+        .price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #e74c3c;
+            margin-bottom: 1.5rem;
+            text-align: center;
         }
 
         .images {
             display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
             gap: 1rem;
             img {
                 width: 150px;
                 height: 150px;
                 object-fit: cover;
                 border-radius: 10px;
+                transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+                border: 3px solid transparent;
+
+                &:hover {
+                    transform: scale(1.1);
+                    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+                    border-color: #2980b9;
+                }
+            }
+        }
+
+        @media screen and (max-width: 1080px) {
+            padding: 1rem;
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .images {
+                img {
+                    width: 120px;
+                    height: 120px;
+                }
+            }
+        }
+
+        @media screen and (max-width: 720px) {
+            padding: 1rem;
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+
+            .images {
+                img {
+                    width: 100px;
+                    height: 100px;
+                }
             }
         }
     }
