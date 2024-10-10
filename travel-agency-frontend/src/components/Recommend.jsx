@@ -1,196 +1,227 @@
-import React, { useState } from "react";
+import React from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import Destination1 from "../assets/Destination1.png";
-import Destination2 from "../assets/Destination2.png";
-import Destination3 from "../assets/Destination3.png";
-import Destination4 from "../assets/Destination4.png";
-import Destination5 from "../assets/Destination5.png";
-import Destination6 from "../assets/Destination6.png";
-import info1 from "../assets/info1.png";
-import info2 from "../assets/info2.png";
-import info3 from "../assets/info3.png";
+import destination1 from "../assets/destination1.jpg";
+import destination2 from "../assets/destination2.jpg";
+import destination3 from "../assets/destination3.jpg";
+import destination4 from "../assets/destination4.jpg";
+import destination5 from "../assets/destination5.jpg";
 
 export default function Recommend() {
+  const navigate = useNavigate();
+
   const data = [
     {
-      image: Destination1,
-      title: "Singapore",
-      subTitle: "Singapore, officialy thr Republic of Singapore, is a",
-      cost: "38,800",
-      duration: "Approx 2 night trip",
+      image: destination1,
+      title: "Oceanic Horizons and Coastal Charms",
+      description: "Explore pristine beaches, tranquil coastal views, and ocean activities.",
+      path: "/oceanic-horizons",
     },
     {
-      image: Destination2,
-      title: "Thailand",
-      subTitle: "Thailand is a Southeast Asia country. It's known for",
-      cost: "54,200",
-      duration: "Approx 2 night trip",
+      image: destination2,
+      title: "Timeless Trails and Sacred Paths",
+      description: "Journey through historical landmarks and sacred religious sites.",
+      path: "/timeless-trails",
     },
     {
-      image: Destination3,
-      title: "Paris",
-      subTitle: "Paris, France's capital, is a major European city and a",
-      cost: "45,500",
-      duration: "Approx 2 night trip",
+      image: destination3,
+      title: "Emerald Highlands and Scenic Vistas",
+      description: "Discover the breathtaking beauty of Sri Lanka's highlands and tea plantations.",
+      path: "/emerald-highlands",
     },
     {
-      image: Destination4,
-      title: "New Zealand",
-      subTitle: "New Zealand is an island country in the",
-      cost: "24,100",
-      duration: "Approx 1 night trip",
+      image: destination4,
+      title: "Wilderness Safaris and Thrill Quests",
+      description: "Experience thrilling safaris and adventure sports in Sri Lanka's wilderness.",
+      path: "/wilderness-safaris",
     },
     {
-      image: Destination5,
-      title: "Bora Bora",
-      subTitle: "Bora Bora is a small South Pacific island northwest of",
-      cost: "95,400",
-      duration: "Approx 2 night 2 day trip",
-    },
-    {
-      image: Destination6,
-      title: "London",
-      subTitle: "London, the capital of England and the United",
-      cost: "38,800",
-      duration: "Approx 3 night 2 day trip",
+      image: destination5,
+      title: "Tranquil Wellness Retreats",
+      description: "Relax and rejuvenate in wellness retreats surrounded by nature.",
+      path: "/serene-sanctuaries",
     },
   ];
 
-  // const packages = [
-  //   "The Weekend Break",
-  //   "The Package Holiday",
-  //   "The Group Tour",
-  //   "Long Term Slow Travel",
-  // ];
+  const handleButtonClick = (destinationPath) => {
+    console.log(`Navigating to: ${destinationPath}`);
+    navigate(destinationPath);
+  };
 
-  const [active, setActive] = useState(1);
   return (
-    <Section id="recommend">
-      <div className="title">
-        <h2>Recommended Destinations</h2>
-      </div>
-      {/*<div className="packages">*/}
-      {/*  <ul>*/}
-      {/*    {packages.map((pkg, index) => {*/}
-      {/*      return (*/}
-      {/*        <li*/}
-      {/*          className={active === index + 1 ? "active" : ""}*/}
-      {/*          onClick={() => setActive(index + 1)}*/}
-      {/*        >*/}
-      {/*          {pkg}*/}
-      {/*        </li>*/}
-      {/*      );*/}
-      {/*    })}*/}
-      {/*  </ul>*/}
-      {/*</div>*/}
-      <div className="destinations">
-        {data.map((destination) => {
-          return (
-            <div className="destination">
-              <img src={destination.image} alt="" />
-              <h3>{destination.title}</h3>
-              <p>{destination.subTitle}</p>
-              <div className="info">
-                <div className="services">
-                  <img src={info1} alt="" />
-                  <img src={info2} alt="" />
-                  <img src={info3} alt="" />
+      <Section id="recommend">
+        <div className="title">
+          <h2>Discover Sri Lanka’s Finest Destinations</h2>
+          <h4>From coastal escapes to wildlife adventures, explore curated experiences in Sri Lanka</h4>
+        </div>
+        <div className="destinations">
+          {data.map((destination, index) => (
+              <div className="destination" key={index}>
+                <img src={destination.image} alt={destination.title} />
+                <div className="overlay">
+                  <h3>{destination.title}</h3>
+                  <p>{destination.description}</p>
+                  <button
+                      className="view-details"
+                      onClick={() => handleButtonClick(destination.path)}
+                  >
+                    View Details
+                  </button>
                 </div>
-                <h4>{destination.cost}</h4>
               </div>
-              <div className="distance">
-                <span>1000 Kms</span>
-                <span>{destination.duration}</span>
-              </div>
-            </div>
-          );
-        })}
-      </div>
-    </Section>
+          ))}
+        </div>
+      </Section>
   );
 }
 
 const Section = styled.section`
   padding: 2rem 0;
+
   .title {
     text-align: center;
-  }
-  .packages {
-    display: flex;
-    justify-content: center;
-    margin: 2rem 0;
-    ul {
-      display: flex;
-      list-style-type: none;
-      width: max-content;
-      li {
-        padding: 1rem 2rem;
-        border-bottom: 0.1rem solid black;
-      }
-      .active {
-        border-bottom: 0.5rem solid #8338ec;
-      }
+    animation: fadeIn 1.5s forwards;
+
+    h2 {
+      font-family: "Oswald", sans-serif;
+      font-weight: 600;
+      font-size: 50px;
+    }
+
+    h4 {
+      font-size: 18px;
+      margin-top: 0.5rem;
+      color: #666;
     }
   }
+
   .destinations {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
-    padding: 0 3rem;
-    .destination {
-      padding: 1rem;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    margin: 0 20px;
+    animation: slideIn 2s forwards;
+  }
+
+  .destination {
+    position: relative;
+    overflow: hidden;
+    height: 450px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    animation: cardFadeIn 0.8s ease-in-out forwards;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s ease, opacity 0.5s ease;
+    }
+
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 60%;
+      background: rgba(0, 0, 0, 0.7);
       display: flex;
       flex-direction: column;
-      gap: 0.5rem;
-      background-color: #8338ec14;
-      border-radius: 1rem;
-      transition: 0.3s ease-in-out;
-      &:hover {
-        transform: translateX(0.4rem) translateY(-1rem);
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+
+      h3 {
+        color: white;
+        font-size: 1.8rem;
+        text-align: center;
+        font-weight: bold;
       }
-      img {
-        width: 100%;
+
+      p {
+        color: #ccc;
+        font-size: 1rem;
+        text-align: center;
+        margin: 10px 0;
       }
-      .info {
-        display: flex;
-        align-items: center;
-        .services {
-          display: flex;
-          gap: 0.3rem;
-          img {
-            border-radius: 1rem;
-            background-color: #4d2ddb84;
-            width: 2rem;
-            /* padding: 1rem; */
-            padding: 0.3rem 0.4rem;
-          }
-        }
-        display: flex;
-        justify-content: space-between;
+
+      .view-details {
+        padding: 10px 20px;
+        background-color: #326ddb;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+        border-radius: 10px;
       }
-      .distance {
-        display: flex;
-        justify-content: space-between;
+
+      .view-details:hover {
+        background-color: transparent;
+        color: #db3236;
+        border: 2px solid #db3236;
       }
+    }
+
+    &:hover .overlay {
+      opacity: 1;
     }
   }
-  @media screen and (min-width: 280px) and (max-width: 768px) {
-    .packages {
-      ul {
-        li {
-          padding: 0 0.5rem;
-          font-size: 2vh;
-          padding-bottom: 1rem;
-        }
-        .active {
-          border-bottom-width: 0.3rem;
-        }
-      }
+
+  @media screen and (max-width: 1200px) {
+    .destinations {
+      grid-template-columns: repeat(3, 1fr);
     }
+  }
+
+  @media screen and (max-width: 768px) {
+    .destinations {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media screen and (max-width: 480px) {
     .destinations {
       grid-template-columns: 1fr;
-      padding: 0;
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes cardFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 `;
