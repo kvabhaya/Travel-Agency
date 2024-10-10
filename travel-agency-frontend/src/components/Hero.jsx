@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import WaterWave from 'react-water-wave';
 import homeImage from "../assets/hero.png";
 export default function Hero() {
   return (
