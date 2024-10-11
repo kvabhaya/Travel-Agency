@@ -42,19 +42,20 @@ const Section = styled.section`
     position: relative;
     margin-top: 1rem;
     width: 100%;
-    height: 80vh; 
+    height: 80vh;
 
     .background {
         height: 100%;
-        width: 100%; 
-        overflow: hidden; 
+        width: 100%;
+        overflow: hidden;
 
         img {
             height: 100%;
             width: 100%;
-            object-fit: cover; 
+            object-fit: cover;
             filter: brightness(40%);
             border-radius: 25px;
+            animation: imageFadeIn 2s ease-in-out;
         }
     }
 
@@ -70,6 +71,8 @@ const Section = styled.section`
         justify-content: center;
         align-items: center;
         gap: 1rem;
+        opacity: 0;
+        animation: fadeIn 1s ease-in-out 0.5s forwards; /* Delay animation to match image fade-in */
 
         .title {
             color: white;
@@ -77,6 +80,7 @@ const Section = styled.section`
             h1 {
                 font-size: 3rem;
                 letter-spacing: 0.2rem;
+                animation: textFadeIn 1s ease-in-out 0.5s forwards;
             }
 
             p {
@@ -84,6 +88,7 @@ const Section = styled.section`
                 padding: 0 30vw;
                 margin-top: 0.5rem;
                 font-size: 1.2rem;
+                animation: textFadeIn 1s ease-in-out 0.7s forwards;
             }
         }
 
@@ -143,22 +148,51 @@ const Section = styled.section`
         }
     }
 
+    @keyframes imageFadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes textFadeIn {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
     @media screen and (max-width: 980px) {
-        height: 60vh; 
+        height: 60vh;
         .background {
             img {
-                object-fit: cover; 
+                object-fit: cover;
             }
         }
 
         .content {
             .title {
                 h1 {
-                    font-size: 2rem; 
+                    font-size: 2rem;
                 }
                 p {
-                    font-size: 1rem; 
-                    padding: 0 5vw; 
+                    font-size: 1rem;
+                    padding: 0 5vw;
                 }
             }
 
