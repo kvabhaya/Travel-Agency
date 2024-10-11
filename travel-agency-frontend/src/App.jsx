@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import ScrollReveal from "scrollreveal"; // Import ScrollReveal
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
@@ -6,45 +7,47 @@ import Recommend from "./components/Recommend";
 import ScrollToTop from "./components/ScrollToTop";
 import Services from "./components/Services";
 import Testimonials from "./components/Testimonials";
-import scrollreveal from "scrollreveal";
 import Packages from "./components/Packages";
 import Contact from "./components/Contact";
+
 export default function App() {
-  useEffect(() => {
-    const sr = scrollreveal({
-      origin: "top",
-      distance: "80px",
-      duration: 2000,
-      reset: true,
-    });
-    sr.reveal(
-        `
-        nav,
-        #hero,
-        #services,
-        #recommend,
-        #testimonials,
-        #packages,
-        #contact
-        footer
-        `,
-        {
-          opacity: 0,
-          interval: 300,
-        }
+    useEffect(() => {
+        const sr = ScrollReveal({
+            origin: "top",
+            distance: "80px",
+            duration: 2000,
+            reset: true,
+        });
+
+        sr.reveal(
+            `
+      nav,
+      #hero,
+      #services,
+      #recommend,
+      #testimonials,
+      #packages,
+      #contact,
+      footer
+      `,
+            {
+                opacity: 0,
+                interval: 300,
+            }
+        );
+    }, []);
+
+    return (
+        <div>
+            <ScrollToTop />
+            <Navbar />
+            <Hero />
+            <Services />
+            <Recommend />
+            <Packages />
+            <Testimonials />
+            <Contact />
+            <Footer />
+        </div>
     );
-  }, []);
-  return (
-      <div>
-        <ScrollToTop />
-        <Navbar />
-        <Hero />
-        <Services />
-        <Recommend />
-        <Packages />
-        <Testimonials />
-        <Contact />
-        <Footer />
-      </div>
-  );
 }
