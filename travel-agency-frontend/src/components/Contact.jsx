@@ -24,19 +24,19 @@ export default function Contact() {
                     {/* Info Sections */}
                     <div className="info-sections">
                         <div className="info phone">
-                            <div className="icon">📞</div>
+                            {/*<div className="icon">📞</div>*/}
                             <div>
                                 <h3>PHONE (LANDLINE)</h3>
                                 <p>+912 3 567 8987</p>
                                 <p>+912 5 252 3336</p>
                             </div>
                         </div>
-                        <div className="info location">
-                            <div className="icon">📍</div>
+                        <div className="info mail">
+                            {/*<div className="icon">📍</div>*/}
                             <div>
-                                <h3>ADDRESS</h3>
-                                <p>The Interior Design Studio Company</p>
-                                <p>The Courtyard, Al Quoz 1, Colorado, USA</p>
+                                <h3>EMAIL</h3>
+                                <p>kkkkkkkkk@gmail.com</p>
+                                <p>kkkkkkkkk@gmail.com</p>
                             </div>
                         </div>
                     </div>
@@ -44,7 +44,7 @@ export default function Contact() {
                     <WavyBar>
                         <svg viewBox="0 0 1440 320">
                             <path
-                                fill="#3498db"  /* Changed Wavy bar color */
+                                fill="#2d4059"  /* Changed Wavy bar color */
                                 fillOpacity="1"
                                 d="M0,96L48,106.7C96,117,192,139,288,170.7C384,203,480,245,576,234.7C672,224,768,160,864,138.7C960,117,1056,139,1152,160C1248,181,1344,203,1392,213.3L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
                             ></path>
@@ -131,7 +131,9 @@ const Section = styled.section`
         justify-content: space-around;
         width: 100%;
         max-width: 1200px;
-        margin-top: 0; /* Reduce margin-top to bring the info sections closer to the form */
+        margin-top: 50px; /* Reduce margin-top to bring the info sections closer to the form */
+        margin-bottom: -100px;
+        flex: 1;
 
         .info {
             display: flex;
@@ -146,9 +148,8 @@ const Section = styled.section`
             transition: all 0.3s ease;
 
             &:hover {
-                background-color: #3498db;
+                background-color: #d0e0e7;
                 transform: translateY(-0.5rem);
-                color: white;
             }
 
             .icon {
@@ -187,7 +188,8 @@ const Section = styled.section`
 const WavyBar = styled.div`
     width: 100%;
     margin-top: 0; /* Removed margin-top to make the wavy bar closer to info sections */
-
+    display: flex;
+    margin-bottom: 0;
     svg {
         display: block;
         width: 100%;
