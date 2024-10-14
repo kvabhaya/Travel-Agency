@@ -29,17 +29,43 @@ import logo2 from "../assets/logo2.avif";
 import logo3 from "../assets/logo3.webp";
 import logo4 from "../assets/logo4.webp";
 
-
 export default function Packages() {
-
     const conversionRate = 325;
 
     const packages = [
+        {
+            title: "Platinum Package",
+            description:
+                "The highest level of luxury travel with elite experiences and exclusive services.",
+            logo: logo1,
+            price: `${(6000 * conversionRate).toLocaleString()} LKR`,
+            images: [img1, img6, img2, img3, img4, img5],
+            details:
+                "This package offers private jets, 5-star luxury resorts, personalized tours, and VIP services.",
+        },
         {
             title: "Golden Package",
             description: "The ultimate luxury travel experience with premium services.",
             logo: logo1,
             price: `${(5000 * conversionRate).toLocaleString()} LKR`,
+            images: [img7, img8, img9, img10, img11, img12],
+            details:
+                "This package includes luxury hotel stays, first-class flights, gourmet dining, and more.",
+        },
+        {
+            title: "Adventurer’s Escape",
+            description:
+                "A thrilling journey packed with outdoor adventures and exploration.",
+            logo: logo3,
+            price: `${(3000 * conversionRate).toLocaleString()} LKR`,
+            images: [img13, img14, img15, img16, img17, img18],
+            details:
+                "This package includes hiking, camping, and adventure sports in thrilling destinations.",
+        },
+        {
+            title: "Cultural Discovery Tour",
+            description:
+                "Immerse yourself in the rich culture and history of exotic destinations.",
             images: [img1, img6   , img2, img3, img4, img5],
             details: "This package includes luxury hotel stays, first-class flights, gourmet dining, and more."
         },
@@ -63,9 +89,10 @@ export default function Packages() {
             title: "Relaxation Retreat",
             description: "A peaceful getaway designed for relaxation and rejuvenation.",
             logo: logo4,
-            price: `${(3500 * conversionRate).toLocaleString()} LKR`,
+            price: `${(4000 * conversionRate).toLocaleString()} LKR`,
             images: [img19, img20, img21, img22, img23, img24],
-            details: "This package includes spa treatments, yoga classes, and scenic retreats."
+            details:
+                "This package includes guided tours, cultural events, and local cuisine experiences.",
         },
     ];
 
@@ -103,19 +130,23 @@ export default function Packages() {
                 <div className="package-details" ref={detailsRef}>
                     <h2>{packages[active].title}</h2>
                     <p>{packages[active].details}</p>
-                    <p><strong>Price:</strong> {packages[active].price}</p>
+                    <p>
+                        <strong>Price:</strong> {packages[active].price}
+                    </p>
                     <div className="images">
                         {packages[active].images.map((img, index) => (
-                            <img key={index} src={img} alt={`${packages[active].title} image ${index + 1}`} />
+                            <img
+                                key={index}
+                                src={img}
+                                alt={`${packages[active].title} image ${index + 1}`}
+                            />
                         ))}
                     </div>
-                    {/* Add the Book Now button */}
                     <div className="book-now">
                         <button>Book Now</button>
                     </div>
                 </div>
             )}
-
         </Section>
     );
 }
@@ -144,7 +175,18 @@ const Section = styled.section`
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 1.5rem;
-        justify-content: center;
+
+        @media (max-width: 1200px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media (max-width: 900px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: 600px) {
+            grid-template-columns: 1fr;
+        }
 
         .package {
             padding: 2rem;
@@ -224,19 +266,12 @@ const Section = styled.section`
             text-align: center;
         }
 
-        .price {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #e74c3c;
-            margin-bottom: 1.5rem;
-            text-align: center;
-        }
-
         .images {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
             gap: 1rem;
+
             img {
                 width: 150px;
                 height: 150px;
@@ -250,19 +285,25 @@ const Section = styled.section`
                     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
                     border-color: #2980b9;
                 }
+
+                @media (max-width: 600px) {
+                    width: 100px;
+                    height: 100px;
+                }
             }
         }
 
-        /* Style for Book Now button */
         .book-now {
             margin-top: 2rem;
-            display: flex;
-            justify-content: center;
+            text-align: center;
 
             button {
-                background-color: #2980b9;
-                color: white;
                 padding: 0.75rem 2rem;
+                font-size: 1.2rem;
+                color: white;
+                background-color: #2980b9;
+                border: none;
+                border-radius: 10px;
                 border: none;
                 border-radius: 5px;
                 font-size: 1.2rem;
@@ -270,6 +311,8 @@ const Section = styled.section`
                 transition: background-color 0.3s ease;
 
                 &:hover {
+                    background-color: #40c4ff;
+
                     background-color: #1b6393;
                 }
             }
