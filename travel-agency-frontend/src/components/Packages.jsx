@@ -36,32 +36,32 @@ export default function Packages() {
 
     const packages = [
         {
+            title: "Platinum Package",
+            description: "The highest level of luxury travel with elite experiences and exclusive services.",
+            logo: logo1,
+            price: `${(6000 * conversionRate).toLocaleString()} LKR`,
+            images: [img1, img6, img2, img3, img4, img5],
+            details: "This package offers private jets, 5-star luxury resorts, personalized tours, and VIP services."
+        },
+        {
             title: "Golden Package",
             description: "The ultimate luxury travel experience with premium services.",
-            logo: logo1,
+            logo: logo2,
             price: `${(5000 * conversionRate).toLocaleString()} LKR`,
-            images: [img1, img6   , img2, img3, img4, img5],
+            images: [img7, img8, img9, img10, img11, img12],
             details: "This package includes luxury hotel stays, first-class flights, gourmet dining, and more."
         },
         {
-            title: "Adventurer’s Escape",
-            description: "A thrilling journey packed with outdoor adventures and exploration.",
-            logo: logo2,
-            price: `${(3000 * conversionRate).toLocaleString()} LKR`,
-            images: [img7, img8, img9, img10, img11, img12],
-            details: "This package includes hiking, camping, and adventure sports in thrilling destinations."
-        },
-        {
-            title: "Cultural Discovery Tour",
-            description: "Immerse yourself in the rich culture and history of exotic destinations.",
+            title: "Diamond Package",
+            description: "A premium adventure tour designed for thrill-seekers and nature lovers.",
             logo: logo3,
-            price: `${(4000 * conversionRate).toLocaleString()} LKR`,
+            price: `${(4500 * conversionRate).toLocaleString()} LKR`,
             images: [img13, img14, img15, img16, img17, img18],
-            details: "This package includes guided tours, cultural events, and local cuisine experiences."
+            details: "This package includes helicopter rides, private yacht tours, and luxury camping in remote locations."
         },
         {
-            title: "Relaxation Retreat",
-            description: "A peaceful getaway designed for relaxation and rejuvenation.",
+            title: "Silver Package",
+            description: "A peaceful getaway designed for relaxation and rejuvenation at an affordable price.",
             logo: logo4,
             price: `${(3500 * conversionRate).toLocaleString()} LKR`,
             images: [img19, img20, img21, img22, img23, img24],
@@ -263,74 +263,16 @@ const Section = styled.section`
                 background-color: #2980b9;
                 color: white;
                 padding: 0.75rem 2rem;
-                border: none;
-                border-radius: 5px;
                 font-size: 1.2rem;
+                border-radius: 10px;
+                border: none;
                 cursor: pointer;
                 transition: background-color 0.3s ease;
 
                 &:hover {
-                    background-color: #1b6393;
+                    background-color: #1f6395;
                 }
             }
-        }
-
-        @media screen and (max-width: 1080px) {
-            padding: 1rem;
-
-            h2 {
-                font-size: 2rem;
-            }
-
-            p {
-                font-size: 1rem;
-            }
-
-            .images {
-                img {
-                    width: 120px;
-                    height: 120px;
-                }
-            }
-        }
-
-        @media screen and (max-width: 720px) {
-            padding: 1rem;
-
-            h2 {
-                font-size: 1.8rem;
-            }
-
-            p {
-                font-size: 0.9rem;
-            }
-
-            .images {
-                img {
-                    width: 100px;
-                    height: 100px;
-                }
-            }
-
-            .book-now {
-                button {
-                    font-size: 1rem;
-                    padding: 0.5rem 1.5rem;
-                }
-            }
-        }
-    }
-
-
-    @media screen and (max-width: 1080px) {
-        .packages {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-
-    @media screen and (max-width: 720px) {
-        .packages {
-            grid-template-columns: 1fr;
         }
     }
 `;
