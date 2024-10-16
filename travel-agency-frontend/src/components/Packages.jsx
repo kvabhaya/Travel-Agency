@@ -31,54 +31,17 @@ import logo4 from "../assets/logo4.webp";
 
 export default function Packages() {
     const conversionRate = 325;
-
     const packages = [
         {
             title: "Platinum Package",
-            description:
-                "The highest level of luxury travel with elite experiences and exclusive services.",
-            logo: logo1,
-            price: `${(6000 * conversionRate).toLocaleString()} LKR`,
-            images: [img1, img6, img2, img3, img4, img5],
-            details:
-                "This package offers private jets, 5-star luxury resorts, personalized tours, and VIP services.",
-        },
-        {
-            title: "Golden Package",
             description: "The ultimate luxury travel experience with premium services.",
             logo: logo1,
             price: `${(5000 * conversionRate).toLocaleString()} LKR`,
-            images: [img7, img8, img9, img10, img11, img12],
-            details:
-                "This package includes luxury hotel stays, first-class flights, gourmet dining, and more.",
-        },
-        {
-            title: "Adventurer’s Escape",
-            description:
-                "A thrilling journey packed with outdoor adventures and exploration.",
-            logo: logo3,
-            price: `${(3000 * conversionRate).toLocaleString()} LKR`,
-            images: [img13, img14, img15, img16, img17, img18],
-            details:
-                "This package includes hiking, camping, and adventure sports in thrilling destinations.",
-        },
-        {
-            title: "Cultural Discovery Tour",
-            description:
-                "Immerse yourself in the rich culture and history of exotic destinations.",
-            images: [img1, img6   , img2, img3, img4, img5],
+            images: [img1, img6, img2, img3, img4, img5],
             details: "This package includes luxury hotel stays, first-class flights, gourmet dining, and more."
         },
         {
-            title: "Adventurer’s Escape",
-            description: "A thrilling journey packed with outdoor adventures and exploration.",
-            logo: logo2,
-            price: `${(3000 * conversionRate).toLocaleString()} LKR`,
-            images: [img7, img8, img9, img10, img11, img12],
-            details: "This package includes hiking, camping, and adventure sports in thrilling destinations."
-        },
-        {
-            title: "Cultural Discovery Tour",
+            title: "Golden Package",
             description: "Immerse yourself in the rich culture and history of exotic destinations.",
             logo: logo3,
             price: `${(4000 * conversionRate).toLocaleString()} LKR`,
@@ -86,20 +49,26 @@ export default function Packages() {
             details: "This package includes guided tours, cultural events, and local cuisine experiences."
         },
         {
-            title: "Relaxation Retreat",
+            title: "Diamond Package",
             description: "A peaceful getaway designed for relaxation and rejuvenation.",
             logo: logo4,
-            price: `${(4000 * conversionRate).toLocaleString()} LKR`,
+            price: `${(3500 * conversionRate).toLocaleString()} LKR`,
             images: [img19, img20, img21, img22, img23, img24],
-            details:
-                "This package includes guided tours, cultural events, and local cuisine experiences.",
+            details: "This package includes spa treatments, yoga classes, and scenic retreats."
+        },
+        {
+            title: "Silver Package",
+            description: "A thrilling journey packed with outdoor adventures and exploration.",
+            logo: logo2,
+            price: `${(3000 * conversionRate).toLocaleString()} LKR`,
+            images: [img7, img8, img9, img10, img11, img12],
+            details: "This package includes hiking, camping, and adventure sports in thrilling destinations."
         },
     ];
 
     const [active, setActive] = useState(null);
     const detailsRef = useRef(null);
 
-    // Scroll to the details section when a package is clicked
     useEffect(() => {
         if (active !== null && detailsRef.current) {
             detailsRef.current.scrollIntoView({ behavior: "smooth" });
@@ -130,16 +99,10 @@ export default function Packages() {
                 <div className="package-details" ref={detailsRef}>
                     <h2>{packages[active].title}</h2>
                     <p>{packages[active].details}</p>
-                    <p>
-                        <strong>Price:</strong> {packages[active].price}
-                    </p>
+                    <p><strong>Price:</strong> {packages[active].price}</p>
                     <div className="images">
                         {packages[active].images.map((img, index) => (
-                            <img
-                                key={index}
-                                src={img}
-                                alt={`${packages[active].title} image ${index + 1}`}
-                            />
+                            <img key={index} src={img} alt={`${packages[active].title} image ${index + 1}`} />
                         ))}
                     </div>
                     <div className="book-now">
@@ -173,20 +136,9 @@ const Section = styled.section`
 
     .packages {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 1.5rem;
-
-        @media (max-width: 1200px) {
-            grid-template-columns: repeat(3, 1fr);
-        }
-
-        @media (max-width: 900px) {
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        @media (max-width: 600px) {
-            grid-template-columns: 1fr;
-        }
+        justify-content: center;
 
         .package {
             padding: 2rem;
@@ -204,8 +156,8 @@ const Section = styled.section`
             }
 
             .logo {
-                width: 120px;
-                height: 120px;
+                width: 100px;
+                height: 100px;
                 object-fit: cover;
                 margin-bottom: 1rem;
                 border-radius: 50%;
@@ -214,7 +166,7 @@ const Section = styled.section`
 
             h3 {
                 margin-bottom: 1rem;
-                font-size: 1.8rem;
+                font-size: 1.5rem;
                 color: #2d4059;
             }
 
@@ -253,16 +205,24 @@ const Section = styled.section`
         color: #34495e;
 
         h2 {
-            font-size: 2.5rem;
+            font-size: 2rem;
             color: #2d4059;
             margin-bottom: 1rem;
             text-align: center;
         }
 
         p {
-            font-size: 1.2rem;
+            font-size: 1rem;
             color: #34495e;
             margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #e74c3c;
+            margin-bottom: 1.5rem;
             text-align: center;
         }
 
@@ -273,8 +233,8 @@ const Section = styled.section`
             gap: 1rem;
 
             img {
-                width: 150px;
-                height: 150px;
+                width: 120px;
+                height: 120px;
                 object-fit: cover;
                 border-radius: 10px;
                 transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
@@ -285,95 +245,79 @@ const Section = styled.section`
                     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
                     border-color: #2980b9;
                 }
-
-                @media (max-width: 600px) {
-                    width: 100px;
-                    height: 100px;
-                }
             }
         }
 
         .book-now {
             margin-top: 2rem;
-            text-align: center;
+            display: flex;
+            justify-content: center;
 
             button {
-                padding: 0.75rem 2rem;
-                font-size: 1.2rem;
-                color: white;
                 background-color: #2980b9;
+                color: white;
+                padding: 0.8rem 2rem;
+                font-size: 1.2rem;
                 border: none;
                 border-radius: 10px;
-                border: none;
-                border-radius: 5px;
-                font-size: 1.2rem;
                 cursor: pointer;
                 transition: background-color 0.3s ease;
 
                 &:hover {
                     background-color: #40c4ff;
-
-                    background-color: #1b6393;
                 }
             }
         }
+    }
 
-        @media screen and (max-width: 1080px) {
+    @media (max-width: 768px) {
+        padding: 3rem 1rem;
+
+        .title h2 {
+            font-size: 2rem;
+        }
+
+        .title p {
+            font-size: 1rem;
+        }
+
+        .packages .package {
             padding: 1rem;
-
-            h2 {
-                font-size: 2rem;
-            }
-
-            p {
-                font-size: 1rem;
-            }
-
-            .images {
-                img {
-                    width: 120px;
-                    height: 120px;
-                }
-            }
         }
 
-        @media screen and (max-width: 720px) {
+        .package-details {
             padding: 1rem;
 
             h2 {
                 font-size: 1.8rem;
             }
 
-            p {
-                font-size: 0.9rem;
-            }
-
-            .images {
-                img {
-                    width: 100px;
-                    height: 100px;
-                }
-            }
-
-            .book-now {
-                button {
-                    font-size: 1rem;
-                    padding: 0.5rem 1.5rem;
-                }
+            .images img {
+                width: 100px;
+                height: 100px;
             }
         }
     }
 
-
-    @media screen and (max-width: 1080px) {
-        .packages {
-            grid-template-columns: repeat(2, 1fr);
+    @media (max-width: 480px) {
+        .packages .package {
+            padding: 0.5rem;
         }
-    }
 
-    @media screen and (max-width: 720px) {
-        .packages {
-            grid-template-columns: 1fr;
+        .package-details {
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .images img {
+                width: 80px;
+                height: 80px;
+            }
+
+            .book-now button {
+                padding: 0.6rem 1.5rem;
+                font-size: 1rem;
+            }
         }
     }
 `;
