@@ -1,58 +1,74 @@
 import React, { useState, useRef, useEffect } from "react";
 import styled from "styled-components";
+import img1 from "../assets/img1.webp";
+import img2 from "../assets/img2.jpg";
+import img3 from "../assets/img3.jpeg";
+import img4 from "../assets/img4.jpeg";
+import img5 from "../assets/img5.jpeg";
+import img6 from "../assets/img6.jpeg";
+import img7 from "../assets/img7.jpeg";
+import img8 from "../assets/img8.jpeg";
+import img9 from "../assets/img9.jpeg";
+import img10 from "../assets/img10.jpeg";
+import img11 from "../assets/img11.jpeg";
+import img12 from "../assets/img12.jpeg";
+import img13 from "../assets/img13.jpeg";
+import img14 from "../assets/img14.jpeg";
+import img15 from "../assets/img15.jpeg";
+import img16 from "../assets/img16.jpeg";
+import img17 from "../assets/img17.jpeg";
+import img18 from "../assets/img18.jpeg";
+import img19 from "../assets/img19.jpeg";
+import img20 from "../assets/img20.jpeg";
+import img21 from "../assets/img21.jpeg";
+import img22 from "../assets/img22.jpeg";
+import img23 from "../assets/img23.jpeg";
+import img24 from "../assets/img24.jpeg";
+import logo1 from "../assets/logo1.jpg";
+import logo2 from "../assets/logo2.avif";
+import logo3 from "../assets/logo3.webp";
+import logo4 from "../assets/logo4.webp";
 
 export default function Packages() {
+    const conversionRate = 325;
     const packages = [
         {
-            title: "Golden Package",
+            title: "Platinum Package",
             description: "The ultimate luxury travel experience with premium services.",
-            logo: "https://t4.ftcdn.net/jpg/04/45/63/69/360_F_445636937_VnBUZ8NVUYD6kzZ3MxweB3e9R3Og95je.jpg",
-            price: "$5000",
-            images: [
-                "https://plus.unsplash.com/premium_photo-1666254114402-cd16bc302aea?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c3JpbGFua2F8ZW58MHx8MHx8fDA%3D",
-                "https://images.unsplash.com/photo-1557251662-02d346591108?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c3JpbGFua2F8ZW58MHx8MHx8fDA%3D"
-            ],
+            logo: logo1,
+            price: `${(5000 * conversionRate).toLocaleString()} LKR`,
+            images: [img1, img6, img2, img3, img4, img5],
             details: "This package includes luxury hotel stays, first-class flights, gourmet dining, and more."
         },
         {
-            title: "Adventurer’s Escape",
-            description: "A thrilling journey packed with outdoor adventures and exploration.",
-            logo: "https://img.freepik.com/premium-vector/vintage-adventure-logo-background_23-2148137257.jpg",
-            price: "$3000",
-            images: [
-                "https://images.unsplash.com/photo-1689144637994-5f62045b02ac?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHNyaWxhbmthfGVufDB8fDB8fHww",
-                "https://images.unsplash.com/photo-1546209189-247948bf5dfc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHNyaWxhbmthfGVufDB8fDB8fHww"
-            ],
-            details: "This package includes hiking, camping, and adventure sports in thrilling destinations."
-        },
-        {
-            title: "Cultural Discovery Tour",
+            title: "Golden Package",
             description: "Immerse yourself in the rich culture and history of exotic destinations.",
-            logo: "https://static.wixstatic.com/media/c8fad6_03f3b65f367848d2bd10f45585c3a9e2~mv2.png/v1/fill/w_266,h_266,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/c8fad6_03f3b65f367848d2bd10f45585c3a9e2~mv2.png",
-            price: "$4000",
-            images: [
-                "https://images.unsplash.com/photo-1689144638193-e6396d13e9d6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHNyaWxhbmthfGVufDB8fDB8fHww",
-                "https://images.unsplash.com/photo-1689144637920-6892e99e5fbc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHNyaWxhbmthfGVufDB8fDB8fHww"
-            ],
+            logo: logo3,
+            price: `${(4000 * conversionRate).toLocaleString()} LKR`,
+            images: [img13, img14, img15, img16, img17, img18],
             details: "This package includes guided tours, cultural events, and local cuisine experiences."
         },
         {
-            title: "Relaxation Retreat",
+            title: "Diamond Package",
             description: "A peaceful getaway designed for relaxation and rejuvenation.",
-            logo: "https://thumbs.dreamstime.com/b/wellness-yoga-pose-people-tree-healthy-life-relaxation-beauty-spa-concept-design-yoga-pose-people-tree-healthy-life-wellness-116717613.jpg",
-            price: "$3500",
-            images: [
-                "https://images.unsplash.com/photo-1689144638474-10e1656d6d53?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHNyaWxhbmthfGVufDB8fDB8fHww",
-                "https://images.unsplash.com/photo-1651264042769-ef84e30f4ac8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHNyaWxhbmthfGVufDB8fDB8fHww"
-            ],
+            logo: logo4,
+            price: `${(3500 * conversionRate).toLocaleString()} LKR`,
+            images: [img19, img20, img21, img22, img23, img24],
             details: "This package includes spa treatments, yoga classes, and scenic retreats."
+        },
+        {
+            title: "Silver Package",
+            description: "A thrilling journey packed with outdoor adventures and exploration.",
+            logo: logo2,
+            price: `${(3000 * conversionRate).toLocaleString()} LKR`,
+            images: [img7, img8, img9, img10, img11, img12],
+            details: "This package includes hiking, camping, and adventure sports in thrilling destinations."
         },
     ];
 
     const [active, setActive] = useState(null);
     const detailsRef = useRef(null);
 
-    // Scroll to the details section when a package is clicked
     useEffect(() => {
         if (active !== null && detailsRef.current) {
             detailsRef.current.scrollIntoView({ behavior: "smooth" });
@@ -89,6 +105,9 @@ export default function Packages() {
                             <img key={index} src={img} alt={`${packages[active].title} image ${index + 1}`} />
                         ))}
                     </div>
+                    <div className="book-now">
+                        <button>Book Now</button>
+                    </div>
                 </div>
             )}
         </Section>
@@ -117,7 +136,7 @@ const Section = styled.section`
 
     .packages {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 1.5rem;
         justify-content: center;
 
@@ -137,8 +156,8 @@ const Section = styled.section`
             }
 
             .logo {
-                width: 120px;
-                height: 120px;
+                width: 100px;
+                height: 100px;
                 object-fit: cover;
                 margin-bottom: 1rem;
                 border-radius: 50%;
@@ -147,7 +166,7 @@ const Section = styled.section`
 
             h3 {
                 margin-bottom: 1rem;
-                font-size: 1.8rem;
+                font-size: 1.5rem;
                 color: #2d4059;
             }
 
@@ -186,20 +205,19 @@ const Section = styled.section`
         color: #34495e;
 
         h2 {
-            font-size: 2.5rem;
+            font-size: 2rem;
             color: #2d4059;
             margin-bottom: 1rem;
             text-align: center;
         }
 
         p {
-            font-size: 1.2rem;
+            font-size: 1rem;
             color: #34495e;
             margin-bottom: 1rem;
             text-align: center;
         }
 
-        /* Price styling */
         .price {
             font-size: 1.5rem;
             font-weight: bold;
@@ -213,9 +231,10 @@ const Section = styled.section`
             justify-content: center;
             flex-wrap: wrap;
             gap: 1rem;
+
             img {
-                width: 150px;
-                height: 150px;
+                width: 120px;
+                height: 120px;
                 object-fit: cover;
                 border-radius: 10px;
                 transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
@@ -229,54 +248,76 @@ const Section = styled.section`
             }
         }
 
-        @media screen and (max-width: 1080px) {
-            padding: 1rem;
+        .book-now {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
 
-            h2 {
-                font-size: 2rem;
-            }
+            button {
+                background-color: #2980b9;
+                color: white;
+                padding: 0.8rem 2rem;
+                font-size: 1.2rem;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
 
-            p {
-                font-size: 1rem;
-            }
-
-            .images {
-                img {
-                    width: 120px;
-                    height: 120px;
+                &:hover {
+                    background-color: #40c4ff;
                 }
             }
         }
+    }
 
-        @media screen and (max-width: 720px) {
+    @media (max-width: 768px) {
+        padding: 3rem 1rem;
+
+        .title h2 {
+            font-size: 2rem;
+        }
+
+        .title p {
+            font-size: 1rem;
+        }
+
+        .packages .package {
+            padding: 1rem;
+        }
+
+        .package-details {
             padding: 1rem;
 
             h2 {
                 font-size: 1.8rem;
             }
 
-            p {
-                font-size: 0.9rem;
-            }
-
-            .images {
-                img {
-                    width: 100px;
-                    height: 100px;
-                }
+            .images img {
+                width: 100px;
+                height: 100px;
             }
         }
     }
 
-    @media screen and (max-width: 1080px) {
-        .packages {
-            grid-template-columns: repeat(2, 1fr);
+    @media (max-width: 480px) {
+        .packages .package {
+            padding: 0.5rem;
         }
-    }
 
-    @media screen and (max-width: 720px) {
-        .packages {
-            grid-template-columns: 1fr;
+        .package-details {
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .images img {
+                width: 80px;
+                height: 80px;
+            }
+
+            .book-now button {
+                padding: 0.6rem 1.5rem;
+                font-size: 1rem;
+            }
         }
     }
 `;
