@@ -38,7 +38,8 @@ export default function Packages() {
             logo: logo1,
             price: `${(5000 * conversionRate).toLocaleString()} LKR`,
             images: [img1, img6, img2, img3, img4, img5],
-            details: "This package includes luxury hotel stays, first-class flights, gourmet dining, and more."
+            details: "This package includes luxury hotel stays, first-class flights, gourmet dining, and more.",
+            destinations: ["Oceanic Horizons", "Timeless Trails", "Emerald Highlands"]
         },
         {
             title: "Golden Package",
@@ -46,7 +47,8 @@ export default function Packages() {
             logo: logo3,
             price: `${(4000 * conversionRate).toLocaleString()} LKR`,
             images: [img13, img14, img15, img16, img17, img18],
-            details: "This package includes guided tours, cultural events, and local cuisine experiences."
+            details: "This package includes guided tours, cultural events, and local cuisine experiences.",
+            destinations: ["Wilderness Safaris", "Tranquil Wellness Retreats"]
         },
         {
             title: "Diamond Package",
@@ -54,7 +56,8 @@ export default function Packages() {
             logo: logo4,
             price: `${(3500 * conversionRate).toLocaleString()} LKR`,
             images: [img19, img20, img21, img22, img23, img24],
-            details: "This package includes spa treatments, yoga classes, and scenic retreats."
+            details: "This package includes spa treatments, yoga classes, and scenic retreats.",
+            destinations: ["Serene Sanctuaries", "Island Adventures"]
         },
         {
             title: "Silver Package",
@@ -62,18 +65,24 @@ export default function Packages() {
             logo: logo2,
             price: `${(3000 * conversionRate).toLocaleString()} LKR`,
             images: [img7, img8, img9, img10, img11, img12],
-            details: "This package includes hiking, camping, and adventure sports in thrilling destinations."
+            details: "This package includes hiking, camping, and adventure sports in thrilling destinations.",
+            destinations: ["Mountain Treks", "Coastal Journeys"]
         },
     ];
 
-    const [active, setActive] = useState(null);
+    const [activePackage, setActivePackage] = useState(null);
+    const [activeDestination, setActiveDestination] = useState(null);
     const detailsRef = useRef(null);
 
     useEffect(() => {
-        if (active !== null && detailsRef.current) {
+        if (activePackage !== null && detailsRef.current) {
             detailsRef.current.scrollIntoView({ behavior: "smooth" });
         }
-    }, [active]);
+    }, [activePackage, activeDestination]);
+
+    const handleDestinationClick = (destination) => {
+        setActiveDestination(destination);
+    };
 
     return (
         <Section id="packages">
@@ -84,9 +93,9 @@ export default function Packages() {
             <div className="packages">
                 {packages.map((pkg, index) => (
                     <div
-                        className={`package ${active === index ? "active" : ""}`}
+                        className={`package ${activePackage === index ? "active" : ""}`}
                         key={index}
-                        onClick={() => setActive(index)}
+                        onClick={() => setActivePackage(index)}
                     >
                         <img src={pkg.logo} alt={`${pkg.title} logo`} className="logo" />
                         <h3>{pkg.title}</h3>
@@ -95,19 +104,34 @@ export default function Packages() {
                 ))}
             </div>
 
-            {active !== null && (
+            {activePackage !== null && (
                 <div className="package-details" ref={detailsRef}>
-                    <h2>{packages[active].title}</h2>
-                    <p>{packages[active].details}</p>
-                    <p><strong>Price:</strong> {packages[active].price}</p>
+                    <h2>{packages[activePackage].title}</h2>
+                    <p>{packages[activePackage].details}</p>
+                    <p><strong>Price:</strong> {packages[activePackage].price}</p>
                     <div className="images">
-                        {packages[active].images.map((img, index) => (
-                            <img key={index} src={img} alt={`${packages[active].title} image ${index + 1}`} />
+                        {packages[activePackage].images.map((img, index) => (
+                            <img key={index} src={img} alt={`${packages[activePackage].title} image ${index + 1}`} />
                         ))}
                     </div>
-                    <div className="book-now">
-                        <button>Book Now</button>
+                    <h3>Destinations</h3>
+                    <div className="destinations">
+                        {packages[activePackage].destinations.map((destination, index) => (
+                            <button
+                                key={index}
+                                onClick={() => handleDestinationClick(destination)}
+                                className={`destination-button ${activeDestination === destination ? "selected" : ""}`}
+                            >
+                                {destination}
+                            </button>
+                        ))}
                     </div>
+                    {activeDestination && (
+                        <div className="destination-details">
+                            <h4>Destination: {activeDestination}</h4>
+                            <p>Details about {activeDestination} will be displayed here based on your selection.</p>
+                        </div>
+                    )}
                 </div>
             )}
         </Section>
@@ -211,21 +235,6 @@ const Section = styled.section`
             text-align: center;
         }
 
-        p {
-            font-size: 1rem;
-            color: #34495e;
-            margin-bottom: 1rem;
-            text-align: center;
-        }
-
-        .price {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #e74c3c;
-            margin-bottom: 1.5rem;
-            text-align: center;
-        }
-
         .images {
             display: flex;
             justify-content: center;
@@ -233,90 +242,55 @@ const Section = styled.section`
             gap: 1rem;
 
             img {
-                width: 120px;
-                height: 120px;
+                width: 200px;
+                height: 150px;
                 object-fit: cover;
                 border-radius: 10px;
-                transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-                border: 3px solid transparent;
-
-                &:hover {
-                    transform: scale(1.1);
-                    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
-                    border-color: #2980b9;
-                }
             }
         }
 
-        .book-now {
+        .destinations {
             margin-top: 2rem;
             display: flex;
             justify-content: center;
+            gap: 1rem;
 
-            button {
-                background-color: #2980b9;
-                color: white;
-                padding: 0.8rem 2rem;
-                font-size: 1.2rem;
+            .destination-button {
+                padding: 0.7rem 1.5rem;
+                font-size: 1rem;
+                background-color: #40c4ff;
                 border: none;
-                border-radius: 10px;
+                border-radius: 5px;
                 cursor: pointer;
                 transition: background-color 0.3s ease;
 
                 &:hover {
-                    background-color: #40c4ff;
+                    background-color: #2d4059;
+                    color: #fff;
+                }
+
+                &.selected {
+                    background-color: #2d4059;
+                    color: #fff;
                 }
             }
         }
-    }
 
-    @media (max-width: 768px) {
-        padding: 3rem 1rem;
+        .destination-details {
+            margin-top: 1.5rem;
+            padding: 1.5rem;
+            background-color: #e0f7fa;
+            border-radius: 10px;
+            text-align: center;
 
-        .title h2 {
-            font-size: 2rem;
-        }
-
-        .title p {
-            font-size: 1rem;
-        }
-
-        .packages .package {
-            padding: 1rem;
-        }
-
-        .package-details {
-            padding: 1rem;
-
-            h2 {
-                font-size: 1.8rem;
-            }
-
-            .images img {
-                width: 100px;
-                height: 100px;
-            }
-        }
-    }
-
-    @media (max-width: 480px) {
-        .packages .package {
-            padding: 0.5rem;
-        }
-
-        .package-details {
-            h2 {
+            h4 {
                 font-size: 1.5rem;
+                color: #2980b9;
             }
 
-            .images img {
-                width: 80px;
-                height: 80px;
-            }
-
-            .book-now button {
-                padding: 0.6rem 1.5rem;
+            p {
                 font-size: 1rem;
+                color: #34495e;
             }
         }
     }
