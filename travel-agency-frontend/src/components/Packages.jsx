@@ -235,6 +235,20 @@ const Section = styled.section`
             text-align: center;
         }
 
+        p {
+            font-size: 1rem;
+            color: #34495e;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #e74c3c;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
         .images {
             display: flex;
             justify-content: center;
