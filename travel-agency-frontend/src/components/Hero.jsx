@@ -54,7 +54,7 @@ const Section = styled.section`
             z-index: 1;
             filter: brightness(40%);
             border-radius: 25px;
-            animation: fadeImage 25s infinite;
+            animation: fadeImage ease-in-out 25s infinite;
             
         }
 
@@ -117,9 +117,11 @@ const Section = styled.section`
     @keyframes fadeImage {
         0%, 20% {
             opacity: 1;
+            z-index: 2;
         }
-        40%, 100% {
+        21%, 100% {
             opacity: 0;
+            z-index: 1;
         }
     }
 
