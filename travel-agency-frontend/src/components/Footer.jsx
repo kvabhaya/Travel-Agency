@@ -7,7 +7,6 @@ export default function Footer() {
     const year = new Date().getFullYear();
     return (
         <FooterContainer>
-            <span>Copyright &copy; {year} TechYoke. All rights reserved</span>
             <ul className="links">
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#services">About</a></li>
@@ -16,11 +15,26 @@ export default function Footer() {
                 <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+
             <ul className="social__links">
-                <li><BsFacebook /></li>
-                <li><AiFillInstagram /></li>
-                <li><BsLinkedin /></li>
+                <li>
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                        <BsFacebook />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                        <AiFillInstagram />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                        <BsLinkedin />
+                    </a>
+                </li>
             </ul>
+
+            <span>Copyright &copy; {year} TechYoke. All rights reserved</span>
         </FooterContainer>
     );
 }
@@ -37,14 +51,16 @@ const FooterContainer = styled.footer`
     span {
         flex-basis: 100%;
         text-align: center;
-        margin-bottom: 1rem;
+        margin-top: 1rem;
         font-weight: bold;
     }
 
     ul {
         display: flex;
-        list-style-type: none;
+        list-style: none;
         gap: 2rem;
+        padding: 0;
+        margin: 0;
 
         li {
             padding: 0.5rem;
@@ -53,7 +69,7 @@ const FooterContainer = styled.footer`
                 text-decoration: none;
                 color: black;
                 font-weight: 500;
-                transition: 0.3s ease-in-out;
+                transition: color 0.3s ease-in-out;
 
                 &:hover {
                     color: #302ce9;
@@ -62,7 +78,7 @@ const FooterContainer = styled.footer`
 
             svg {
                 font-size: 1.5rem;
-                transition: 0.3s ease-in-out;
+                transition: color 0.3s ease-in-out;
 
                 &:hover {
                     color: #302ce9;
@@ -71,7 +87,7 @@ const FooterContainer = styled.footer`
         }
     }
 
-    @media screen and (min-width: 280px) and (max-width: 1024px) {
+    @media (max-width: 1024px) {
         flex-direction: column;
         gap: 2rem;
 
