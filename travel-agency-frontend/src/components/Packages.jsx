@@ -34,39 +34,113 @@ export default function Packages() {
     const packages = [
         {
             title: "Platinum Package",
-            description: "The ultimate luxury travel experience with premium services.",
+            description: "The ultimate luxury travel experience in Sri Lanka with premium services.",
             logo: logo1,
-            price: `${(5000 * conversionRate).toLocaleString()} LKR`,
-            images: [img1, img6, img2, img3, img4, img5],
-            details: "This package includes luxury hotel stays, first-class flights, gourmet dining, and more.",
-            destinations: ["Oceanic Horizons", "Timeless Trails", "Emerald Highlands"]
+            images: [img1, img2, img3, img4, img5, img6],
+            details: "This package includes luxury stays, exclusive tours, gourmet dining, and first-class travel across Sri Lanka's finest destinations.",
+            destinations: [
+                {
+                    name: "Cultural Odyssey",
+                    price: `${(800 * conversionRate).toLocaleString()} LKR`,
+                    place: "Kandy",
+                    accommodations: "Luxury Hotel, Cultural Tours",
+                    details: "Discover the heritage of Kandy with visits to the Temple of the Tooth, cultural shows, and serene luxury hotel stays.",
+                    image: img1,
+                },
+                {
+                    name: "Tropical Serenity",
+                    price: `${(1200 * conversionRate).toLocaleString()} LKR`,
+                    place: "Galle",
+                    accommodations: "Beach Resort, Private Villa",
+                    details: "Relax at the beautiful beaches of Galle with stays at luxury resorts and explore the historic Galle Fort.",
+                    image: img2,
+                },
+                {
+                    name: "Mountain Escape",
+                    price: `${(1000 * conversionRate).toLocaleString()} LKR`,
+                    place: "Ella",
+                    accommodations: "Eco Resort, Adventure Tours",
+                    details: "Stay in eco-friendly resorts and explore the breathtaking mountains, waterfalls, and tea plantations of Ella.",
+                    image: img3,
+                },
+            ],
         },
         {
             title: "Golden Package",
-            description: "Immerse yourself in the rich culture and history of exotic destinations.",
-            logo: logo3,
-            price: `${(4000 * conversionRate).toLocaleString()} LKR`,
-            images: [img13, img14, img15, img16, img17, img18],
-            details: "This package includes guided tours, cultural events, and local cuisine experiences.",
-            destinations: ["Wilderness Safaris", "Tranquil Wellness Retreats"]
+            description: "Immerse yourself in Sri Lanka's rich culture and history.",
+            logo: logo2,
+            images: [img7, img8, img9, img10, img11, img12],
+            details: "This package offers guided tours, cultural experiences, and local cuisine across Sri Lanka.",
+            destinations: [
+                {
+                    name: "Ancient Kingdoms",
+                    price: `${(900 * conversionRate).toLocaleString()} LKR`,
+                    place: "Anuradhapura",
+                    accommodations: "Heritage Resort, Historical Tours",
+                    details: "Explore the ancient city of Anuradhapura, visit sacred stupas, and stay in a heritage resort with scenic views.",
+                    image: img7,
+                },
+                {
+                    name: "Coastal Wonders",
+                    price: `${(1100 * conversionRate).toLocaleString()} LKR`,
+                    place: "Mirissa",
+                    accommodations: "Beach Bungalow, Whale Watching",
+                    details: "Enjoy whale watching and relax at beachside accommodations along the stunning coastline of Mirissa.",
+                    image: img8,
+                },
+            ],
         },
         {
             title: "Diamond Package",
-            description: "A peaceful getaway designed for relaxation and rejuvenation.",
-            logo: logo4,
-            price: `${(3500 * conversionRate).toLocaleString()} LKR`,
-            images: [img19, img20, img21, img22, img23, img24],
-            details: "This package includes spa treatments, yoga classes, and scenic retreats.",
-            destinations: ["Serene Sanctuaries", "Island Adventures"]
+            description: "A peaceful getaway to the most scenic and tranquil locations in Sri Lanka.",
+            logo: logo3,
+            price: `${(3000 * conversionRate).toLocaleString()} LKR`,
+            images: [img13, img14, img15, img16, img17, img18],
+            details: "This package includes spa treatments, wellness retreats, and scenic tours in beautiful destinations.",
+            destinations: [
+                {
+                    name: "Wellness Retreat",
+                    price: `${(1200 * conversionRate).toLocaleString()} LKR`,
+                    place: "Sigiriya",
+                    accommodations: "Ayurvedic Spa Resort, Wellness Programs",
+                    details: "Unwind in the shadow of the Sigiriya rock fortress with luxurious spa treatments and wellness activities.",
+                    image: img13,
+                },
+                {
+                    name: "Highland Tranquility",
+                    price: `${(1000 * conversionRate).toLocaleString()} LKR`,
+                    place: "Nuwara Eliya",
+                    accommodations: "Tea Bungalow, Nature Walks",
+                    details: "Enjoy the cool climate and scenic beauty of Nuwara Eliya with tea plantation tours and nature walks.",
+                    image: img14,
+                },
+            ],
         },
         {
             title: "Silver Package",
-            description: "A thrilling journey packed with outdoor adventures and exploration.",
-            logo: logo2,
-            price: `${(3000 * conversionRate).toLocaleString()} LKR`,
-            images: [img7, img8, img9, img10, img11, img12],
-            details: "This package includes hiking, camping, and adventure sports in thrilling destinations.",
-            destinations: ["Mountain Treks", "Coastal Journeys"]
+            description: "A thrilling journey packed with outdoor adventures and wildlife exploration.",
+            logo: logo4,
+            price: `${(2500 * conversionRate).toLocaleString()} LKR`,
+            images: [img19, img20, img21, img22, img23, img24],
+            details: "This package includes wildlife safaris, hiking, and adventure sports in stunning locations.",
+            destinations: [
+                {
+                    name: "Wildlife Safaris",
+                    price: `${(900 * conversionRate).toLocaleString()} LKR`,
+                    place: "Yala National Park",
+                    accommodations: "Safari Lodge, Wildlife Tours",
+                    details: "Experience the excitement of a safari in Yala National Park, home to leopards, elephants, and diverse wildlife.",
+                    image: img19,
+                },
+                {
+                    name: "River Adventures",
+                    price: `${(850 * conversionRate).toLocaleString()} LKR`,
+                    place: "Kitulgala",
+                    accommodations: "Adventure Camp, White Water Rafting",
+                    details: "Enjoy thrilling white-water rafting and adventure sports along the scenic Kelani River in Kitulgala.",
+                    image: img20,
+                },
+            ],
         },
     ];
 
@@ -79,6 +153,12 @@ export default function Packages() {
             detailsRef.current.scrollIntoView({ behavior: "smooth" });
         }
     }, [activePackage, activeDestination]);
+
+    useEffect(() => {
+        if (activeDestination && detailsRef.current) {
+            detailsRef.current.scrollIntoView({ behavior: "smooth" });
+        }
+    }, [activeDestination]);
 
     const handleDestinationClick = (destination) => {
         setActiveDestination(destination);
@@ -95,7 +175,10 @@ export default function Packages() {
                     <div
                         className={`package ${activePackage === index ? "active" : ""}`}
                         key={index}
-                        onClick={() => setActivePackage(index)}
+                        onClick={() => {
+                            setActivePackage(index);
+                            setActiveDestination(null);
+                        }}
                     >
                         <img src={pkg.logo} alt={`${pkg.title} logo`} className="logo" />
                         <h3>{pkg.title}</h3>
@@ -108,7 +191,6 @@ export default function Packages() {
                 <div className="package-details" ref={detailsRef}>
                     <h2>{packages[activePackage].title}</h2>
                     <p>{packages[activePackage].details}</p>
-                    <p><strong>Price:</strong> {packages[activePackage].price}</p>
                     <div className="images">
                         {packages[activePackage].images.map((img, index) => (
                             <img key={index} src={img} alt={`${packages[activePackage].title} image ${index + 1}`} />
@@ -122,14 +204,18 @@ export default function Packages() {
                                 onClick={() => handleDestinationClick(destination)}
                                 className={`destination-button ${activeDestination === destination ? "selected" : ""}`}
                             >
-                                {destination}
+                                {destination.name}
                             </button>
                         ))}
                     </div>
                     {activeDestination && (
                         <div className="destination-details">
-                            <h4>Destination: {activeDestination}</h4>
-                            <p>Details about {activeDestination} will be displayed here based on your selection.</p>
+                            <h4>Destination: {activeDestination.name}</h4>
+                            <p><strong>Price:</strong> {activeDestination.price}</p>
+                            <p><strong>Place:</strong> {activeDestination.place}</p>
+                            <p><strong>Accommodations:</strong> {activeDestination.accommodations}</p>
+                            <p>{activeDestination.details}</p>
+                            <img src={activeDestination.image} alt={activeDestination.name} className="destination-image" />
                         </div>
                     )}
                 </div>
@@ -262,6 +348,13 @@ const Section = styled.section`
                 border-radius: 10px;
             }
         }
+        
+        h3{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #023e8a;
+        }
 
         .destinations {
             margin-top: 2rem;
@@ -270,42 +363,63 @@ const Section = styled.section`
             gap: 1rem;
 
             .destination-button {
-                padding: 0.7rem 1.5rem;
+                padding: 0.75rem 1.5rem;
                 font-size: 1rem;
-                background-color: #40c4ff;
+                background-color: #2d4059;
+                color: white;
                 border: none;
-                border-radius: 5px;
+                border-radius: 10px;
                 cursor: pointer;
                 transition: background-color 0.3s ease;
 
                 &:hover {
-                    background-color: #2d4059;
-                    color: #fff;
+                    background-color: #2980b9;
                 }
 
                 &.selected {
-                    background-color: #2d4059;
-                    color: #fff;
+                    background-color: #e74c3c;
                 }
             }
         }
 
         .destination-details {
-            margin-top: 1.5rem;
+            margin-top: 2rem;
             padding: 1.5rem;
-            background-color: #e0f7fa;
-            border-radius: 10px;
-            text-align: center;
+            background-color: #ecf0f1;
+            border-radius: 20px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 
             h4 {
                 font-size: 1.5rem;
-                color: #2980b9;
+                color: #34495e;
+                margin-bottom: 1rem;
+                text-align: center;
             }
 
             p {
                 font-size: 1rem;
                 color: #34495e;
+                margin-bottom: 0.75rem;
+                text-align: center;
+
+                strong {
+                    font-weight: bold;
+                    color: #2d4059;
+                }
+            }
+
+            .destination-image {
+                width: 100%;
+                max-width: 300px;
+                height: 200px;
+                object-fit: cover;
+                margin-top: 1rem;
+                border-radius: 15px;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
             }
         }
     }
 `;
+
