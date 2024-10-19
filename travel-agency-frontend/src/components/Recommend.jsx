@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 import styled from "styled-components";
 import destination1 from "../assets/destination1.jpg";
 import destination2 from "../assets/destination2.jpg";
@@ -8,45 +8,36 @@ import destination4 from "../assets/destination4.jpg";
 import destination5 from "../assets/destination5.jpg";
 
 export default function Recommend() {
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // Initialize useNavigate
 
   const data = [
     {
       image: destination1,
       title: "Oceanic Horizons and Coastal Charms",
       description: "Explore pristine beaches, tranquil coastal views, and ocean activities.",
-      path: "/oceanic-horizons",
+      link: "/oceans", // Add a link for the Oceans component
     },
     {
       image: destination2,
       title: "Timeless Trails and Sacred Paths",
       description: "Journey through historical landmarks and sacred religious sites.",
-      path: "/timeless-trails",
     },
     {
       image: destination3,
       title: "Emerald Highlands and Scenic Vistas",
       description: "Discover the breathtaking beauty of Sri Lanka's highlands and tea plantations.",
-      path: "/emerald-highlands",
     },
     {
       image: destination4,
       title: "Wilderness Safaris and Thrill Quests",
       description: "Experience thrilling safaris and adventure sports in Sri Lanka's wilderness.",
-      path: "/wilderness-safaris",
     },
     {
       image: destination5,
       title: "Tranquil Wellness Retreats",
       description: "Relax and rejuvenate in wellness retreats surrounded by nature.",
-      path: "/serene-sanctuaries",
     },
   ];
-
-  const handleButtonClick = (destinationPath) => {
-    console.log(`Navigating to: ${destinationPath}`);
-    navigate(destinationPath);
-  };
 
   return (
       <Section id="recommend">
@@ -63,7 +54,12 @@ export default function Recommend() {
                   <p>{destination.description}</p>
                   <button
                       className="view-details"
-                      onClick={() => handleButtonClick(destination.path)}
+                      onClick={() => {
+                        // Navigate to the corresponding link if provided
+                        if (destination.link) {
+                          navigate(destination.link);
+                        }
+                      }}
                   >
                     View Details
                   </button>
@@ -104,6 +100,7 @@ const Section = styled.section`
   }
 
   .destination {
+    border-radius: 12px;
     position: relative;
     overflow: hidden;
     height: 450px;
