@@ -36,19 +36,59 @@ export default function Packages() {
             title: "Platinum Package",
             description: "The ultimate luxury travel experience with premium services.",
             logo: logo1,
-            price: `${(5000 * conversionRate).toLocaleString()} LKR`,
             images: [img1, img6, img2, img3, img4, img5],
             details: "This package includes luxury hotel stays, first-class flights, gourmet dining, and more.",
-            destinations: ["Oceanic Horizons", "Timeless Trails", "Emerald Highlands"]
+            destinations: [
+                {
+                    name: "Oceanic Horizons",
+                    price: `${(1200 * conversionRate).toLocaleString()} LKR`,
+                    place: "Maldives",
+                    accommodations: "5-star hotel, Private Beach Villa",
+                    details: "Experience the serene beauty of the Maldives with crystal-clear waters and luxurious amenities.",
+                    image: img1,
+                },
+                {
+                    name: "Timeless Trails",
+                    price: `${(900 * conversionRate).toLocaleString()} LKR`,
+                    place: "Switzerland",
+                    accommodations: "Mountain Lodge, Spa Access",
+                    details: "A scenic journey through the Swiss Alps with stunning views and world-class accommodations.",
+                    image: img2,
+                },
+                {
+                    name: "Emerald Highlands",
+                    price: `${(1000 * conversionRate).toLocaleString()} LKR`,
+                    place: "New Zealand",
+                    accommodations: "Luxury Cabin, Adventure Tours",
+                    details: "Explore the breathtaking landscapes of New Zealand with adventure-packed tours and luxury lodging.",
+                    image: img3,
+                },
+            ],
         },
         {
             title: "Golden Package",
             description: "Immerse yourself in the rich culture and history of exotic destinations.",
             logo: logo3,
-            price: `${(4000 * conversionRate).toLocaleString()} LKR`,
             images: [img13, img14, img15, img16, img17, img18],
             details: "This package includes guided tours, cultural events, and local cuisine experiences.",
-            destinations: ["Wilderness Safaris", "Tranquil Wellness Retreats"]
+            destinations: [
+                {
+                    name: "Wilderness Safaris",
+                    price: `${(1100 * conversionRate).toLocaleString()} LKR`,
+                    place: "South Africa",
+                    accommodations: "Safari Lodge, Wildlife Tours",
+                    details: "Join guided safaris and explore the wildlife of Africa while staying in a luxurious safari lodge.",
+                    image: img13,
+                },
+                {
+                    name: "Tranquil Wellness Retreats",
+                    price: `${(950 * conversionRate).toLocaleString()} LKR`,
+                    place: "Bali, Indonesia",
+                    accommodations: "Wellness Resort, Spa Treatments",
+                    details: "Relax and rejuvenate at a peaceful wellness resort with a focus on health and wellbeing.",
+                    image: img14,
+                },
+            ],
         },
         {
             title: "Diamond Package",
@@ -57,7 +97,24 @@ export default function Packages() {
             price: `${(3500 * conversionRate).toLocaleString()} LKR`,
             images: [img19, img20, img21, img22, img23, img24],
             details: "This package includes spa treatments, yoga classes, and scenic retreats.",
-            destinations: ["Serene Sanctuaries", "Island Adventures"]
+            destinations: [
+                {
+                    name: "Serene Sanctuaries",
+                    price: `${(1000 * conversionRate).toLocaleString()} LKR`,
+                    place: "Japan",
+                    accommodations: "Ryokan, Onsen Access",
+                    details: "Unwind in the tranquil Japanese countryside, enjoying traditional ryokan stays and hot spring baths.",
+                    image: img19,
+                },
+                {
+                    name: "Island Adventures",
+                    price: `${(1200 * conversionRate).toLocaleString()} LKR`,
+                    place: "Hawaii, USA",
+                    accommodations: "Beach Resort, Water Sports",
+                    details: "Enjoy island life with water sports and relaxing beachside stays at a luxurious resort.",
+                    image: img20,
+                },
+            ],
         },
         {
             title: "Silver Package",
@@ -66,7 +123,24 @@ export default function Packages() {
             price: `${(3000 * conversionRate).toLocaleString()} LKR`,
             images: [img7, img8, img9, img10, img11, img12],
             details: "This package includes hiking, camping, and adventure sports in thrilling destinations.",
-            destinations: ["Mountain Treks", "Coastal Journeys"]
+            destinations: [
+                {
+                    name: "Mountain Treks",
+                    price: `${(800 * conversionRate).toLocaleString()} LKR`,
+                    place: "Nepal",
+                    accommodations: "Trekking Lodge, Adventure Camp",
+                    details: "Hike through the rugged beauty of the Himalayas, experiencing the thrill of mountain adventures.",
+                    image: img7,
+                },
+                {
+                    name: "Coastal Journeys",
+                    price: `${(850 * conversionRate).toLocaleString()} LKR`,
+                    place: "Australia",
+                    accommodations: "Coastal Camp, Surfing Lessons",
+                    details: "Explore the Australian coastline with camping and surfing experiences in beautiful natural surroundings.",
+                    image: img8,
+                },
+            ],
         },
     ];
 
@@ -79,6 +153,12 @@ export default function Packages() {
             detailsRef.current.scrollIntoView({ behavior: "smooth" });
         }
     }, [activePackage, activeDestination]);
+
+    useEffect(() => {
+        if (activeDestination && detailsRef.current) {
+            detailsRef.current.scrollIntoView({ behavior: "smooth" });
+        }
+    }, [activeDestination]);
 
     const handleDestinationClick = (destination) => {
         setActiveDestination(destination);
@@ -95,7 +175,10 @@ export default function Packages() {
                     <div
                         className={`package ${activePackage === index ? "active" : ""}`}
                         key={index}
-                        onClick={() => setActivePackage(index)}
+                        onClick={() => {
+                            setActivePackage(index);
+                            setActiveDestination(null);
+                        }}
                     >
                         <img src={pkg.logo} alt={`${pkg.title} logo`} className="logo" />
                         <h3>{pkg.title}</h3>
@@ -108,7 +191,6 @@ export default function Packages() {
                 <div className="package-details" ref={detailsRef}>
                     <h2>{packages[activePackage].title}</h2>
                     <p>{packages[activePackage].details}</p>
-                    <p><strong>Price:</strong> {packages[activePackage].price}</p>
                     <div className="images">
                         {packages[activePackage].images.map((img, index) => (
                             <img key={index} src={img} alt={`${packages[activePackage].title} image ${index + 1}`} />
@@ -122,14 +204,18 @@ export default function Packages() {
                                 onClick={() => handleDestinationClick(destination)}
                                 className={`destination-button ${activeDestination === destination ? "selected" : ""}`}
                             >
-                                {destination}
+                                {destination.name}
                             </button>
                         ))}
                     </div>
                     {activeDestination && (
                         <div className="destination-details">
-                            <h4>Destination: {activeDestination}</h4>
-                            <p>Details about {activeDestination} will be displayed here based on your selection.</p>
+                            <h4>Destination: {activeDestination.name}</h4>
+                            <p><strong>Price:</strong> {activeDestination.price}</p>
+                            <p><strong>Place:</strong> {activeDestination.place}</p>
+                            <p><strong>Accommodations:</strong> {activeDestination.accommodations}</p>
+                            <p>{activeDestination.details}</p>
+                            <img src={activeDestination.image} alt={activeDestination.name} className="destination-image" />
                         </div>
                     )}
                 </div>
@@ -262,6 +348,13 @@ const Section = styled.section`
                 border-radius: 10px;
             }
         }
+        
+        h3{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #023e8a;
+        }
 
         .destinations {
             margin-top: 2rem;
@@ -270,42 +363,63 @@ const Section = styled.section`
             gap: 1rem;
 
             .destination-button {
-                padding: 0.7rem 1.5rem;
+                padding: 0.75rem 1.5rem;
                 font-size: 1rem;
-                background-color: #40c4ff;
+                background-color: #2d4059;
+                color: white;
                 border: none;
-                border-radius: 5px;
+                border-radius: 10px;
                 cursor: pointer;
                 transition: background-color 0.3s ease;
 
                 &:hover {
-                    background-color: #2d4059;
-                    color: #fff;
+                    background-color: #2980b9;
                 }
 
                 &.selected {
-                    background-color: #2d4059;
-                    color: #fff;
+                    background-color: #e74c3c;
                 }
             }
         }
 
         .destination-details {
-            margin-top: 1.5rem;
+            margin-top: 2rem;
             padding: 1.5rem;
-            background-color: #e0f7fa;
-            border-radius: 10px;
-            text-align: center;
+            background-color: #ecf0f1;
+            border-radius: 20px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 
             h4 {
                 font-size: 1.5rem;
-                color: #2980b9;
+                color: #34495e;
+                margin-bottom: 1rem;
+                text-align: center;
             }
 
             p {
                 font-size: 1rem;
                 color: #34495e;
+                margin-bottom: 0.75rem;
+                text-align: center;
+
+                strong {
+                    font-weight: bold;
+                    color: #2d4059;
+                }
+            }
+
+            .destination-image {
+                width: 100%;
+                max-width: 300px;
+                height: 200px;
+                object-fit: cover;
+                margin-top: 1rem;
+                border-radius: 15px;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
             }
         }
     }
 `;
+
