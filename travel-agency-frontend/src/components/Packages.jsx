@@ -152,7 +152,7 @@ export default function Packages() {
         if (activePackage !== null && detailsRef.current) {
             detailsRef.current.scrollIntoView({ behavior: "smooth" });
         }
-    }, [activePackage, activeDestination]);
+    }, [activePackage]);
 
     useEffect(() => {
         if (activeDestination && detailsRef.current) {
@@ -215,7 +215,11 @@ export default function Packages() {
                             <p><strong>Place:</strong> {activeDestination.place}</p>
                             <p><strong>Accommodations:</strong> {activeDestination.accommodations}</p>
                             <p>{activeDestination.details}</p>
-                            <img src={activeDestination.image} alt={activeDestination.name} className="destination-image" />
+                            <img src={activeDestination.image} alt={activeDestination.name}
+                                 className="destination-image"/>
+                            <div className="parent-container">
+                                <button className="book-now">Book Now</button>
+                            </div>
                         </div>
                     )}
                 </div>
@@ -418,6 +422,27 @@ const Section = styled.section`
                 display: block;
                 margin-left: auto;
                 margin-right: auto;
+            }
+
+            .parent-container {
+                display: flex;
+                justify-content: center;
+                margin-top: 2rem; /* Example to give some space from the top */
+            }
+
+            .book-now {
+                padding: 0.75rem 1.5rem;
+                background-color: #273c75;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 1rem;
+                transition: background-color 0.3s ease-in-out;
+            }
+
+            .book-now:hover {
+                background-color: #0056b3;
             }
         }
     }
