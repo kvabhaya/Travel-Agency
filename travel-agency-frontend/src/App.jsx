@@ -10,7 +10,8 @@ import Services from "./components/Services";
 import Testimonials from "./components/Testimonials";
 import Packages from "./components/Packages";
 import Contact from "./components/Contact";
-import Oceans from "./components/Oceans"; // Import the Oceans component
+import Oceans from "./components/Oceans";
+import Historical from "./components/Historical";
 
 export default function App() {
     useEffect(() => {
@@ -36,7 +37,8 @@ export default function App() {
             <Navbar />
             <Routes>
                 <Route path="/" element={<><Hero /><Services /><Recommend /><Packages /><Testimonials /><Contact /></>} />
-                <Route path="/oceans" element={<Oceans />} /> {/* Add the route for Oceans */}
+                <Route path="/oceans" element={<Oceans />} />
+                <Route path="/historical" element={<Historical />} />
             </Routes>
             <Footer />
         </div>
