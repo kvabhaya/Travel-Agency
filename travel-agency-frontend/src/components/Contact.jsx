@@ -21,8 +21,23 @@ export default function Contact() {
                 </form>
             </div>
 
-            {/* Bottom UpBar */}
-            <div className="bottom-upbar"></div>
+            {/* Bottom UpBar with Info Section */}
+            <div className="bottom-upbar">
+                <div className="info">
+                    <div className="info-item">
+                        <h4>Email</h4>
+                        <p>contact@gmail.com</p>
+                    </div>
+                    <div className="info-item">
+                        <h4>Location</h4>
+                        <p> Colombo, Sri Lanka</p>
+                    </div>
+                    <div className="info-item">
+                        <h4>Contact</h4>
+                        <p>+94771234567</p>
+                    </div>
+                </div>
+            </div>
 
             {/* Bottom Bar */}
             <div className="bottom-bar"></div>
@@ -58,13 +73,13 @@ const Section = styled.section`
 
     .contact-form {
         background-color: #f7f8fa;
-        padding: 2rem; /* Increased padding for better layout */
+        padding: 2rem;
         border-radius: 10px;
         box-shadow: rgba(52, 152, 219, 0.4) 0px 8px 20px;
         width: 100%;
         max-width: 600px;
-        margin: 0 auto; /* Center horizontally */
-        margin-bottom: 22rem; /* Add space below the form */
+        margin: 0 auto;
+        margin-bottom: 22rem;
 
         form {
             display: flex;
@@ -102,9 +117,38 @@ const Section = styled.section`
         left: 50%;
         transform: translateX(-50%);
         width: 95%;
-        height: 200px;
+        height: 150px;
         background-color: #b2c7d5;
         z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+
+        .info {
+            display: flex;
+            justify-content: center;
+            gap: 22rem; /* Ensures equal space between all items */
+            align-items: center;
+            width: 100%;
+            max-width: 800px;
+
+            .info-item {
+                text-align: center;
+
+                h4 {
+                    font-size: 1.2rem;
+                    color: #2d4059;
+                    margin-bottom: 0.5rem;
+                }
+
+                p {
+                    font-size: 1rem;
+                    color: #34495e;
+                }
+            }
+        }
+
     }
 
     .bottom-bar {
@@ -122,7 +166,12 @@ const Section = styled.section`
 
     @media screen and (max-width: 768px) {
         .contact-form {
-            width: 90%; /* Adjust for smaller screens */
+            width: 90%;
+        }
+
+        .bottom-upbar .info {
+            flex-direction: column;
+            gap: 1rem;
         }
     }
 `;
