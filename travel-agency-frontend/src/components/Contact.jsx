@@ -26,15 +26,15 @@ export default function Contact() {
                 <div className="info">
                     <div className="info-item">
                         <h4>Email</h4>
-                        <p>contact@example.com</p>
+                        <p>contact@gmail.com</p>
                     </div>
                     <div className="info-item">
                         <h4>Location</h4>
-                        <p>123 Main St, Colombo, Sri Lanka</p>
+                        <p> Colombo, Sri Lanka</p>
                     </div>
                     <div className="info-item">
                         <h4>Contact</h4>
-                        <p>+94 77 123 4567</p>
+                        <p>+94771234567</p>
                     </div>
                 </div>
             </div>
@@ -127,7 +127,9 @@ const Section = styled.section`
 
         .info {
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
+            gap: 22rem; /* Ensures equal space between all items */
+            align-items: center;
             width: 100%;
             max-width: 800px;
 
@@ -146,6 +148,7 @@ const Section = styled.section`
                 }
             }
         }
+
     }
 
     .bottom-bar {
