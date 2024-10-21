@@ -21,6 +21,7 @@ export default function Recommend() {
       image: destination2,
       title: "Timeless Trails and Sacred Paths",
       description: "Journey through historical landmarks and sacred religious sites.",
+      link: "/historical",
     },
     {
       image: destination3,
