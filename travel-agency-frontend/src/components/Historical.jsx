@@ -1,20 +1,26 @@
 import React from "react";
-import PropTypes from "prop-types"; // Import PropTypes
+import PropTypes from "prop-types";
 import styled from "styled-components";
 
 // Importing images from assets (replace these with actual image paths)
-// import anuradhapura from "../assets/anuradhapura.avif";
-// import polonnaruwa from "../assets/polonnaruwa.avif";
-// import sigiriya from "../assets/sigiriya.avif";
-// import templeOfTooth from "../assets/temple_of_tooth.avif";
-// import adamsPeak from "../assets/adams_peak.avif";
-// import dambulla from "../assets/dambulla.avif";
-// import galleFort from "../assets/galle_fort.avif";
-// import jaffnaDutchFort from "../assets/jaffna_dutch_fort.avif";
-// import colomboHospital from "../assets/colombo_dutch_hospital.avif";
-// import kandyFestival from "../assets/kandy_festival.avif";
-// import duruthuFestival from "../assets/duruthu_perahera.avif";
-
+import anuradhapura from "../assets/anuradhapura.webp";
+import polonnaruwa from "../assets/polonnaruwa.webp";
+import sigiriya from "../assets/sigiriya.webp";
+import templeOfTooth from "../assets/dhaladha.jpg";
+import adamsPeak from "../assets/adhams.jpeg";
+import dambulla from "../assets/dambulla.webp";
+import galleFort from "../assets/galle_fort_1.webp";
+import jaffnaDutchFort from "../assets/jaffna.webp";
+import colomboHospital from "../assets/colombo.webp";
+import kandyFestival from "../assets/kandy.avif";
+import pongol from "../assets/pongol.jpeg";
+import vesak from "../assets/vesak.jpeg";
+import buddhaStatue from "../assets/giant.jpeg";
+import kataragamaTemple from "../assets/kataragama.jpeg";
+import nallurKovil from "../assets/nallur.webp";
+import nuwaraEliya from "../assets/nuwaraeliya.webp";
+import kandy from "../assets/nuwara.jpeg";
+import oldParliament from "../assets/old.jpeg"
 export default function Historical() {
     return (
         <Section id="historical">
@@ -27,41 +33,59 @@ export default function Historical() {
 
                 <Categories>
                     <Category title="Ancient Kingdoms">
-                        <CardContainer>
+                        <CardContainer large>
                             <LocationCard
-                                // image={anuradhapura}
+                                image={anuradhapura}
                                 title="Anuradhapura"
                                 description="Embark on a journey through the historic ruins of this ancient capital, a UNESCO World Heritage site."
+                                large
                             />
                             <LocationCard
-                                // image={polonnaruwa}
+                                image={polonnaruwa}
                                 title="Polonnaruwa"
                                 description="Explore the well-preserved ruins of Sri Lanka's medieval capital."
                             />
                             <LocationCard
-                                // image={sigiriya}
+                                image={sigiriya}
                                 title="Sigiriya"
                                 description="Climb the iconic rock fortress, a masterpiece of ancient engineering."
+                                large
                             />
                         </CardContainer>
                     </Category>
 
                     <Category title="Sacred Sanctuaries">
-                        <CardContainer>
+                        <CardContainer small>
                             <LocationCard
-                                // image={templeOfTooth}
+                                image={templeOfTooth}
                                 title="Temple of the Tooth"
                                 description="Visit the sacred Buddhist temple housing the relic of the tooth of Buddha."
                             />
                             <LocationCard
-                                // image={adamsPeak}
+                                image={adamsPeak}
                                 title="Adam's Peak"
                                 description="A revered pilgrimage site, known for its stunning views and sacred footprint."
+                                large
                             />
                             <LocationCard
-                                // image={dambulla}
+                                image={dambulla}
                                 title="Dambulla Cave Temple"
                                 description="Marvel at the impressive rock temples filled with ancient Buddha statues and murals."
+                            />
+                            {/*<LocationCard*/}
+                            {/*    image={buddhaStatue}*/}
+                            {/*    title="Giant Buddha Statue"*/}
+                            {/*    description="Visit the enormous Buddha statue in Bodh Gaya, a symbol of peace and reverence."*/}
+                            {/*/>*/}
+                            <LocationCard
+                                image={kataragamaTemple}
+                                title="Kataragama Temple"
+                                description="A sacred site for Buddhists and Hindus, known for its vibrant festivals and rituals."
+                            />
+                            <LocationCard
+                                image={nallurKovil}
+                                title="Nallur Kandaswamy Kovil"
+                                description="A prominent Hindu temple in Jaffna, known for its beautiful architecture and vibrant festivals."
                             />
                         </CardContainer>
                     </Category>
@@ -69,34 +93,57 @@ export default function Historical() {
                     <Category title="Colonial Echoes">
                         <CardContainer>
                             <LocationCard
-                                // image={galleFort}
+                                image={galleFort}
                                 title="Galle Fort"
                                 description="Discover the preserved grandeur of this UNESCO World Heritage site with its colonial architecture."
                             />
                             <LocationCard
-                                // image={jaffnaDutchFort}
+                                image={jaffnaDutchFort}
                                 title="Jaffna Dutch Fort"
                                 description="Explore the historic fort offering insights into the colonial past of Jaffna."
+                                large
                             />
                             <LocationCard
-                                // image={colomboHospital}
+                                image={colomboHospital}
                                 title="Colombo's Dutch Hospital"
                                 description="Visit the historic hospital turned shopping and dining precinct."
                             />
+                            {/*<LocationCard*/}
+                            {/*    image={nuwaraEliya}*/}
+                            {/*    title="Nuwara Eliya"*/}
+                            {/*    description="Known as 'Little England', this town showcases colonial-era architecture and beautiful gardens."*/}
+                            {/*/>*/}
+                            <LocationCard
+                                image={kandy}
+                                title="Kandy"
+                                description="Home to the Temple of the Tooth and colonial buildings that reflect the town's rich history."
+                            />
+                            <LocationCard
+                                image={oldParliament} // make sure to import the corresponding image
+                                title="Old Parliament Building"
+                                description="An architectural marvel of colonial times, reflecting the political history of Sri Lanka."
+                            />
+
                         </CardContainer>
                     </Category>
 
                     <Category title="Cultural Celebrations">
-                        <CardContainer>
+                        <CardContainer large>
                             <LocationCard
-                                // image={kandyFestival}
+                                image={kandyFestival}
                                 title="Kandy Esala Perahera"
                                 description="Immerse in the vibrant festivities of this grand cultural event held in Kandy."
+                                large
                             />
                             <LocationCard
-                                // image={duruthuFestival}
-                                title="Duruthu Perahera"
-                                description="Experience the colorful procession celebrating the arrival of Buddha in Sri Lanka."
+                                image={pongol}
+                                title="Thai Pongal Festival"
+                                description="A multi-day harvest festival celebrated by Tamil people in Sri Lanka."
+                            />
+                            <LocationCard
+                                image={vesak}
+                                title="Vesak Festival"
+                                description="Celebrate the birth, enlightenment, and death of Buddha with colorful lanterns and festivities."
                             />
                         </CardContainer>
                     </Category>
@@ -155,13 +202,13 @@ const Content = styled.div`
 const Categories = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    gap: 2rem; /* Reduced gap to 2rem */
 `;
 
 const CategoryContainer = styled.div`
     background: #fff;
     border-radius: 12px;
-    padding: 2rem;
+    padding: 1rem; /* Reduced padding to 1rem */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 `;
 
@@ -173,92 +220,96 @@ const CategoryTitle = styled.h3`
     text-transform: uppercase;
 `;
 
-const CardContainer = styled.div`
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-    flex-wrap: wrap;
-`;
-
-const Card = styled.div`
-    background: #ffffff;
-    border-radius: 12px;
-    padding: 1.5rem;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s, box-shadow 0.3s;
-    flex: 1 1 calc(33% - 1rem); /* Responsive sizing */
-    min-width: 250px; /* Ensure a minimum width for better layout */
-
-    &:hover {
-        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-    }
-`;
-
-const CardImage = styled.img`
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 12px 12px 0 0;
-    transition: transform 0.3s ease-in-out;
-
-    ${Card}:hover & {
-        transform: scale(1.05);
-    }
-`;
-
-const CardTitle = styled.h4`
-    color: #2c3e50;
-    margin: 0.75rem 0 0.5rem;
-    font-size: 22px;
-    font-weight: 600;
-`;
-
-const CardDescription = styled.p`
-    font-size: 16px;
-    color: #666;
-    margin-bottom: 1rem;
-`;
-
-const ExploreNowButton = styled.button`
-    background: #2c3e50;
-    color: white;
-    padding: 0.75rem 1.5rem;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background 0.3s ease, transform 0.3s, box-shadow 0.3s;
-
-    &:hover {
-        background: #34495e;
-        transform: scale(1.05);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-`;
-
-const LocationCard = ({ image, title, description }) => {
-    return (
-        <Card>
-            <CardImage src={image || "/path/to/default-image.jpg"} alt={title} />
-            <CardTitle>{title}</CardTitle>
-            <CardDescription>{description}</CardDescription>
-            <ExploreNowButton>Explore Now</ExploreNowButton>
-        </Card>
-    );
-};
-
-LocationCard.propTypes = {
-    image: PropTypes.string,
-    title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-};
-
 const Category = ({ title, children }) => (
     <CategoryContainer>
         <CategoryTitle>{title}</CategoryTitle>
-        <CardContainer>{children}</CardContainer>
+        {children}
     </CategoryContainer>
 );
+
+const CardContainer = styled.div`
+    display: grid;
+    grid-template-columns: ${({ large }) => (large ? 'repeat(auto-fill, minmax(300px, 1fr))' : 'repeat(auto-fill, minmax(200px, 1fr))')};
+    gap: 1rem; /* Adjust the gap between cards */
+    justify-items: center;
+`;
+
+const Card = styled.div`
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 1rem; /* Reduced padding */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 200px; /* Adjusted min-height */
+    text-align: center;
+
+    &:hover {
+        transform: translateY(-5px) scale(1.02);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    img {
+        border-radius: 10px;
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        margin-bottom: 0.5rem; /* Reduced margin */
+        transition: transform 0.3s ease;
+    }
+
+    img:hover {
+        transform: scale(1.05);
+    }
+
+    h4 {
+        margin: 0.5rem 0;
+        color: #2c3e50;
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    p {
+        color: #555;
+        margin-bottom: 0.5rem; /* Reduced margin */
+        font-size: 1rem;
+        flex-grow: 1;
+    }
+
+    button {
+        background-color: #2c3e50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        transition: background 0.3s ease, transform 0.3s ease;
+
+        &:hover {
+            background-color: #34495e;
+            transform: scale(1.05);
+        }
+    }
+`;
+
+function LocationCard({ image, title, description, large }) {
+    return (
+        <Card imageOnLeft={large}>
+            <img src={image} alt={title} />
+            <h4>{title}</h4>
+            <p>{description}</p>
+            <button>Explore More</button>
+        </Card>
+    );
+}
+
+LocationCard.propTypes = {
+    image: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    large: PropTypes.bool,
+};
 
 Category.propTypes = {
     title: PropTypes.string.isRequired,
