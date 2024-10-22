@@ -137,21 +137,21 @@ export default function EmeraldHighlands() {
 }
 
 const Section = styled.section`
-  padding: 4rem 2rem;
-  text-align: center;
-  background: linear-gradient(to bottom, #e0ffe0, #ccffcc);
-  animation: fadeIn 1s ease-in-out;
+    padding: 4rem 2rem;
+    text-align: center;
+    background: linear-gradient(to bottom, #e0ffe0, #256725);
+    animation: fadeIn 1s ease-in-out;
 
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
 `;
 
 const Content = styled.div`
