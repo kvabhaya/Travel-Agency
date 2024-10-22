@@ -27,11 +27,13 @@ export default function Recommend() {
       image: destination3,
       title: "Emerald Highlands and Scenic Vistas",
       description: "Discover the breathtaking beauty of Sri Lanka's highlands and tea plantations.",
+      link: "/emerald",
     },
     {
       image: destination4,
       title: "Wilderness Safaris and Thrill Quests",
       description: "Experience thrilling safaris and adventure sports in Sri Lanka's wilderness.",
+      link: "/safaris",
     },
     {
       image: destination5,
