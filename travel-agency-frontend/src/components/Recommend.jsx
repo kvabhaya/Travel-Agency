@@ -37,8 +37,9 @@ export default function Recommend() {
     },
     {
       image: destination5,
-      title: "Tranquil Wellness Retreats",
+      title: "Serene Sanctuaries and Wellness Retreats",
       description: "Relax and rejuvenate in wellness retreats surrounded by nature.",
+      link: "/wellness",
     },
   ];
 
