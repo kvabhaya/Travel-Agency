@@ -282,7 +282,7 @@ const CardDescription = styled.p`
 `;
 
 const ExploreNowButton = styled.button`
-    background: #2c3e50;
+    background: #5b7d9f;
     color: white;
     padding: 0.75rem 1.5rem;
     border-radius: 8px;

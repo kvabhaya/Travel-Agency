@@ -12,6 +12,7 @@ import Packages from "./components/Packages";
 import Contact from "./components/Contact";
 import Oceans from "./components/Oceans";
 import Historical from "./components/Historical";
+import Emerald from "./components/Emerald";
 
 export default function App() {
     useEffect(() => {
@@ -39,6 +40,7 @@ export default function App() {
                 <Route path="/" element={<><Hero /><Services /><Recommend /><Packages /><Testimonials /><Contact /></>} />
                 <Route path="/oceans" element={<Oceans />} />
                 <Route path="/historical" element={<Historical />} />
+                <Route path="/emerald" element={<Emerald />} />
             </Routes>
             <Footer />
         </div>
