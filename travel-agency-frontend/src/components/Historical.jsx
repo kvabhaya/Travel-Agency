@@ -146,7 +146,7 @@ export default function Historical() {
 const Section = styled.section`
     padding: 4rem 2rem;
     text-align: center;
-    background: linear-gradient(to bottom, #fff3e6, #f9f9f9);
+    background: linear-gradient(to bottom, #fff3e6, #d34e4e);
     animation: fadeIn 1s ease-in-out;
 
     @keyframes fadeIn {

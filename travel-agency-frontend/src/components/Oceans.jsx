@@ -138,7 +138,7 @@ export default function Oceans() {
 const Section = styled.section`
     padding: 4rem 2rem;
     text-align: center;
-    background: linear-gradient(to bottom, #e6f7ff, #f9f9f9);
+    background: linear-gradient(to bottom, #e6f7ff, #223156);
     animation: fadeIn 1s ease-in-out; /* Add animation for the section */
     @keyframes fadeIn {
         0% {

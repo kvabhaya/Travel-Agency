@@ -33,6 +33,7 @@ export default function Recommend() {
       image: destination4,
       title: "Wilderness Safaris and Thrill Quests",
       description: "Experience thrilling safaris and adventure sports in Sri Lanka's wilderness.",
+      link: "/safaris",
     },
     {
       image: destination5,
