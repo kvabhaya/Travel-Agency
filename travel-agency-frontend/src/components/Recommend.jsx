@@ -27,6 +27,7 @@ export default function Recommend() {
       image: destination3,
       title: "Emerald Highlands and Scenic Vistas",
       description: "Discover the breathtaking beauty of Sri Lanka's highlands and tea plantations.",
+      link: "/emerald",
     },
     {
       image: destination4,

@@ -15,10 +15,8 @@ import colomboHospital from "../assets/colombo.webp";
 import kandyFestival from "../assets/kandy.avif";
 import pongol from "../assets/pongol.jpeg";
 import vesak from "../assets/vesak.jpeg";
-import buddhaStatue from "../assets/giant.jpeg";
 import kataragamaTemple from "../assets/kataragama.jpeg";
 import nallurKovil from "../assets/nallur.webp";
-import nuwaraEliya from "../assets/nuwaraeliya.webp";
 import kandy from "../assets/nuwara.jpeg";
 import oldParliament from "../assets/old.jpeg"
 export default function Historical() {
@@ -72,11 +70,7 @@ export default function Historical() {
                                 title="Dambulla Cave Temple"
                                 description="Marvel at the impressive rock temples filled with ancient Buddha statues and murals."
                             />
-                            {/*<LocationCard*/}
-                            {/*    image={buddhaStatue}*/}
-                            {/*    title="Giant Buddha Statue"*/}
-                            {/*    description="Visit the enormous Buddha statue in Bodh Gaya, a symbol of peace and reverence."*/}
-                            {/*/>*/}
+
                             <LocationCard
                                 image={kataragamaTemple}
                                 title="Kataragama Temple"
@@ -108,11 +102,7 @@ export default function Historical() {
                                 title="Colombo's Dutch Hospital"
                                 description="Visit the historic hospital turned shopping and dining precinct."
                             />
-                            {/*<LocationCard*/}
-                            {/*    image={nuwaraEliya}*/}
-                            {/*    title="Nuwara Eliya"*/}
-                            {/*    description="Known as 'Little England', this town showcases colonial-era architecture and beautiful gardens."*/}
-                            {/*/>*/}
+
                             <LocationCard
                                 image={kandy}
                                 title="Kandy"
@@ -278,7 +268,7 @@ const Card = styled.div`
     }
 
     button {
-        background-color: #2c3e50;
+        background-color: #eaaa5d;
         color: white;
         border: none;
         border-radius: 5px;
@@ -287,7 +277,7 @@ const Card = styled.div`
         transition: background 0.3s ease, transform 0.3s ease;
 
         &:hover {
-            background-color: #34495e;
+            background-color: #493b2c;
             transform: scale(1.05);
         }
     }
