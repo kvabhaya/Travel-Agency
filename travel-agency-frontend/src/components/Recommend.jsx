@@ -21,21 +21,25 @@ export default function Recommend() {
       image: destination2,
       title: "Timeless Trails and Sacred Paths",
       description: "Journey through historical landmarks and sacred religious sites.",
+      link: "/historical",
     },
     {
       image: destination3,
       title: "Emerald Highlands and Scenic Vistas",
       description: "Discover the breathtaking beauty of Sri Lanka's highlands and tea plantations.",
+      link: "/emerald",
     },
     {
       image: destination4,
       title: "Wilderness Safaris and Thrill Quests",
       description: "Experience thrilling safaris and adventure sports in Sri Lanka's wilderness.",
+      link: "/safaris",
     },
     {
       image: destination5,
-      title: "Tranquil Wellness Retreats",
+      title: "Serene Sanctuaries and Wellness Retreats",
       description: "Relax and rejuvenate in wellness retreats surrounded by nature.",
+      link: "/wellness",
     },
   ];
 
