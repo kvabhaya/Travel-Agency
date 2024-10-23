@@ -287,7 +287,7 @@ function LocationCard({ image, title, description, large }) {
             {image && <img src={image} alt={title} />}
             <h4>{title}</h4>
             <p>{description}</p>
-            <button>View Details</button>
+            <button>Explore More</button>
         </Card>
     );
 }

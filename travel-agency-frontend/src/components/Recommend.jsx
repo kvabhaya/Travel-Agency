@@ -14,12 +14,12 @@ export default function Recommend() {
     {
       image: destination1,
       title: "Oceanic Horizons and Coastal Charms",
-      description: "Explore pristine beaches, tranquil coastal views, and ocean activities.",
+      description: "Immerse yourself in the beauty of tranquil coastal views, and exhilarating ocean activities.",
       link: "/oceans", // Add a link for the Oceans component
     },
     {
       image: destination2,
-      title: "Timeless Trails and Sacred Paths",
+      title: "Timeless Trails and Extremely Sacred Paths",
       description: "Journey through historical landmarks and sacred religious sites.",
       link: "/historical",
     },
@@ -37,8 +37,9 @@ export default function Recommend() {
     },
     {
       image: destination5,
-      title: "Tranquil Wellness Retreats",
-      description: "Relax and rejuvenate in wellness retreats surrounded by nature.",
+      title: "Serene Sanctuaries and Wellness Retreats",
+      description: "Find your inner peace in wellness retreats nestled amidst breathtaking natural landscapes.",
+      link: "/wellness",
     },
   ];
 
@@ -166,8 +167,8 @@ const Section = styled.section`
 
       .view-details:hover {
         background-color: transparent;
-        color: #db3236;
-        border: 2px solid #db3236;
+        color: #ffffff;
+        border: 2px solid #ffffff;
       }
     }
 
