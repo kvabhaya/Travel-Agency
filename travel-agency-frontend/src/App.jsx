@@ -12,7 +12,9 @@ import Packages from "./components/Packages";
 import Contact from "./components/Contact";
 import Oceans from "./components/Oceans";
 import Historical from "./components/Historical";
-
+import Emerald from "./components/Emerald";
+import Safaris from "./components/Safaris";
+import Wellness from "./components/Wellness";
 export default function App() {
     useEffect(() => {
         const sr = ScrollReveal({
@@ -36,9 +38,24 @@ export default function App() {
             <ScrollToTop />
             <Navbar />
             <Routes>
-                <Route path="/" element={<><Hero /><Services /><Recommend /><Packages /><Testimonials /><Contact /></>} />
+                <Route
+                    path="/"
+                    element={
+                        <>
+                            <Hero />
+                            <Services />
+                            <Recommend />
+                            <Packages />
+                            <Testimonials />
+                            <Contact />
+                        </>
+                    }
+                />
                 <Route path="/oceans" element={<Oceans />} />
                 <Route path="/historical" element={<Historical />} />
+                <Route path="/emerald" element={<Emerald />} />
+                <Route path="/safaris" element={<Safaris />} />
+                <Route path="/wellness" element={<Wellness />} />
             </Routes>
             <Footer />
         </div>

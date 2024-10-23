@@ -99,10 +99,10 @@ export default function Packages() {
             details: "This package includes spa treatments, wellness retreats, and scenic tours in beautiful destinations.",
             destinations: [
                 {
-                    name: "Wellness Retreat",
+                    name: "Wellness.jsx Retreat",
                     price: `${(1200 * conversionRate).toLocaleString()} LKR`,
                     place: "Sigiriya",
-                    accommodations: "Ayurvedic Spa Resort, Wellness Programs",
+                    accommodations: "Ayurvedic Spa Resort, Wellness.jsx Programs",
                     details: "Unwind in the shadow of the Sigiriya rock fortress with luxurious spa treatments and wellness activities.",
                     image: img13,
                 },
