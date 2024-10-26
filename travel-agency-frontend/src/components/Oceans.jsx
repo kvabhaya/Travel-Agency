@@ -249,7 +249,9 @@ const Card = styled.div`
     padding: 1.5rem;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s, box-shadow 0.3s;
-    flex: 1; /* Allow cards to grow equally */
+    flex: 1;
+    position: relative; /* Set relative positioning for absolute child elements */
+    padding-bottom: 4rem; /* Add extra bottom padding to prevent overlap */
 
     &:hover {
         box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
@@ -284,26 +286,30 @@ const CardDescription = styled.p`
 const ExploreNowButton = styled.button`
     background: #5b7d9f;
     color: white;
-    padding: 0.75rem 1.5rem;
-    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    width: 250px;
+    border-radius: 5px;
     border: none;
     cursor: pointer;
     font-size: 16px;
-    transition: background 0.3s ease, transform 0.3s, box-shadow 0.3s; /* Added transition for box-shadow */
+    position: absolute;
+    bottom: 1rem; /* Position button near the bottom */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    transition: background 0.3s ease, transform 0.3s, box-shadow 0.3s;
 
     &:hover {
-        background: #34495e; /* Darken button on hover */
-        transform: scale(1.05); /* Scale button on hover */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+        background: #34495e;
+        transform: translate(-50%, -5%);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 `;
-
 const LocationCard = ({ image, title, description }) => (
     <Card>
         <CardImage src={image} alt={title} />
         <CardTitle>{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
-        <ExploreNowButton>Explore Now</ExploreNowButton>
+        <ExploreNowButton>Explore More</ExploreNowButton>
     </Card>
 );
 

@@ -7,8 +7,6 @@ import anuradhapura from "../assets/anuradhapura.webp";
 import polonnaruwa from "../assets/polonnaruwa.webp";
 import sigiriya from "../assets/sigiriya.webp";
 import templeOfTooth from "../assets/dhaladha.jpg";
-import adamsPeak from "../assets/adhams.jpeg";
-import dambulla from "../assets/dambulla.webp";
 import galleFort from "../assets/galle_fort_1.webp";
 import jaffnaDutchFort from "../assets/jaffna.webp";
 import colomboHospital from "../assets/colombo.webp";
@@ -19,6 +17,10 @@ import kataragamaTemple from "../assets/kataragama.jpeg";
 import nallurKovil from "../assets/nallur.webp";
 import kandy from "../assets/nuwara.jpeg";
 import oldParliament from "../assets/old.jpeg"
+import mosque from "../assets/mosque.jpg"
+import church from"../assets/church.jpeg"
+import ramadhan from "../assets/ramadhan.jpeg"
+import christmas from "../assets/christmas.jpeg"
 export default function Historical() {
     return (
         <Section id="historical">
@@ -60,16 +62,17 @@ export default function Historical() {
                                 description="Visit the sacred Buddhist temple housing the relic of the tooth of Buddha."
                             />
                             <LocationCard
-                                image={adamsPeak}
-                                title="Adam's Peak"
-                                description="A revered pilgrimage site, known for its stunning views and sacred footprint."
+                                image={church}
+                                title="Basilica of Our Lady of Lanka"
+                                description="An iconic Roman Catholic basilica, renowned for its spiritual significance and beautiful hilltop views."
                                 large
                             />
                             <LocationCard
-                                image={dambulla}
-                                title="Dambulla Cave Temple"
-                                description="Marvel at the impressive rock temples filled with ancient Buddha statues and murals."
+                                image={mosque}
+                                title="Jami Ul-Alfar Mosque"
+                                description="A striking red-and-white mosque in Colombo, known for its unique Indo-Saracenic architecture and cultural importance."
                             />
+
 
                             <LocationCard
                                 image={kataragamaTemple}
@@ -118,12 +121,11 @@ export default function Historical() {
                     </Category>
 
                     <Category title="Cultural Celebrations">
-                        <CardContainer large>
+                        <CardContainer>
                             <LocationCard
                                 image={kandyFestival}
                                 title="Kandy Esala Perahera"
                                 description="Immerse in the vibrant festivities of this grand cultural event held in Kandy."
-                                large
                             />
                             <LocationCard
                                 image={pongol}
@@ -135,8 +137,19 @@ export default function Historical() {
                                 title="Vesak Festival"
                                 description="Celebrate the birth, enlightenment, and death of Buddha with colorful lanterns and festivities."
                             />
+                            <LocationCard
+                                image={ramadhan}  // Replace with an actual image of Eid celebration if available
+                                title="Eid al-Fitr"
+                                description="Mark the end of Ramadan with family gatherings, charity, and festive meals celebrated by Sri Lanka’s Muslim community."
+                            />
+                            <LocationCard
+                                image={christmas}  // Replace with an actual image of Christmas celebration if available
+                                title="Christmas"
+                                description="Experience Christmas in Sri Lanka with joyous celebrations, decorations, and gatherings marking the birth of Jesus Christ."
+                            />
                         </CardContainer>
                     </Category>
+
                 </Categories>
             </Content>
         </Section>
@@ -146,7 +159,7 @@ export default function Historical() {
 const Section = styled.section`
     padding: 4rem 2rem;
     text-align: center;
-    background: linear-gradient(to bottom, #fff3e6, #d34e4e);
+    background: linear-gradient(to bottom, #fff3e6, #604e36);
     animation: fadeIn 1s ease-in-out;
 
     @keyframes fadeIn {
@@ -237,7 +250,7 @@ const Card = styled.div`
 
     &:hover {
         transform: translateY(-5px) scale(1.02);
-        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 12px 24px rgb(147, 120, 89);
     }
 
     img {
@@ -268,14 +281,14 @@ const Card = styled.div`
     }
 
     button {
-        background-color: #eaaa5d;
+        background-color: #a88259;
         color: white;
         border: none;
         border-radius: 5px;
         padding: 0.5rem 1rem;
         cursor: pointer;
         transition: background 0.3s ease, transform 0.3s ease;
-
+font-size: 16px;
         &:hover {
             background-color: #493b2c;
             transform: scale(1.05);
