@@ -1,45 +1,92 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import axios from "axios";
+import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 
 export default function Contact() {
-    const [active, setActive] = useState(1);
+    const [email, setEmail] = useState("");
+    const [name, setName] = useState("");
+    const [message, setMessage] = useState("");  // Add state for the message
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        // Send form data to the backend
+        axios.post("http://localhost:3000/submit-form", { email, name, message })
+            .then(response => {
+                alert(response.data.message);
+            })
+            .catch(error => {
+                console.error("There was an error submitting the form!", error);
+            });
+    };
 
     return (
         <Section id="contact">
-            {/* Title Section */}
             <div className="title">
                 <h2>Contact</h2>
                 <p>Any questions or remarks? Just write us a message!</p>
             </div>
 
-            {/* Contact Form Section */}
             <div className="contact-form">
-                <form>
-                    <input type="email" placeholder="Enter a valid email address" required />
-                    <input type="text" placeholder="Enter your Name" required />
+                <form onSubmit={handleSubmit}>
+                    <input
+                        type="email"
+                        placeholder="Enter a valid email address"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                    />
+                    <input
+                        type="text"
+                        placeholder="Enter your Name"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        required
+                    />
+                    <textarea
+                        placeholder="Enter your message"
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
+                        rows="5"
+                        required
+                    ></textarea>
                     <button type="submit">Submit</button>
                 </form>
             </div>
 
-            {/* Bottom UpBar with Info Section */}
             <div className="bottom-upbar">
                 <div className="info">
                     <div className="info-item">
-                        <h4>Email</h4>
-                        <p>contact@gmail.com</p>
+                        <div className="info-email">
+                            <div className="icon">
+                                <FaEnvelope />
+                            </div>
+                            <h4>Email</h4>
+                            <p>contact@gmail.com</p>
+                        </div>
                     </div>
                     <div className="info-item">
-                        <h4>Location</h4>
-                        <p> Colombo, Sri Lanka</p>
+                        <div className="info-loca">
+                            <div className="icon">
+                                <FaMapMarkerAlt />
+                            </div>
+                            <h4>Location</h4>
+                            <p>Sri Lanka</p>
+                        </div>
                     </div>
                     <div className="info-item">
-                        <h4>Contact</h4>
-                        <p>+94771234567</p>
+                        <div className="info-con">
+                            <div className="icon">
+                                <FaPhoneAlt />
+                            </div>
+                            <h4>Contact</h4>
+                            <p>+94771234567</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            {/* Bottom Bar */}
             <div className="bottom-bar"></div>
         </Section>
     );
@@ -87,12 +134,18 @@ const Section = styled.section`
             gap: 1rem;
             align-items: center;
 
-            input {
+            input, textarea {
                 padding: 0.75rem;
                 border: none;
                 border-radius: 5px;
                 width: 80%;
                 background-color: #ecf0f1;
+                font-family: inherit;
+                font-size: 1rem;
+            }
+
+            textarea {
+                resize: none; /* Prevents resizing */
             }
 
             button {
@@ -117,7 +170,7 @@ const Section = styled.section`
         left: 50%;
         transform: translateX(-50%);
         width: 95%;
-        height: 150px;
+        height: 100px;
         background-color: #b2c7d5;
         z-index: 1;
         display: flex;
@@ -127,28 +180,43 @@ const Section = styled.section`
 
         .info {
             display: flex;
-            justify-content: center;
-            gap: 22rem; /* Ensures equal space between all items */
+            justify-content: space-evenly;
             align-items: center;
             width: 100%;
-            max-width: 800px;
 
             .info-item {
-                text-align: center;
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                margin-bottom: 60px;
 
-                h4 {
-                    font-size: 1.2rem;
-                    color: #2d4059;
-                    margin-bottom: 0.5rem;
+                .icon {
+                    background-color: #2d4059;
+                    width: 70px;
+                    height: 70px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                    color: white;
+                    font-size: 1.5rem;
+                    margin-bottom: 10px;
                 }
 
-                p {
-                    font-size: 1rem;
-                    color: #34495e;
+                .text {
+                    h4 {
+                        font-size: 1.2rem;
+                        color: #2d4059;
+                        margin-bottom: 0.2rem;
+                    }
+
+                    p {
+                        font-size: 1rem;
+                        color: #34495e;
+                    }
                 }
             }
         }
-
     }
 
     .bottom-bar {
@@ -175,3 +243,4 @@ const Section = styled.section`
         }
     }
 `;
+
