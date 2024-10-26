@@ -273,7 +273,7 @@ const Card = styled.div`
         padding: 0.5rem 1rem;
         cursor: pointer;
         transition: background 0.3s ease, transform 0.3s ease;
-
+font-size: 16px;
         &:hover {
             background-color: #22042a;
             transform: scale(1.05);

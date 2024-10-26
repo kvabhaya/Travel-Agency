@@ -13,16 +13,18 @@ import styled from "styled-components";
  import diyalumaFalls from "../assets/diyaluma.jpeg";
  import bambarakandaFalls from "../assets/bambarakanda.jpeg";
  import kandyToEllaTrain from "../assets/kandy to ella.jpeg";
- import Badulla from "../assets/badulla.jpeg";
+ import matara from "../assets/matara.jpeg";
 
 // Reusable Location Card Component
 const LocationCard = ({ image, title, description }) => {
     return (
         <Card>
             <CardImage src={image} alt={title} />
-            <CardTitle>{title}</CardTitle>
-            <CardDescription>{description}</CardDescription>
-            <ExploreNowButton>Explore Now</ExploreNowButton>
+            <CardContent>
+                <CardTitle>{title}</CardTitle>
+                <CardDescription>{description}</CardDescription>
+            </CardContent>
+            <ExploreNowButton>Explore More</ExploreNowButton>
         </Card>
     );
 };
@@ -124,10 +126,11 @@ export default function EmeraldHighlands() {
                                 description="Take the scenic train ride from Kandy to Ella, a journey through misty mountains, lush tea estates, and iconic bridges."
                             />
                             <LocationCard
-                                image={Badulla}
-                                title="Badulla to Colombo"
-                                description="Experience the scenic ride from Badulla to Colombo, passing through lush forests and rolling hills."
+                                image={matara}
+                                title="Beliatta to Colombo"
+                                description="Journey through Sri Lanka's stunning landscapes from Beliatta to Colombo, featuring coastal views, historic towns, and vibrant local culture along the way."
                             />
+
                         </CardContainer>
                     </Category>
                 </Categories>
@@ -253,12 +256,20 @@ const Card = styled.div`
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s, box-shadow 0.3s;
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative; /* Enable absolute positioning for child elements */
 
   &:hover {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
   }
 `;
-
+const CardContent = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+`;
 const CardImage = styled.img`
   width: 100%;
   height: 180px;
@@ -289,13 +300,19 @@ const ExploreNowButton = styled.button`
     background: #46d984;
     color: #fff;
     padding: 0.5rem 1rem;
+    width:250px;
     border: none;
     border-radius: 6px;
     font-size: 16px;
     cursor: pointer;
     transition: background 0.3s ease;
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%); /* Center the button horizontally */
 
     &:hover {
         background: #219150;
     }
 `;
+
