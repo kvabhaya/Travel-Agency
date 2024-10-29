@@ -14,13 +14,13 @@ export default function Recommend() {
     {
       image: destination1,
       title: "Oceanic Horizons and Coastal Charms",
-      description: "Immerse yourself in the beauty of tranquil coastal views, and exhilarating ocean activities.",
+      description: "Immerse yourself in the beauty of tranquil coastal views and exhilarating ocean activities.",
       link: "/oceans", // Add a link for the Oceans component
     },
     {
       image: destination2,
       title: "Timeless Trails and Extremely Sacred Paths",
-      description: "Journey through historical landmarks and sacred religious sites.",
+      description: "Journey through historical landmarks and sacred sites, experiencing cultural heritage and spiritual significance.",
       link: "/historical",
     },
     {
@@ -77,6 +77,7 @@ export default function Recommend() {
 
 const Section = styled.section`
   padding: 2rem 0;
+  background-color: #f8f9fa; /* Light background for contrast */
 
   .title {
     text-align: center;
@@ -86,6 +87,7 @@ const Section = styled.section`
       font-family: "Oswald", sans-serif;
       font-weight: 600;
       font-size: 50px;
+      color: #333; /* Darker text color */
     }
 
     h4 {
@@ -139,14 +141,14 @@ const Section = styled.section`
       transition: opacity 0.5s ease;
 
       h3 {
-        color: white;
-        font-size: 1.8rem;
+        color: #ffdd57; /* Bright color for title */
+        font-size: 1.5rem;
         text-align: center;
         font-weight: bold;
       }
 
       p {
-        color: #ccc;
+        color: #ffffff; /* White text for better readability */
         font-size: 1rem;
         text-align: center;
         margin: 10px 0;
@@ -163,12 +165,12 @@ const Section = styled.section`
         font-weight: 600;
         transition: background-color 0.3s ease;
         border-radius: 10px;
-      }
 
-      .view-details:hover {
-        background-color: transparent;
-        color: #ffffff;
-        border: 2px solid #ffffff;
+        &:hover {
+          background-color: transparent;
+          color: #ffffff;
+          border: 2px solid #ffffff;
+        }
       }
     }
 
