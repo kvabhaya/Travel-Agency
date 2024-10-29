@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ebab9a23-7139-4408-ada5-b8e3fa144cb5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.firebase/hosting.cHVibGlj.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.firebaserc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/travel-agency-frontend.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firebase.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/2.avif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/4.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/Avatar-img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/adams.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/adhams.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/anuradhapura.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/backg1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/badulla.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/bambarakanda.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/bentota.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/bentotas.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/beruwala_harbour.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/blog1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/blog2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/blog3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/christmas.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/church.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/colombo.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/colombow.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/contactImg.avif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/coral.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/dambulla.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/dambullas.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/delft.avif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/destination1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/destination2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/destination3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/destination4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/destination5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/dhaladha.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/diyaluma.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/ella.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/ellarock.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/ellazipling.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/galle_fort.avif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/galle_fort_1.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/giant.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/haputale.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/hero.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/hero1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/hero2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/hero3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/hero4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/hero5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/hiking.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/hikkaduwa.avif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/hikkaduwa.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/hikkaduwaHarbour.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/hikkaduwas.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/hortan.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/horton.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img1.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img10.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img11.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img12.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img13.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img14.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img15.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img16.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img17.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img18.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img19.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img20.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img21.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img22.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img23.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img24.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img3.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img4.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img5.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img6.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img7.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img8.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img9.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/info1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/info2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/info3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/jaffna.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/jetskiing.avif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/kalpitiya.avif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/kalptiya_island.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/kandy to ella.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/kandy.avif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/kandyayur.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/kataragama.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/kitulgala.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/knuckles.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/kumana.avif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/madolDuwa.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/matara.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/minneriya.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/mirissa.avif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/mosque.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/nallur.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/negombo.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/negombo_habour.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/negombos.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/nuwara.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/nuwaraEliyas.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/nuwaraeliya.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/nuwaras.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/old.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/pasikuda.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/peak.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/piggoen_island.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/pigoen_island.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/polonnaruwa.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/pongol.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/ramadhan.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/ravana.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/service1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/service2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/service3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/service4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/sigiriya.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/sinharaja.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/snorkeling.avif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/spas.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/spat.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/trinco.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/udawalawa.avif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/unawatuna.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/vesak.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/weligama.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/whaleWatching.avif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/wilpattu.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/yala.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/yogae.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/yogag.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/yogak.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/yogau.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Contact.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Emerald.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Hero.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Historical.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Oceans.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Packages.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Recommend.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Safaris.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ScrollToTop.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Services.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Testimonials.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Wellness.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/firebaseConfig.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2nIL6remRFSRWhThUR0XznxHBkG" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Abhayasundara&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/media/abhayasundara/6f2c8e19-35fb-433c-ab46-a879fe1cc2c1/Projects/Travel-Agency/travel-agency-frontend/src/assets&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/abhayasundara/Downloads/ideaIU-2024.2.2/idea-IU-242.22855.74/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$" />
+      <setting name="debug" value="false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.22855.74" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.22855.74" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ebab9a23-7139-4408-ada5-b8e3fa144cb5" name="Changes" comment="" />
+      <created>1728655471568</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1728655471568</updated>
+      <workItem from="1728655473104" duration="4440000" />
+      <workItem from="1728660814111" duration="5189000" />
+      <workItem from="1728674647982" duration="70000" />
+      <workItem from="1728706560182" duration="2454000" />
+      <workItem from="1728791001281" duration="1287000" />
+      <workItem from="1728924186258" duration="432000" />
+      <workItem from="1729097681580" duration="884000" />
+      <workItem from="1729153241228" duration="55000" />
+      <workItem from="1729153964056" duration="252000" />
+      <workItem from="1729154465525" duration="2690000" />
+      <workItem from="1729170018141" duration="2361000" />
+      <workItem from="1729222426706" duration="2410000" />
+      <workItem from="1729234654087" duration="684000" />
+      <workItem from="1729322779911" duration="2832000" />
+      <workItem from="1729656547244" duration="6283000" />
+      <workItem from="1729848248373" duration="605000" />
+      <workItem from="1730174226617" duration="33735000" />
+      <workItem from="1730228063127" duration="1349000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
