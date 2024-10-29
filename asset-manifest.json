@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Travel-Agency/static/css/main.e6c13ad2.css",
-    "main.js": "/Travel-Agency/static/js/main.37f29c6c.js",
+    "main.js": "/Travel-Agency/static/js/main.f9d8d7bd.js",
     "static/media/hero2.jpg": "/Travel-Agency/static/media/hero2.f72d4b52b4ac86b70bde.jpg",
     "static/media/hero3.jpg": "/Travel-Agency/static/media/hero3.3b35e5c1137fe0333e97.jpg",
     "static/media/hero4.jpg": "/Travel-Agency/static/media/hero4.62b519f8a815728bd167.jpg",
@@ -18,6 +18,7 @@
     "static/media/polonnaruwa.webp": "/Travel-Agency/static/media/polonnaruwa.ec46a91d2a8e0fe83a72.webp",
     "static/media/anuradhapura.webp": "/Travel-Agency/static/media/anuradhapura.4b0d69a4da56f036643f.webp",
     "static/media/dhaladha.jpg": "/Travel-Agency/static/media/dhaladha.15c27be5c1de06e4f3f3.jpg",
+    "static/media/4.webp": "/Travel-Agency/static/media/4.ad19412dba0027563366.webp",
     "static/media/negombo_habour.webp": "/Travel-Agency/static/media/negombo_habour.d88d8b086df1b71c9b73.webp",
     "static/media/logo.png": "/Travel-Agency/static/media/logo.2f52d2f6e2d56317ce3c.png",
     "static/media/nuwaraEliyas.webp": "/Travel-Agency/static/media/nuwaraEliyas.ae826211e4f6c14263a2.webp",
@@ -27,33 +28,32 @@
     "static/media/destination5.jpg": "/Travel-Agency/static/media/destination5.bed5c86a351ff1074f98.jpg",
     "static/media/sigiriya.webp": "/Travel-Agency/static/media/sigiriya.2c9b94c3a15232569d3c.webp",
     "static/media/galle_fort_1.webp": "/Travel-Agency/static/media/galle_fort_1.14c664e76263d5a1bcab.webp",
-    "static/media/logo3.webp": "/Travel-Agency/static/media/logo3.998bdd3a66b363512e13.webp",
     "static/media/nallur.webp": "/Travel-Agency/static/media/nallur.028389cc830fec69952d.webp",
     "static/media/mosque.jpg": "/Travel-Agency/static/media/mosque.10585aa4e322bbe44e37.jpg",
     "static/media/piggoen_island.jpg": "/Travel-Agency/static/media/piggoen_island.467cbea42cd8a221395d.jpg",
     "static/media/hikkaduwaHarbour.jpg": "/Travel-Agency/static/media/hikkaduwaHarbour.d7a7794cc761ac0bd6c0.jpg",
-    "static/media/logo1.jpg": "/Travel-Agency/static/media/logo1.668f65595643ce37bd9e.jpg",
     "static/media/colombo.webp": "/Travel-Agency/static/media/colombo.759c0b51e08f0f3d02fb.webp",
     "static/media/kalptiya_island.webp": "/Travel-Agency/static/media/kalptiya_island.a83139398196a25f9911.webp",
     "static/media/whaleWatching.avif": "/Travel-Agency/static/media/whaleWatching.657a079892d20b0fdf88.avif",
     "static/media/jetskiing.avif": "/Travel-Agency/static/media/jetskiing.9180e40342a8f8fb22d3.avif",
     "static/media/img2.jpg": "/Travel-Agency/static/media/img2.0b7d964f74f5d4aea23c.jpg",
-    "static/media/logo2.avif": "/Travel-Agency/static/media/logo2.da6b7713001e8505ff74.avif",
     "static/media/galle_fort.avif": "/Travel-Agency/static/media/galle_fort.8838777c48dea476c1ac.avif",
     "static/media/yala.webp": "/Travel-Agency/static/media/yala.314fc9592da95f1af653.webp",
     "static/media/hikkaduwa.avif": "/Travel-Agency/static/media/hikkaduwa.5f942c973be970c35784.avif",
     "static/media/ella.webp": "/Travel-Agency/static/media/ella.6fd3cd7e4cb8ff0df7b8.webp",
     "static/media/kandy.avif": "/Travel-Agency/static/media/kandy.eb464246e87ad8c86382.avif",
+    "static/media/2.avif": "/Travel-Agency/static/media/2.a644a1da7bfa8699228e.avif",
     "static/media/img1.webp": "/Travel-Agency/static/media/img1.59c0bed5dda5f690fa83.webp",
     "static/media/unawatuna.webp": "/Travel-Agency/static/media/unawatuna.7f099d32ab8d68d240ca.webp",
     "static/media/beruwala_harbour.webp": "/Travel-Agency/static/media/beruwala_harbour.87815b2a2b65012eb8af.webp",
     "static/media/delft.avif": "/Travel-Agency/static/media/delft.bdbf8a45a8e4a44b006b.avif",
     "static/media/pasikuda.webp": "/Travel-Agency/static/media/pasikuda.f3e071466a1b54a047e3.webp",
+    "static/media/3.jpg": "/Travel-Agency/static/media/3.0006762dd279c9df0e77.jpg",
     "static/media/minneriya.webp": "/Travel-Agency/static/media/minneriya.64499dd1654fc8b2e80e.webp",
     "static/media/jaffna.webp": "/Travel-Agency/static/media/jaffna.70ad27f00ca0eb972c3a.webp",
     "static/media/snorkeling.avif": "/Travel-Agency/static/media/snorkeling.2d2ac12d827b487ee49d.avif",
+    "static/media/1.jpg": "/Travel-Agency/static/media/1.3b5c380b6f0e2576cd1b.jpg",
     "static/media/kalpitiya.avif": "/Travel-Agency/static/media/kalpitiya.b56eb5d956bf48e1208d.avif",
-    "static/media/logo4.webp": "/Travel-Agency/static/media/logo4.bd91d6d5b3ec0e311499.webp",
     "static/media/vesak.jpeg": "/Travel-Agency/static/media/vesak.37e593283b5dea93cbf8.jpeg",
     "static/media/trinco.jpeg": "/Travel-Agency/static/media/trinco.18f2cd2763416b3fbf11.jpeg",
     "static/media/church.jpeg": "/Travel-Agency/static/media/church.2160d2864a6aaefc32d8.jpeg",
@@ -103,10 +103,10 @@
     "static/media/img20.jpeg": "/Travel-Agency/static/media/img20.199e5d8f07be37140235.jpeg",
     "index.html": "/Travel-Agency/index.html",
     "main.e6c13ad2.css.map": "/Travel-Agency/static/css/main.e6c13ad2.css.map",
-    "main.37f29c6c.js.map": "/Travel-Agency/static/js/main.37f29c6c.js.map"
+    "main.f9d8d7bd.js.map": "/Travel-Agency/static/js/main.f9d8d7bd.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.37f29c6c.js"
+    "static/js/main.f9d8d7bd.js"
   ]
 }
