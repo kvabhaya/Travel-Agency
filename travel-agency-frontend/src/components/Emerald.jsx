@@ -1,22 +1,22 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import styled from "styled-components";
 
-
- import nuwaraEliya from "../assets/nuwaraEliyas.webp";
- import ella from "../assets/ella.webp";
- import haputale from "../assets/haputale.webp";
- import hortonPlains from "../assets/hortan.jpeg";
- import adamsPeak from "../assets/adams.jpeg";
- import ellaRock from "../assets/ellarock.jpeg";
- import knucklesRange from "../assets/knuckles.webp";
- import ravanaFalls from "../assets/ravana.jpeg";
- import diyalumaFalls from "../assets/diyaluma.jpeg";
- import bambarakandaFalls from "../assets/bambarakanda.jpeg";
- import kandyToEllaTrain from "../assets/kandy to ella.jpeg";
- import matara from "../assets/matara.jpeg";
+// Importing images for each location
+import nuwaraEliya from "../assets/nuwaraEliyas.webp";
+import ella from "../assets/ella.webp";
+import haputale from "../assets/haputale.webp";
+import hortonPlains from "../assets/hortan.jpeg";
+import adamsPeak from "../assets/adams.jpeg";
+import ellaRock from "../assets/ellarock.jpeg";
+import knucklesRange from "../assets/knuckles.webp";
+import ravanaFalls from "../assets/ravana.jpeg";
+import diyalumaFalls from "../assets/diyaluma.jpeg";
+import bambarakandaFalls from "../assets/bambarakanda.jpeg";
+import kandyToEllaTrain from "../assets/kandy to ella.jpeg";
+import matara from "../assets/matara.jpeg";
 
 // Reusable Location Card Component
-const LocationCard = ({ image, title, description }) => {
+const LocationCard = ({ image, title, description, onExploreMore }) => {
     return (
         <Card>
             <CardImage src={image} alt={title} />
@@ -24,7 +24,7 @@ const LocationCard = ({ image, title, description }) => {
                 <CardTitle>{title}</CardTitle>
                 <CardDescription>{description}</CardDescription>
             </CardContent>
-            <ExploreNowButton>Explore More</ExploreNowButton>
+            <ExploreNowButton onClick={onExploreMore}>Explore More</ExploreNowButton>
         </Card>
     );
 };
@@ -40,6 +40,23 @@ const Category = ({ title, children }) => {
 };
 
 export default function EmeraldHighlands() {
+    const [selectedLocation, setSelectedLocation] = useState(null);
+    const detailsRef = useRef(null);
+    const [scrollPosition, setScrollPosition] = useState(0);
+
+    const handleExploreMore = (location) => {
+        setSelectedLocation(location);
+        setScrollPosition(window.scrollY);
+        if (detailsRef.current) {
+            detailsRef.current.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
+    const handleCloseDetails = () => {
+        setSelectedLocation(null);
+        window.scrollTo({ top: scrollPosition, behavior: "smooth" });
+    };
+
     return (
         <Section id="emerald-highlands">
             <Content>
@@ -56,19 +73,22 @@ export default function EmeraldHighlands() {
                     <Category title="Tea Leaf Trails">
                         <CardContainer>
                             <LocationCard
-                                 image={nuwaraEliya}
+                                image={nuwaraEliya}
                                 title="Nuwara Eliya"
                                 description="Explore the rolling tea plantations of Nuwara Eliya, known for its cool climate and colonial charm."
+                                onExploreMore={() => handleExploreMore({ title: "Nuwara Eliya", details: "Detailed info about Nuwara Eliya's tea plantations and scenic beauty." })}
                             />
                             <LocationCard
                                 image={ella}
                                 title="Ella"
                                 description="Walk through the picturesque Ella tea estates, famous for their scenic vistas and the Nine Arches Bridge."
+                                onExploreMore={() => handleExploreMore({ title: "Ella", details: "Discover Ella's picturesque tea estates and the Nine Arches Bridge." })}
                             />
                             <LocationCard
-                                 image={haputale}
+                                image={haputale}
                                 title="Haputale"
                                 description="Visit Haputale, a serene location known for its panoramic views and surrounding tea estates."
+                                onExploreMore={() => handleExploreMore({ title: "Haputale", details: "Serene views and tea estates await in Haputale." })}
                             />
                         </CardContainer>
                     </Category>
@@ -79,21 +99,25 @@ export default function EmeraldHighlands() {
                                 image={hortonPlains}
                                 title="Horton Plains"
                                 description="Hike across the breathtaking plateau of Horton Plains, leading to the famous World's End drop."
+                                onExploreMore={() => handleExploreMore({ title: "Horton Plains", details: "Explore the plateau of Horton Plains and World's End." })}
                             />
                             <LocationCard
                                 image={adamsPeak}
                                 title="Adam's Peak"
                                 description="Challenge yourself with a trek up Adam's Peak, a sacred pilgrimage site offering spectacular sunrise views."
+                                onExploreMore={() => handleExploreMore({ title: "Adam's Peak", details: "Trek up Adam's Peak for a sacred pilgrimage experience and stunning views." })}
                             />
                             <LocationCard
-                                 image={ellaRock}
+                                image={ellaRock}
                                 title="Ella Rock"
                                 description="Conquer the Ella Rock trail and enjoy panoramic views of the surrounding valleys and mountains."
+                                onExploreMore={() => handleExploreMore({ title: "Ella Rock", details: "Hike up Ella Rock for panoramic views of valleys and mountains." })}
                             />
                             <LocationCard
-                                 image={knucklesRange}
+                                image={knucklesRange}
                                 title="Knuckles Range"
                                 description="Explore the rugged Knuckles Range, a UNESCO World Heritage site known for its biodiversity and hiking trails."
+                                onExploreMore={() => handleExploreMore({ title: "Knuckles Range", details: "Explore the UNESCO World Heritage site, the Knuckles Range." })}
                             />
                         </CardContainer>
                     </Category>
@@ -101,19 +125,22 @@ export default function EmeraldHighlands() {
                     <Category title="Cascade Spectacles">
                         <CardContainer>
                             <LocationCard
-                                 image={ravanaFalls}
+                                image={ravanaFalls}
                                 title="Ravana Falls"
                                 description="Marvel at the cascading beauty of Ravana Falls, one of the most popular and picturesque waterfalls in Ella."
+                                onExploreMore={() => handleExploreMore({ title: "Ravana Falls", details: "Enjoy the beauty of the Ravana Falls." })}
                             />
                             <LocationCard
-                                 image={diyalumaFalls}
+                                image={diyalumaFalls}
                                 title="Diyaluma Falls"
                                 description="Visit the majestic Diyaluma Falls, Sri Lanka's second-highest waterfall, offering stunning views and natural pools."
+                                onExploreMore={() => handleExploreMore({ title: "Diyaluma Falls", details: "Explore the second-highest waterfall in Sri Lanka, Diyaluma Falls." })}
                             />
                             <LocationCard
                                 image={bambarakandaFalls}
                                 title="Bambarakanda Falls"
                                 description="Witness the towering Bambarakanda Falls, Sri Lanka's tallest waterfall, nestled within lush greenery."
+                                onExploreMore={() => handleExploreMore({ title: "Bambarakanda Falls", details: "Sri Lanka's tallest waterfall, surrounded by lush scenery." })}
                             />
                         </CardContainer>
                     </Category>
@@ -121,19 +148,29 @@ export default function EmeraldHighlands() {
                     <Category title="Train of Tranquility">
                         <CardContainer>
                             <LocationCard
-                                 image={kandyToEllaTrain}
+                                image={kandyToEllaTrain}
                                 title="Kandy to Ella"
                                 description="Take the scenic train ride from Kandy to Ella, a journey through misty mountains, lush tea estates, and iconic bridges."
+                                onExploreMore={() => handleExploreMore({ title: "Kandy to Ella Train", details: "Experience the scenic train journey from Kandy to Ella." })}
                             />
                             <LocationCard
                                 image={matara}
                                 title="Beliatta to Colombo"
-                                description="Journey through Sri Lanka's stunning landscapes from Beliatta to Colombo, featuring coastal views, historic towns, and vibrant local culture along the way."
+                                description="Journey through Sri Lanka's stunning landscapes from Beliatta to Colombo, featuring coastal views, historic towns, and vibrant local culture."
+                                onExploreMore={() => handleExploreMore({ title: "Beliatta to Colombo", details: "Coastal journey with views and historic stops from Beliatta to Colombo." })}
                             />
-
                         </CardContainer>
                     </Category>
                 </Categories>
+
+                {/* Displaying selected location details */}
+                {selectedLocation && (
+                    <DetailsContainer ref={detailsRef}>
+                        <h2>{selectedLocation.title}</h2>
+                        <p>{selectedLocation.details}</p>
+                        <CloseButton onClick={handleCloseDetails}>Close</CloseButton>
+                    </DetailsContainer>
+                )}
             </Content>
         </Section>
     );
@@ -144,17 +181,6 @@ const Section = styled.section`
     text-align: center;
     background: linear-gradient(to bottom, #e0ffe0, #256725);
     animation: fadeIn 1s ease-in-out;
-
-    @keyframes fadeIn {
-        0% {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-        100% {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
 `;
 
 const Content = styled.div`
@@ -167,14 +193,6 @@ const Content = styled.div`
     font-size: 48px;
     color: #2c3e50;
     margin-bottom: 0.5rem;
-
-    @media (max-width: 768px) {
-      font-size: 36px;
-    }
-
-    @media (max-width: 480px) {
-      font-size: 28px;
-    }
   }
 
   h2 {
@@ -183,14 +201,6 @@ const Content = styled.div`
     font-size: 36px;
     color: #34495e;
     margin-bottom: 1rem;
-
-    @media (max-width: 768px) {
-      font-size: 28px;
-    }
-
-    @media (max-width: 480px) {
-      font-size: 24px;
-    }
   }
 
   p {
@@ -198,14 +208,6 @@ const Content = styled.div`
     color: #555;
     margin-bottom: 2rem;
     line-height: 1.7;
-
-    @media (max-width: 768px) {
-      font-size: 1rem;
-    }
-
-    @media (max-width: 480px) {
-      font-size: 0.9rem;
-    }
   }
 `;
 
@@ -213,10 +215,6 @@ const Categories = styled.div`
   display: flex;
   flex-direction: column;
   gap: 4rem;
-
-  @media (max-width: 768px) {
-    gap: 2rem;
-  }
 `;
 
 const CategoryContainer = styled.div`
@@ -239,14 +237,6 @@ const CardContainer = styled.div`
   justify-content: space-between;
   gap: 1rem;
   flex-wrap: wrap;
-
-  @media (max-width: 768px) {
-    justify-content: center;
-  }
-
-  @media (max-width: 480px) {
-    gap: 0.5rem;
-  }
 `;
 
 const Card = styled.div`
@@ -313,6 +303,30 @@ const ExploreNowButton = styled.button`
 
     &:hover {
         background: #219150;
+    }
+`;
+
+
+const DetailsContainer = styled.div`
+    margin-top: 2rem;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+`;
+
+const CloseButton = styled.button`
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 1rem;
+    &:hover {
+        background: #c0392b;
     }
 `;
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useRef, useState} from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
@@ -21,6 +21,24 @@ import negomboBeach from "../assets/negombos.jpeg";
 import dambulla from "../assets/dambullas.jpeg";
 
 export default function SereneSanctuaries() {
+    const [selectedLocation, setSelectedLocation] = useState(null);
+    const detailsRef = useRef(null);
+    const [scrollPosition, setScrollPosition] = useState(0);
+
+    const handleExploreMore = (location) => {
+        setSelectedLocation(location);
+        setScrollPosition(window.scrollY);
+        if (detailsRef.current) {
+            detailsRef.current.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
+    const handleCloseDetails = () => {
+        setSelectedLocation(null);
+        window.scrollTo({ top: scrollPosition, behavior: "smooth" });
+    };
+
+
     return (
         <Section id="serene-sanctuaries">
             <Content>
@@ -34,28 +52,40 @@ export default function SereneSanctuaries() {
                     <Category title="Ayurvedic Escapes">
                         <CardContainer>
                             <LocationCard
-                                 image={bentota}
+                                image={bentota}
                                 title="Ayurveda Resorts in Bentota"
                                 description="Rejuvenate at premier Ayurveda resorts surrounded by nature."
-                                cardSize="large"
+                                onExploreMore={() => handleExploreMore({
+                                    title: "Ayurveda Resorts in Bentota",
+                                    details: "Discover the peaceful ambiance and wellness treatments at Bentota's top Ayurveda resorts."
+                                })}
                             />
                             <LocationCard
-                                 image={negombo}
+                                image={negombo}
                                 title="Ayurveda Resorts in Negombo"
                                 description="Experience traditional healing in the coastal charm of Negombo."
-                                cardSize="medium"
+                                onExploreMore={() => handleExploreMore({
+                                    title: "Ayurveda Resorts in Negombo",
+                                    details: "Enjoy holistic healing therapies with a view of the coast in Negombo."
+                                })}
                             />
                             <LocationCard
-                                 image={weligama}
+                                image={weligama}
                                 title="Ayurveda Resorts in Weligama"
                                 description="Enjoy tranquil treatments with stunning sea views."
-                                cardSize="medium"
+                                onExploreMore={() => handleExploreMore({
+                                    title: "Ayurveda Resorts in Weligama",
+                                    details: "Rejuvenate your body and soul with seaside Ayurveda treatments."
+                                })}
                             />
                             <LocationCard
-                                 image={kandy}
+                                image={kandy}
                                 title="Ayurveda Retreats in Kandy"
                                 description="Explore the healing arts surrounded by the beauty of the hill country."
-                                cardSize="small"
+                                onExploreMore={() => handleExploreMore({
+                                    title: "Ayurveda Retreats in Kandy",
+                                    details: "Connect with nature and explore Ayurvedic therapies in the hills of Kandy."
+                                })}
                             />
                         </CardContainer>
                     </Category>
@@ -63,28 +93,40 @@ export default function SereneSanctuaries() {
                     <Category title="Spiritual Sojourns">
                         <CardContainer>
                             <LocationCard
-                                 image={yogak}
+                                image={yogak}
                                 title="Yoga Retreats in Kandy"
                                 description="Find peace and balance amidst the scenic beauty of Kandy."
-                                cardSize="medium"
+                                onExploreMore={() => handleExploreMore({
+                                    title: "Yoga Retreats in Kandy",
+                                    details: "Achieve inner harmony surrounded by the beauty of Kandy's landscapes."
+                                })}
                             />
                             <LocationCard
-                                 image={yogag}
+                                image={yogag}
                                 title="Meditation Retreats in Galle"
                                 description="Reconnect with your inner self in the historic town of Galle."
-                                cardSize="large"
+                                onExploreMore={() => handleExploreMore({
+                                    title: "Meditation Retreats in Galle",
+                                    details: "Explore meditative practices in the historic and serene town of Galle."
+                                })}
                             />
                             <LocationCard
-                                 image={yogae}
+                                image={yogae}
                                 title="Wellness Retreats in Ella"
                                 description="Breathe in serenity in the lush hills of Ella."
-                                cardSize="medium"
+                                onExploreMore={() => handleExploreMore({
+                                    title: "Wellness Retreats in Ella",
+                                    details: "Experience peaceful wellness retreats in Ella's lush, green surroundings."
+                                })}
                             />
                             <LocationCard
                                 image={yogau}
                                 title="Holistic Retreats in Unawatuna"
                                 description="Unwind with yoga and meditation by the beach."
-                                cardSize="small"
+                                onExploreMore={() => handleExploreMore({
+                                    title: "Holistic Retreats in Unawatuna",
+                                    details: "Relax by the beach with holistic yoga and meditation sessions."
+                                })}
                             />
                         </CardContainer>
                     </Category>
@@ -92,28 +134,40 @@ export default function SereneSanctuaries() {
                     <Category title="Spa Havens">
                         <CardContainer>
                             <LocationCard
-                                 image={nuwaras}
+                                image={nuwaras}
                                 title="Luxurious Spas in Nuwara Eliya"
                                 description="Indulge in luxurious spa treatments amid beautiful landscapes."
-                                cardSize="large"
+                                onExploreMore={() => handleExploreMore({
+                                    title: "Luxurious Spas in Nuwara Eliya",
+                                    details: "Treat yourself to a luxury spa experience in the cool highlands of Nuwara Eliya."
+                                })}
                             />
                             <LocationCard
-                                 image={sigiriyas}
+                                image={sigiriyas}
                                 title="Spa Resorts in Sigiriya"
                                 description="Experience relaxation with views of the ancient rock fortress."
-                                cardSize="medium"
+                                onExploreMore={() => handleExploreMore({
+                                    title: "Spa Resorts in Sigiriya",
+                                    details: "Relax in spa resorts with magnificent views of Sigiriya."
+                                })}
                             />
                             <LocationCard
-                                 image={tangalle}
+                                image={tangalle}
                                 title="Spa Retreats in Tangalle"
                                 description="Relax in coastal resorts offering rejuvenating spa therapies."
-                                cardSize="small"
+                                onExploreMore={() => handleExploreMore({
+                                    title: "Spa Retreats in Tangalle",
+                                    details: "Unwind in coastal Tangalle with soothing spa therapies."
+                                })}
                             />
                             <LocationCard
-                                 image={hikkaduwa}
+                                image={hikkaduwa}
                                 title="Spa Retreats in Hikkaduwa"
                                 description="Pamper yourself at beachfront spas known for their wellness treatments."
-                                cardSize="medium"
+                                onExploreMore={() => handleExploreMore({
+                                    title: "Spa Retreats in Hikkaduwa",
+                                    details: "Enjoy beachside spa treatments in Hikkaduwa's relaxing atmosphere."
+                                })}
                             />
                         </CardContainer>
                     </Category>
@@ -121,32 +175,55 @@ export default function SereneSanctuaries() {
                     <Category title="Holistic Healing">
                         <CardContainer>
                             <LocationCard
-                                 image={bentotas}
+                                image={bentotas}
                                 title="Bentota Traditional Ayurvedic Therapies"
                                 description="Experience authentic Ayurvedic treatments across the island."
-                                cardSize="medium"
+                                onExploreMore={() => handleExploreMore({
+                                    title: "Bentota Traditional Ayurvedic Therapies",
+                                    details: "Receive traditional Ayurvedic treatments in the calm setting of Bentota."
+                                })}
                             />
                             <LocationCard
                                 image={colombo}
                                 title="Wellness Centers in Colombo"
                                 description="Explore wellness options in the heart of the city."
-                                cardSize="medium"
+                                onExploreMore={() => handleExploreMore({
+                                    title: "Wellness Centers in Colombo",
+                                    details: "Discover diverse wellness treatments in the vibrant city of Colombo."
+                                })}
                             />
                             <LocationCard
-                                 image={negomboBeach}
+                                image={negomboBeach}
                                 title="Beachfront Wellness Retreats in Negombo"
                                 description="Revitalize your spirit at beachfront wellness centers."
-                                cardSize="small"
+                                onExploreMore={() => handleExploreMore({
+                                    title: "Beachfront Wellness Retreats in Negombo",
+                                    details: "Experience refreshing wellness therapies by the sea in Negombo."
+                                })}
                             />
                             <LocationCard
-                                 image={dambulla}
+                                image={dambulla}
                                 title="Wellness Retreats in Dambulla"
                                 description="Find tranquility and holistic healing in the historical city of Dambulla."
-                                cardSize="medium"
+                                onExploreMore={() => handleExploreMore({
+                                    title: "Wellness Retreats in Dambulla",
+                                    details: "Relax and heal in Dambulla's tranquil wellness retreats."
+                                })}
                             />
                         </CardContainer>
                     </Category>
                 </Categories>
+
+
+                {/* Displaying selected location details */}
+                {selectedLocation && (
+                    <DetailsContainer ref={detailsRef}>
+                        <h2>{selectedLocation.title}</h2>
+                        <p>{selectedLocation.details}</p>
+                        <CloseButton onClick={handleCloseDetails}>Close</CloseButton>
+                    </DetailsContainer>
+                )}
+
             </Content>
         </Section>
     );
@@ -301,24 +378,69 @@ const Card = styled.div`
     }
 `;
 
-
-const LocationCard = ({ image, title, description, cardSize }) => (
+const LocationCard = ({ image, title, description, cardSize, onExploreMore }) => (
     <Card cardSize={cardSize}>
         {image && <img src={image} alt={title} />}
         <h4>{title}</h4>
         <p>{description}</p>
-        <button>Explore More</button>
+        <ExploreNowButton onClick={onExploreMore}>Explore More</ExploreNowButton>
     </Card>
 );
+
 
 LocationCard.propTypes = {
     image: PropTypes.string,
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     cardSize: PropTypes.oneOf(["small", "medium", "large"]).isRequired,
+    onExploreMore: PropTypes.func.isRequired,
 };
 
 Category.propTypes = {
     title: PropTypes.string.isRequired,
     children: PropTypes.node.isRequired,
 };
+
+const ExploreNowButton = styled.button`
+    background: #46d984;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    width:250px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%); /* Center the button horizontally */
+
+    &:hover {
+        background: #219150;
+    }
+`;
+
+
+const DetailsContainer = styled.div`
+    margin-top: 2rem;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+`;
+
+const CloseButton = styled.button`
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 1rem;
+    &:hover {
+        background: #c0392b;
+    }
+`;
