@@ -25,10 +25,10 @@ import img21 from "../assets/img21.jpeg";
 import img22 from "../assets/img22.jpeg";
 import img23 from "../assets/img23.jpeg";
 import img24 from "../assets/img24.jpeg";
-import logo1 from "../assets/logo1.jpg";
-import logo2 from "../assets/logo2.avif";
-import logo3 from "../assets/logo3.webp";
-import logo4 from "../assets/logo4.webp";
+import logo1 from "../assets/1.jpg";
+import logo2 from "../assets/2.avif";
+import logo3 from "../assets/3.jpg";
+import logo4 from "../assets/4.webp";
 
 export default function Packages() {
     const conversionRate = 325;
@@ -245,7 +245,7 @@ const Section = styled.section`
 
         .package {
             padding: 2rem;
-            background-color: #bdc3c7;
+            background-color: #95a5a6;
             border-radius: 20px;
             box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
             transition: all 0.3s ease;
@@ -254,7 +254,7 @@ const Section = styled.section`
 
             &:hover {
                 transform: translateY(-0.5rem);
-                background-color: #2980b9;
+                background-color: #70a1ff;
                 box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 20px;
             }
 
@@ -264,7 +264,7 @@ const Section = styled.section`
                 object-fit: cover;
                 margin-bottom: 1rem;
                 border-radius: 50%;
-                border: 2px solid #40c4ff;
+                border: 3px solid #000000;
             }
 
             h3 {
@@ -285,10 +285,6 @@ const Section = styled.section`
             box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 25px;
             transform: translateY(-0.8rem);
 
-            .logo {
-                border: 3px solid white;
-            }
-
             h3 {
                 color: white;
             }
@@ -296,7 +292,13 @@ const Section = styled.section`
             p {
                 color: #f1f1f1;
             }
+
+            &:hover {
+                color: #000000;
+            }
         }
+        
+        
     }
 
     .package-details {
