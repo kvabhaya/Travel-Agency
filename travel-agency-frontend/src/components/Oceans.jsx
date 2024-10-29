@@ -29,6 +29,7 @@ export default function Oceans() {
                     Experience the beauty of pristine beaches, tranquil coastal views, and exhilarating ocean activities. Whether you're looking to relax by the shore, indulge in water sports, or explore marine life, Sri Lanka offers an unforgettable coastal experience.
                 </p>
 
+
                 <Categories>
                     <Category title="Tropical Shores">
                         <CardContainer>
