@@ -71,6 +71,7 @@ const Testimonials = () => {
                     <span>{testimonial.title}</span>
                   </div>
                 </div>
+                <RatingStars rating={testimonial.rating} />
               </div>
           ))}
         </div>
@@ -112,6 +113,14 @@ const Testimonials = () => {
       </Section>
   );
 };
+
+const RatingStars = ({ rating }) => (
+    <div className="rating-display">
+      {[1, 2, 3, 4, 5].map((star) => (
+          <Star key={star} isSelected={star <= rating}>★</Star>
+      ))}
+    </div>
+);
 
 const Section = styled.section`
   margin: 5rem 0;
@@ -165,12 +174,19 @@ const Section = styled.section`
           }
         }
       }
+
+      .rating-display {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+        gap: 0.2rem;
+      }
     }
   }
 
   .see-more {
     display: block;
-    margin: 2rem auto; /* Centering the button */
+    margin: 2rem auto;
     padding: 0.5rem 1rem;
     background-color: #007bff;
     color: white;
