@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useRef, useState} from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
@@ -21,7 +21,28 @@ import mosque from "../assets/mosque.jpg"
 import church from"../assets/church.jpeg"
 import ramadhan from "../assets/ramadhan.jpeg"
 import christmas from "../assets/christmas.jpeg"
+
 export default function Historical() {
+    const [selectedLocation, setSelectedLocation] = useState(null);
+    const detailsRef = useRef(null); // Create a ref for the details container
+    const [scrollPosition, setScrollPosition] = useState(0); // Store the scroll position
+
+    const handleExploreMore = (location) => {
+        setSelectedLocation(location);
+        setScrollPosition(window.scrollY);
+
+        // Scroll to the details container if it exists
+        if (detailsRef.current) {
+            detailsRef.current.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
+    const handleCloseDetails = () => {
+        setSelectedLocation(null);
+        window.scrollTo({ top: scrollPosition, behavior: "smooth" });
+    };
+
+
     return (
         <Section id="historical">
             <Content>
@@ -38,17 +59,20 @@ export default function Historical() {
                                 image={anuradhapura}
                                 title="Anuradhapura"
                                 description="Embark on a journey through the historic ruins of this ancient capital, a UNESCO World Heritage site."
+                                onExploreMore={() => handleExploreMore({ title: "Anuradhapura", details: "Anuradhapura is famous for its well-preserved ruins." })}
                                 large
                             />
                             <LocationCard
                                 image={polonnaruwa}
                                 title="Polonnaruwa"
                                 description="Explore the well-preserved ruins of Sri Lanka's medieval capital."
+                                onExploreMore={() => handleExploreMore({ title: "Polonnaruwa", details: "Polonnaruwa showcases stunning ancient architecture." })}
                             />
                             <LocationCard
                                 image={sigiriya}
                                 title="Sigiriya"
                                 description="Climb the iconic rock fortress, a masterpiece of ancient engineering."
+                                onExploreMore={() => handleExploreMore({ title: "Sigiriya", details: "Sigiriya is renowned for its rock fortress and frescoes." })}
                                 large
                             />
                         </CardContainer>
@@ -60,29 +84,31 @@ export default function Historical() {
                                 image={templeOfTooth}
                                 title="Temple of the Tooth"
                                 description="Visit the sacred Buddhist temple housing the relic of the tooth of Buddha."
+                                onExploreMore={() => handleExploreMore({ title: "Temple of the Tooth", details: "This temple is a UNESCO World Heritage site." })}
                             />
                             <LocationCard
                                 image={church}
                                 title="Basilica of Our Lady of Lanka"
                                 description="An iconic Roman Catholic basilica, renowned for its spiritual significance and beautiful hilltop views."
-                                large
+                                onExploreMore={() => handleExploreMore({ title: "Basilica of Our Lady of Lanka", details: "This basilica is a major pilgrimage site." })}
                             />
                             <LocationCard
                                 image={mosque}
                                 title="Jami Ul-Alfar Mosque"
                                 description="A striking red-and-white mosque in Colombo, known for its unique Indo-Saracenic architecture and cultural importance."
+                                onExploreMore={() => handleExploreMore({ title: "Jami Ul-Alfar Mosque", details: "This mosque is known for its architectural beauty." })}
                             />
-
-
                             <LocationCard
                                 image={kataragamaTemple}
                                 title="Kataragama Temple"
                                 description="A sacred site for Buddhists and Hindus, known for its vibrant festivals and rituals."
+                                onExploreMore={() => handleExploreMore({ title: "Kataragama Temple", details: "Kataragama is significant for its multicultural festivals." })}
                             />
                             <LocationCard
                                 image={nallurKovil}
                                 title="Nallur Kandaswamy Kovil"
                                 description="A prominent Hindu temple in Jaffna, known for its beautiful architecture and vibrant festivals."
+                                onExploreMore={() => handleExploreMore({ title: "Nallur Kovil", details: "This temple is celebrated for its annual festival." })}
                             />
                         </CardContainer>
                     </Category>
@@ -93,30 +119,33 @@ export default function Historical() {
                                 image={galleFort}
                                 title="Galle Fort"
                                 description="Discover the preserved grandeur of this UNESCO World Heritage site with its colonial architecture."
+                                onExploreMore={() => handleExploreMore({ title: "Galle Fort", details: "Galle Fort is known for its historic charm." })}
                             />
                             <LocationCard
                                 image={jaffnaDutchFort}
                                 title="Jaffna Dutch Fort"
                                 description="Explore the historic fort offering insights into the colonial past of Jaffna."
+                                onExploreMore={() => handleExploreMore({ title: "Jaffna Dutch Fort", details: "This fort provides a glimpse into Jaffna's history." })}
                                 large
                             />
                             <LocationCard
                                 image={colomboHospital}
                                 title="Colombo's Dutch Hospital"
                                 description="Visit the historic hospital turned shopping and dining precinct."
+                                onExploreMore={() => handleExploreMore({ title: "Dutch Hospital", details: "This site is now a vibrant shopping area." })}
                             />
-
                             <LocationCard
                                 image={kandy}
                                 title="Kandy"
                                 description="Home to the Temple of the Tooth and colonial buildings that reflect the town's rich history."
+                                onExploreMore={() => handleExploreMore({ title: "Kandy", details: "Kandy is a cultural hub of Sri Lanka." })}
                             />
                             <LocationCard
-                                image={oldParliament} // make sure to import the corresponding image
+                                image={oldParliament}
                                 title="Old Parliament Building"
                                 description="An architectural marvel of colonial times, reflecting the political history of Sri Lanka."
+                                onExploreMore={() => handleExploreMore({ title: "Old Parliament Building", details: "This building showcases colonial architecture." })}
                             />
-
                         </CardContainer>
                     </Category>
 
@@ -126,31 +155,44 @@ export default function Historical() {
                                 image={kandyFestival}
                                 title="Kandy Esala Perahera"
                                 description="Immerse in the vibrant festivities of this grand cultural event held in Kandy."
+                                onExploreMore={() => handleExploreMore({ title: "Kandy Esala Perahera", details: "This festival is a colorful display of culture." })}
                             />
                             <LocationCard
                                 image={pongol}
                                 title="Thai Pongal Festival"
                                 description="A multi-day harvest festival celebrated by Tamil people in Sri Lanka."
+                                onExploreMore={() => handleExploreMore({ title: "Thai Pongal Festival", details: "Pongal is celebrated with joyous family gatherings." })}
                             />
                             <LocationCard
                                 image={vesak}
                                 title="Vesak Festival"
                                 description="Celebrate the birth, enlightenment, and death of Buddha with colorful lanterns and festivities."
+                                onExploreMore={() => handleExploreMore({ title: "Vesak Festival", details: "Vesak is marked by special decorations and events." })}
                             />
                             <LocationCard
-                                image={ramadhan}  // Replace with an actual image of Eid celebration if available
+                                image={ramadhan}
                                 title="Eid al-Fitr"
                                 description="Mark the end of Ramadan with family gatherings, charity, and festive meals celebrated by Sri Lanka’s Muslim community."
+                                onExploreMore={() => handleExploreMore({ title: "Eid al-Fitr", details: "Eid al-Fitr is celebrated with community and family." })}
                             />
                             <LocationCard
-                                image={christmas}  // Replace with an actual image of Christmas celebration if available
+                                image={christmas}
                                 title="Christmas"
                                 description="Experience Christmas in Sri Lanka with joyous celebrations, decorations, and gatherings marking the birth of Jesus Christ."
+                                onExploreMore={() => handleExploreMore({ title: "Christmas", details: "Christmas celebrations include festive meals and events." })}
                             />
                         </CardContainer>
                     </Category>
-
                 </Categories>
+
+                {/* Displaying selected location details */}
+                {selectedLocation && (
+                    <DetailsContainer ref={detailsRef}>
+                        <h2>{selectedLocation.title}</h2>
+                        <p>{selectedLocation.details}</p>
+                        <CloseButton onClick={handleCloseDetails}>Close</CloseButton>
+                    </DetailsContainer>
+                )}
             </Content>
         </Section>
     );
@@ -296,25 +338,68 @@ font-size: 16px;
     }
 `;
 
-function LocationCard({ image, title, description, large }) {
-    return (
-        <Card imageOnLeft={large}>
-            <img src={image} alt={title} />
-            <h4>{title}</h4>
-            <p>{description}</p>
-            <button>Explore More</button>
-        </Card>
-    );
-}
+const LocationCard = ({ image, title, description, onExploreMore }) => (
+    <Card onClick={onExploreMore}>
+        <img src={image} alt={title} />
+        <h3>{title}</h3>
+        <p>{description}</p>
+        <ExploreButton onClick={onExploreMore}>Explore More</ExploreButton>
+    </Card>
+);
+
+const ExploreButton = styled.button`
+    background-color: #604e36; /* Change color as needed */
+    color: #fff; /* Text color */
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: #4a3b2a; /* Darker shade on hover */
+    }
+`;
+
 
 LocationCard.propTypes = {
     image: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
+    onExploreMore: PropTypes.func.isRequired,
     large: PropTypes.bool,
+};
+
+LocationCard.defaultProps = {
+    large: false,
 };
 
 Category.propTypes = {
     title: PropTypes.string.isRequired,
     children: PropTypes.node.isRequired,
 };
+
+const DetailsContainer = styled.div`
+    margin-top: 2rem;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+`;
+
+const CloseButton = styled.button`
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 1rem;
+    &:hover {
+        background: #c0392b;
+    }
+`;
