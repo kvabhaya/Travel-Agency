@@ -1,8 +1,5 @@
 {
   "projects": {
-    "default": "skywing-2500d",
-    "delete": "skywing-2500d"
-  },
-  "targets": {},
-  "etags": {}
+    "default": "skywing-2500d"
+  }
 }
