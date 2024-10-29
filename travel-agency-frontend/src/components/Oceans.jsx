@@ -308,28 +308,24 @@ const CardDescription = styled.p`
 const ExploreMoreButton = styled.button`
     background: #5b7d9f;
     color: white;
-    padding: 0.75rem 1.5rem;
-    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    width: 250px;
+    border-radius: 5px;
     border: none;
     cursor: pointer;
     font-size: 16px;
-    transition: background 0.3s ease, transform 0.3s, box-shadow 0.3s; /* Added transition for box-shadow */
+    position: absolute;
+    bottom: 1rem; /* Position button near the bottom */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    transition: background 0.3s ease, transform 0.3s, box-shadow 0.3s;
 
     &:hover {
-        background: #34495e; /* Darken button on hover */
-        transform: scale(1.05); /* Scale button on hover */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+        background: #34495e;
+        transform: translate(-50%, -5%);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 `;
-
-const LocationCard = ({ image, title, description }) => (
-    <Card>
-        <CardImage src={image} alt={title} />
-        <CardTitle>{title}</CardTitle>
-        <CardDescription>{description}</CardDescription>
-        <ExploreMoreButton>Explore More</ExploreMoreButton>
-    </Card>
-);
 
 const DetailsContainer = styled.div`
     margin-top: 2rem;
