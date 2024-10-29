@@ -1,84 +1,151 @@
 import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
 import logo from "../assets/logo.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { VscChromeClose } from "react-icons/vsc";
+
 export default function Navbar() {
   const [navbarState, setNavbarState] = useState(false);
-  return (
-    <>
-      <Nav>
-        <div className="brand">
-          <div className="container">
-            <img src={logo} alt="" />
-            SkyWingTravel
-          </div>
-          <div className="toggle">
-            {navbarState ? (
-              <VscChromeClose onClick={() => setNavbarState(false)} />
-            ) : (
-              <GiHamburgerMenu onClick={() => setNavbarState(true)} />
-            )}
-          </div>
-        </div>
+  const location = useLocation();
 
-        <ul>
-          <li>
-            <a href="#home">Home</a>
-          </li>
-          <li>
-            <a href="#services">Services</a>
-          </li>
-          <li>
-            <a href="#recommend">Destinations</a>
-          </li>
-          <li>
-            <a href="#packages">Packages</a>
-          </li>
-          <li>
-            <a href="#testimonials">Testimonials</a>
-          </li>
-          <li>
-            <a href="#contact">Contact</a>
-          </li>
-        </ul>
-        <button>Connect</button>
-      </Nav>
-      <ResponsiveNav state={navbarState}>
-        <ul>
-          <li>
-            <a href="#home" tabIndex="0" role="menuitem" onClick={() => setNavbarState(false)}>
-              Home
-            </a>
-          </li>
-          <li>
-            <a href="#services" tabIndex="0" role="menuitem" onClick={() => setNavbarState(false)}>
-              About
-            </a>
-          </li>
-          <li>
-            <a href="#recommend" tabIndex="0" role="menuitem" onClick={() => setNavbarState(false)}>
-              Places
-            </a>
-          </li>
-          <li>
-            <a href="#packages" tabIndex="0" role="menuitem" onClick={() => setNavbarState(false)}>
-              Packages
-            </a>
-          </li>
-          <li>
-            <a href="#testimonials" tabIndex="0" role="menuitem" onClick={() => setNavbarState(false)}>
-              Testimonials
-            </a>
-          </li>
-          <li>
-            <a href="#contact" tabIndex="0" role="menuitem" onClick={() => setNavbarState(false)}>
-              Contact Us
-            </a>
-          </li>
-        </ul>
-      </ResponsiveNav>
-    </>
+  return (
+      <>
+        <Nav>
+          <div className="brand">
+            <div className="container">
+              <img src={logo} alt="" />
+              SkyWingTravel
+            </div>
+            <div className="toggle">
+              {navbarState ? (
+                  <VscChromeClose onClick={() => setNavbarState(false)} />
+              ) : (
+                  <GiHamburgerMenu onClick={() => setNavbarState(true)} />
+              )}
+            </div>
+          </div>
+
+          <ul>
+            {location.pathname === "/" ? (
+                <>
+                  <li>
+                    <a href="#hero">Home</a>
+                  </li>
+                  <li>
+                    <a href="#services">Services</a>
+                  </li>
+                  <li>
+                    <a href="#recommend">Destinations</a>
+                  </li>
+                  <li>
+                    <a href="#packages">Packages</a>
+                  </li>
+                  <li>
+                    <a href="#testimonials">Testimonials</a>
+                  </li>
+                  <li>
+                    <a href="#contact">Contact</a>
+                  </li>
+                </>
+            ) : (
+                <>
+                  <li>
+                    <Link to="/">Home</Link>
+                  </li>
+                  <li>
+                    <Link to="/oceans">Oceans</Link>
+                  </li>
+                  <li>
+                    <Link to="/historical">Historical</Link>
+                  </li>
+                  <li>
+                    <Link to="/emerald">Emerald</Link>
+                  </li>
+                  <li>
+                    <Link to="/safaris">Safaris</Link>
+                  </li>
+                  <li>
+                    <Link to="/wellness">Wellness</Link>
+                  </li>
+                </>
+            )}
+          </ul>
+          <button>Connect</button>
+        </Nav>
+
+        <ResponsiveNav state={navbarState}>
+          <ul>
+            {location.pathname === "/" ? (
+                <>
+                  <li>
+                    <a href="#hero" onClick={() => setNavbarState(false)}>
+                      Home
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#services" onClick={() => setNavbarState(false)}>
+                      Services
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#recommend" onClick={() => setNavbarState(false)}>
+                      Destinations
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#packages" onClick={() => setNavbarState(false)}>
+                      Packages
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#testimonials" onClick={() => setNavbarState(false)}>
+                      Testimonials
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#contact" onClick={() => setNavbarState(false)}>
+                      Contact
+                    </a>
+                  </li>
+                </>
+            ) : (
+                <>
+                  <li>
+                    <Link to="/" onClick={() => setNavbarState(false)}>
+                      Home
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/oceans" onClick={() => setNavbarState(false)}>
+                      Oceans
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/historical" onClick={() => setNavbarState(false)}>
+                      Historical
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/emerald" onClick={() => setNavbarState(false)}>
+                      Emerald
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/safaris" onClick={() => setNavbarState(false)}>
+                      Safaris
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/wellness" onClick={() => setNavbarState(false)}>
+                      Wellness
+                    </Link>
+                  </li>
+                </>
+            )}
+          </ul>
+        </ResponsiveNav>
+      </>
   );
 }
 
@@ -98,7 +165,7 @@ const Nav = styled.nav`
       font-size: 1.2rem;
       font-weight: 900;
       text-transform: uppercase;
-      img{
+      img {
         height: 50px;
         width: auto;
         max-width: 100%;
@@ -151,8 +218,8 @@ const Nav = styled.nav`
       justify-content: space-between;
       align-items: center;
       width: 100%;
-      .container{
-        img{
+      .container {
+        img {
           height: 40px;
         }
       }
