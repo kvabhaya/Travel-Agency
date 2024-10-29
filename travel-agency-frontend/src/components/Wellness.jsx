@@ -244,6 +244,7 @@ const Card = styled.div`
     min-height: ${(props) => (props.cardSize === "large" ? "350px" : props.cardSize === "medium" ? "250px" : "200px")};
     max-width: 300px;
     text-align: center;
+    position: relative;
 
     &:hover {
         transform: translateY(-5px) scale(1.02);
@@ -274,24 +275,32 @@ const Card = styled.div`
         font-size: 1rem;
         color: #555;
         line-height: 1.5;
+        margin-bottom: 2rem;
     }
 
     button {
+        position: absolute;
+        bottom: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
         padding: 0.5rem 1rem;
         border: none;
+        width: 250px;
         border-radius: 8px;
+        font-size: 16px;
         background-color: #1b9d93;
         color: white;
-        font-weight: bold;
+        
         cursor: pointer;
         transition: background-color 0.3s ease, transform 0.2s ease;
     }
 
     button:hover {
-        background-color: #166191;
-        transform: scale(1.05);
+        background-color: #0b380b;
+
     }
 `;
+
 
 const LocationCard = ({ image, title, description, cardSize }) => (
     <Card cardSize={cardSize}>
