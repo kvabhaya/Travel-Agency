@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import styled from "styled-components";
+
 import img1 from "../assets/img1.webp";
 import img2 from "../assets/img2.jpg";
 import img3 from "../assets/img3.jpeg";
@@ -24,10 +25,10 @@ import img21 from "../assets/img21.jpeg";
 import img22 from "../assets/img22.jpeg";
 import img23 from "../assets/img23.jpeg";
 import img24 from "../assets/img24.jpeg";
-import logo1 from "../assets/logo1.jpg";
-import logo2 from "../assets/logo2.avif";
-import logo3 from "../assets/logo3.webp";
-import logo4 from "../assets/logo4.webp";
+import logo1 from "../assets/1.jpg";
+import logo2 from "../assets/2.avif";
+import logo3 from "../assets/3.jpg";
+import logo4 from "../assets/4.webp";
 
 export default function Packages() {
     const conversionRate = 325;
@@ -41,7 +42,6 @@ export default function Packages() {
             destinations: [
                 {
                     name: "Cultural Odyssey",
-                    price: `${(800 * conversionRate).toLocaleString()} LKR`,
                     place: "Kandy",
                     accommodations: "Luxury Hotel, Cultural Tours",
                     details: "Discover the heritage of Kandy with visits to the Temple of the Tooth, cultural shows, and serene luxury hotel stays.",
@@ -49,7 +49,6 @@ export default function Packages() {
                 },
                 {
                     name: "Tropical Serenity",
-                    price: `${(1200 * conversionRate).toLocaleString()} LKR`,
                     place: "Galle",
                     accommodations: "Beach Resort, Private Villa",
                     details: "Relax at the beautiful beaches of Galle with stays at luxury resorts and explore the historic Galle Fort.",
@@ -57,7 +56,6 @@ export default function Packages() {
                 },
                 {
                     name: "Mountain Escape",
-                    price: `${(1000 * conversionRate).toLocaleString()} LKR`,
                     place: "Ella",
                     accommodations: "Eco Resort, Adventure Tours",
                     details: "Stay in eco-friendly resorts and explore the breathtaking mountains, waterfalls, and tea plantations of Ella.",
@@ -74,7 +72,6 @@ export default function Packages() {
             destinations: [
                 {
                     name: "Ancient Kingdoms",
-                    price: `${(900 * conversionRate).toLocaleString()} LKR`,
                     place: "Anuradhapura",
                     accommodations: "Heritage Resort, Historical Tours",
                     details: "Explore the ancient city of Anuradhapura, visit sacred stupas, and stay in a heritage resort with scenic views.",
@@ -82,7 +79,6 @@ export default function Packages() {
                 },
                 {
                     name: "Coastal Wonders",
-                    price: `${(1100 * conversionRate).toLocaleString()} LKR`,
                     place: "Mirissa",
                     accommodations: "Beach Bungalow, Whale Watching",
                     details: "Enjoy whale watching and relax at beachside accommodations along the stunning coastline of Mirissa.",
@@ -94,13 +90,11 @@ export default function Packages() {
             title: "Diamond Package",
             description: "A peaceful getaway to the most scenic and tranquil locations in Sri Lanka.",
             logo: logo3,
-            price: `${(3000 * conversionRate).toLocaleString()} LKR`,
             images: [img13, img14, img15, img16, img17, img18],
             details: "This package includes spa treatments, wellness retreats, and scenic tours in beautiful destinations.",
             destinations: [
                 {
-                    name: "Wellness.jsx Retreat",
-                    price: `${(1200 * conversionRate).toLocaleString()} LKR`,
+                    name: "Wellness Retreat",
                     place: "Sigiriya",
                     accommodations: "Ayurvedic Spa Resort, Wellness.jsx Programs",
                     details: "Unwind in the shadow of the Sigiriya rock fortress with luxurious spa treatments and wellness activities.",
@@ -108,7 +102,6 @@ export default function Packages() {
                 },
                 {
                     name: "Highland Tranquility",
-                    price: `${(1000 * conversionRate).toLocaleString()} LKR`,
                     place: "Nuwara Eliya",
                     accommodations: "Tea Bungalow, Nature Walks",
                     details: "Enjoy the cool climate and scenic beauty of Nuwara Eliya with tea plantation tours and nature walks.",
@@ -120,13 +113,11 @@ export default function Packages() {
             title: "Silver Package",
             description: "A thrilling journey packed with outdoor adventures and wildlife exploration.",
             logo: logo4,
-            price: `${(2500 * conversionRate).toLocaleString()} LKR`,
             images: [img19, img20, img21, img22, img23, img24],
             details: "This package includes wildlife safaris, hiking, and adventure sports in stunning locations.",
             destinations: [
                 {
                     name: "Wildlife Safaris",
-                    price: `${(900 * conversionRate).toLocaleString()} LKR`,
                     place: "Yala National Park",
                     accommodations: "Safari Lodge, Wildlife Tours",
                     details: "Experience the excitement of a safari in Yala National Park, home to leopards, elephants, and diverse wildlife.",
@@ -134,7 +125,6 @@ export default function Packages() {
                 },
                 {
                     name: "River Adventures",
-                    price: `${(850 * conversionRate).toLocaleString()} LKR`,
                     place: "Kitulgala",
                     accommodations: "Adventure Camp, White Water Rafting",
                     details: "Enjoy thrilling white-water rafting and adventure sports along the scenic Kelani River in Kitulgala.",
@@ -211,7 +201,6 @@ export default function Packages() {
                     {activeDestination && (
                         <div className="destination-details">
                             <h4>Destination: {activeDestination.name}</h4>
-                            <p><strong>Price:</strong> {activeDestination.price}</p>
                             <p><strong>Place:</strong> {activeDestination.place}</p>
                             <p><strong>Accommodations:</strong> {activeDestination.accommodations}</p>
                             <p>{activeDestination.details}</p>
@@ -256,7 +245,7 @@ const Section = styled.section`
 
         .package {
             padding: 2rem;
-            background-color: #bdc3c7;
+            background-color: #95a5a6;
             border-radius: 20px;
             box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
             transition: all 0.3s ease;
@@ -265,7 +254,7 @@ const Section = styled.section`
 
             &:hover {
                 transform: translateY(-0.5rem);
-                background-color: #2980b9;
+                background-color: #70a1ff;
                 box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 20px;
             }
 
@@ -275,7 +264,7 @@ const Section = styled.section`
                 object-fit: cover;
                 margin-bottom: 1rem;
                 border-radius: 50%;
-                border: 2px solid #40c4ff;
+                border: 3px solid #000000;
             }
 
             h3 {
@@ -296,10 +285,6 @@ const Section = styled.section`
             box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 25px;
             transform: translateY(-0.8rem);
 
-            .logo {
-                border: 3px solid white;
-            }
-
             h3 {
                 color: white;
             }
@@ -307,7 +292,13 @@ const Section = styled.section`
             p {
                 color: #f1f1f1;
             }
+
+            &:hover {
+                color: #000000;
+            }
         }
+        
+        
     }
 
     .package-details {
