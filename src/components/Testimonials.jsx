@@ -143,15 +143,16 @@ const Section = styled.section`
       border-radius: 0.5rem;
       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
       transition: 0.3s ease-in-out;
-      width: 300px;
-      height: 200px;
+      width: 100%; /* Changed to 100% for mobile */
+      max-width: 300px; /* Set a max width for larger screens */
+      height: auto; /* Set height to auto to fit content */
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       text-align: center;
 
       &:hover {
-        transform: translateX(0.4rem) translateY(-1rem);
+        transform: translateY(-1rem);
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
       }
 
@@ -204,6 +205,11 @@ const Section = styled.section`
     .testimonials {
       flex-direction: column;
       align-items: center;
+
+      .testimonial {
+        width: 90%; /* Adjust width for mobile */
+        max-width: 400px; /* Allow for wider cards on mobile */
+      }
     }
   }
 `;
@@ -214,8 +220,10 @@ const Form = styled.form`
   align-items: center;
   margin-top: 2rem;
 
-  input, textarea {
-    width: 300px;
+  input,
+  textarea {
+    width: 90%; /* Adjust width for mobile */
+    max-width: 400px; /* Set a max width */
     margin-bottom: 1rem;
     padding: 0.5rem;
     border: 1px solid #ccc;
