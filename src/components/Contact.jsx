@@ -3,11 +3,13 @@ import styled from "styled-components";
 import { db } from '../firebaseConfig'; // Ensure the path is correct
 import { collection, addDoc } from "firebase/firestore";
 import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
+import emailjs from "emailjs-com"; // Import EmailJS
 
 const Contact = () => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
+        phone: '',
         message: ''
     });
 
@@ -19,15 +21,29 @@ const Contact = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            // Change "testimonials" to "contacts" to save in a different collection
-            const docRef = await addDoc(collection(db, "contacts"), {
+            // Save the form data to Firestore
+            const docRef = await addDoc(collection(db, "contacts"), formData);
+            console.log("Document written with ID: ", docRef.id);
+
+            // Send email using EmailJS
+            const emailParams = {
                 name: formData.name,
                 email: formData.email,
-                message: formData.message,
-            });
-            console.log("Document written with ID: ", docRef.id);
+                phone: formData.phone,
+                message: formData.message
+            };
+
+            emailjs.send("service_jxore9q", "template_5s4s6hf", emailParams, "XcLJ1GiMKVbwnWFYF")
+                .then(response => {
+                    console.log("Email successfully sent!", response.status, response.text);
+                    alert("Your message has been sent successfully.");
+                })
+                .catch(error => {
+                    console.error("There was an error sending the email:", error);
+                });
+
             // Reset form after submission
-            setFormData({ name: '', email: '', message: '' });
+            setFormData({ name: '', email: '', phone: '', message: '' });
         } catch (error) {
             console.error("Error adding document: ", error);
         }
@@ -55,6 +71,13 @@ const Contact = () => {
                         value={formData.email}
                         onChange={handleChange}
                     />
+                    <Input
+                        type="number"
+                        name="phone"
+                        placeholder="Your Phone Number with Country Code"
+                        value={formData.phone}
+                        onChange={handleChange}
+                    />
                     <Textarea
                         name="message"
                         placeholder="Your Message"
@@ -69,17 +92,17 @@ const Contact = () => {
                     <div className="info-item">
                         <div className="icon"><FaEnvelope /></div>
                         <h4>Email</h4>
-                        <p>example@example.com</p>
+                        <p>skywing2024travels@gmail.com</p>
                     </div>
                     <div className="info-item">
                         <div className="icon"><FaPhoneAlt /></div>
                         <h4>Phone</h4>
-                        <p>+123456789</p>
+                        <p>+94777551408</p>
                     </div>
                     <div className="info-item">
                         <div className="icon"><FaMapMarkerAlt /></div>
                         <h4>Address</h4>
-                        <p>123 Street Name, City, Country</p>
+                        <p>59, Medagamagama, Hanguranketha, Sri Lanka</p>
                     </div>
                 </div>
             </div>
@@ -87,7 +110,6 @@ const Contact = () => {
         </Section>
     );
 };
-
 // Styled components
 const Section = styled.section`
     display: flex;
