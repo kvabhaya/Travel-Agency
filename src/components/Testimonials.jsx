@@ -127,56 +127,57 @@ const Section = styled.section`
 
   .title {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
 
   .testimonials {
     display: flex;
     justify-content: center;
-    margin: 0 2rem;
-    gap: 2rem;
+    margin: 0 1rem;
+    gap: 1rem;
     flex-wrap: wrap;
 
     .testimonial {
       background-color: aliceblue;
-      padding: 2rem;
+      padding: 1.5rem;
       border-radius: 0.5rem;
       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
       transition: 0.3s ease-in-out;
-      width: 300px;
-      height: 200px;
+      width: 100%;
+      max-width: 280px; /* Set max-width for smaller screens */
+      height: auto;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       text-align: center;
 
       &:hover {
-        transform: translateX(0.4rem) translateY(-1rem);
+        transform: translateY(-0.5rem);
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
       }
 
       .info {
         display: flex;
         justify-content: center;
-        gap: 1rem;
+        gap: 0.5rem;
         align-items: center;
-        margin-top: 1rem;
+        margin-top: 0.5rem;
 
         img {
           border-radius: 50%;
-          height: 60px;
-          width: 60px;
+          height: 50px;
+          width: 50px;
         }
 
         .details {
           span {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
           }
         }
       }
 
       .rating-display {
-        margin-top: 1rem;
+        margin-top: 0.5rem;
         display: flex;
         justify-content: center;
         gap: 0.2rem;
@@ -186,14 +187,14 @@ const Section = styled.section`
 
   .see-more {
     display: block;
-    margin: 2rem auto;
-    padding: 0.5rem 1rem;
+    margin: 1.5rem auto;
+    padding: 0.4rem 1rem;
     background-color: #007bff;
     color: white;
     border: none;
     border-radius: 0.3rem;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 0.9rem;
 
     &:hover {
       background-color: #0056b3;
@@ -204,6 +205,31 @@ const Section = styled.section`
     .testimonials {
       flex-direction: column;
       align-items: center;
+
+      .testimonial {
+        width: 100%;
+        max-width: 90%; /* Adjusted for mobile */
+      }
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    .testimonials {
+      margin: 0 0.5rem; /* Less margin for very small screens */
+
+      .testimonial {
+        padding: 1rem;
+        max-width: 100%;
+      }
+    }
+
+    .title h2 {
+      font-size: 1.5rem;
+    }
+
+    .see-more {
+      font-size: 0.85rem;
+      padding: 0.4rem 0.8rem;
     }
   }
 `;
@@ -214,8 +240,10 @@ const Form = styled.form`
   align-items: center;
   margin-top: 2rem;
 
-  input, textarea {
-    width: 300px;
+  input,
+  textarea {
+    width: 100%;
+    max-width: 350px; /* Adjusted for mobile */
     margin-bottom: 1rem;
     padding: 0.5rem;
     border: 1px solid #ccc;
@@ -233,7 +261,7 @@ const Form = styled.form`
     margin-bottom: 1rem;
 
     span {
-      margin-right: 1rem;
+      margin-right: 0.5rem;
     }
   }
 
@@ -244,12 +272,14 @@ const Form = styled.form`
     border: none;
     border-radius: 0.3rem;
     cursor: pointer;
+    font-size: 0.9rem;
 
     &:hover {
       background-color: #0056b3;
     }
   }
 `;
+
 
 const Star = styled.span`
   cursor: pointer;
