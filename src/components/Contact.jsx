@@ -27,13 +27,14 @@ const Contact = () => {
 
             // Send email using EmailJS
             const emailParams = {
+                to_name: "SkyWingTravels Team", // Placeholder for the recipient name in the template
                 name: formData.name,
-                email: formData.email,
+                reply_to: formData.email,  // Ensure the parameter matches the template variable
                 phone: formData.phone,
                 message: formData.message
             };
 
-            emailjs.send("service_jxore9q", "template_5s4s6hf", emailParams, "XcLJ1GiMKVbwnWFYF")
+            emailjs.send("service_qe2ypd5", "template_q9azy4x", emailParams, "9SGRaVFDDPl8nl0IR")
                 .then(response => {
                     console.log("Email successfully sent!", response.status, response.text);
                     alert("Your message has been sent successfully.");
@@ -48,6 +49,7 @@ const Contact = () => {
             console.error("Error adding document: ", error);
         }
     };
+
 
     return (
         <Section>
@@ -123,7 +125,7 @@ const Section = styled.section`
 
     .title {
         text-align: center;
-        margin-bottom: 2rem; /* Adjust margin for better spacing */
+        margin-bottom: 2rem;
         h2 {
             font-size: 2.5rem;
             font-weight: bold;
