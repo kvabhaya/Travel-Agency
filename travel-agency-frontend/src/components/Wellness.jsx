@@ -57,7 +57,7 @@ export default function SereneSanctuaries() {
                                 description="Rejuvenate at premier Ayurveda resorts surrounded by nature."
                                 onExploreMore={() => handleExploreMore({
                                     title: "Ayurveda Resorts in Bentota",
-                                    details: "Discover the peaceful ambiance and wellness treatments at Bentota's top Ayurveda resorts."
+                                    details: "Discover the peaceful ambiance and wellness treatments at Bentota's top Ayurveda resorts. Nestled along the serene coast, these resorts offer a perfect blend of traditional Ayurvedic therapies and modern comforts. Indulge in rejuvenating treatments, yoga sessions, and meditation practices while enjoying stunning views of the Indian Ocean. Whether you seek relaxation or holistic healing, Bentota's Ayurveda resorts provide personalized programs tailored to your needs, ensuring a transformative experience."
                                 })}
                             />
                             <LocationCard
@@ -66,7 +66,7 @@ export default function SereneSanctuaries() {
                                 description="Experience traditional healing in the coastal charm of Negombo."
                                 onExploreMore={() => handleExploreMore({
                                     title: "Ayurveda Resorts in Negombo",
-                                    details: "Enjoy holistic healing therapies with a view of the coast in Negombo."
+                                    details: "Enjoy holistic healing therapies with a view of the coast in Negombo. Known for its vibrant fishing community, Negombo is home to Ayurveda resorts that offer authentic Ayurvedic treatments. Engage in therapeutic massages, herbal baths, and dietary consultations while being enveloped in the coastal breeze. The proximity to beautiful beaches allows you to unwind after your treatments, making Negombo an ideal destination for relaxation and rejuvenation."
                                 })}
                             />
                             <LocationCard
@@ -75,7 +75,7 @@ export default function SereneSanctuaries() {
                                 description="Enjoy tranquil treatments with stunning sea views."
                                 onExploreMore={() => handleExploreMore({
                                     title: "Ayurveda Resorts in Weligama",
-                                    details: "Rejuvenate your body and soul with seaside Ayurveda treatments."
+                                    details: "Rejuvenate your body and soul with seaside Ayurveda treatments in Weligama. Famous for its surf beaches, Weligama also hosts renowned Ayurveda resorts where you can experience the healing power of nature. With expert therapists, indulge in various treatments, including aromatherapy and wellness consultations, all while enjoying breathtaking views of the ocean. Experience the harmony of mind and body as you soak in the tranquil ambiance and soothing sounds of the waves."
                                 })}
                             />
                             <LocationCard
@@ -84,7 +84,7 @@ export default function SereneSanctuaries() {
                                 description="Explore the healing arts surrounded by the beauty of the hill country."
                                 onExploreMore={() => handleExploreMore({
                                     title: "Ayurveda Retreats in Kandy",
-                                    details: "Connect with nature and explore Ayurvedic therapies in the hills of Kandy."
+                                    details: "Connect with nature and explore Ayurvedic therapies in the hills of Kandy, a UNESCO World Heritage Site. The lush greenery and cool climate provide the perfect backdrop for rejuvenating retreats. Participate in Ayurvedic workshops, herbal medicine preparation, and serene yoga sessions. Many retreats also offer guided tours to explore the rich culture and history of Kandy, including visits to the Temple of the Tooth and beautiful botanical gardens, enhancing your wellness journey."
                                 })}
                             />
                         </CardContainer>
@@ -98,7 +98,7 @@ export default function SereneSanctuaries() {
                                 description="Find peace and balance amidst the scenic beauty of Kandy."
                                 onExploreMore={() => handleExploreMore({
                                     title: "Yoga Retreats in Kandy",
-                                    details: "Achieve inner harmony surrounded by the beauty of Kandy's landscapes."
+                                    details: "Achieve inner harmony surrounded by the beauty of Kandy's landscapes. Nestled in the heart of Sri Lanka's hill country, Kandy offers a tranquil setting for yoga retreats. Participants can engage in daily yoga sessions led by experienced instructors, focusing on various styles such as Hatha, Vinyasa, and Yin Yoga. Enjoy breathtaking views of the surrounding hills and the serene Kandy Lake, while also exploring local attractions such as the Temple of the Tooth and lush botanical gardens during your free time."
                                 })}
                             />
                             <LocationCard
@@ -107,7 +107,7 @@ export default function SereneSanctuaries() {
                                 description="Reconnect with your inner self in the historic town of Galle."
                                 onExploreMore={() => handleExploreMore({
                                     title: "Meditation Retreats in Galle",
-                                    details: "Explore meditative practices in the historic and serene town of Galle."
+                                    details: "Explore meditative practices in the historic and serene town of Galle. This retreat offers a perfect blend of meditation, mindfulness, and local culture. Participate in guided meditation sessions that enhance self-awareness and emotional balance while enjoying the calming sound of waves crashing on the shore. Explore Galle's rich history by visiting its iconic lighthouse, ancient fortifications, and charming streets, making your meditation experience both enriching and memorable."
                                 })}
                             />
                             <LocationCard
@@ -116,7 +116,7 @@ export default function SereneSanctuaries() {
                                 description="Breathe in serenity in the lush hills of Ella."
                                 onExploreMore={() => handleExploreMore({
                                     title: "Wellness Retreats in Ella",
-                                    details: "Experience peaceful wellness retreats in Ella's lush, green surroundings."
+                                    details: "Experience peaceful wellness retreats in Ella's lush, green surroundings. Known for its breathtaking landscapes, Ella provides an ideal environment for rejuvenation and relaxation. Enjoy daily yoga and meditation sessions, alongside holistic wellness treatments such as Ayurvedic therapies and herbal baths. Take time to explore nearby attractions, such as the Nine Arches Bridge and Little Adam's Peak, creating a perfect balance between physical activity and relaxation."
                                 })}
                             />
                             <LocationCard
@@ -125,9 +125,10 @@ export default function SereneSanctuaries() {
                                 description="Unwind with yoga and meditation by the beach."
                                 onExploreMore={() => handleExploreMore({
                                     title: "Holistic Retreats in Unawatuna",
-                                    details: "Relax by the beach with holistic yoga and meditation sessions."
+                                    details: "Relax by the beach with holistic yoga and meditation sessions. Unawatuna's sandy shores and clear blue waters set the stage for a transformative retreat experience. Engage in daily yoga practices tailored to all levels, alongside meditation sessions that focus on mindfulness and self-discovery. Indulge in healthy meals prepared with fresh, local ingredients, and take advantage of opportunities for beach activities, ensuring a holistic approach to wellness and relaxation."
                                 })}
                             />
+
                         </CardContainer>
                     </Category>
 
@@ -139,7 +140,7 @@ export default function SereneSanctuaries() {
                                 description="Indulge in luxurious spa treatments amid beautiful landscapes."
                                 onExploreMore={() => handleExploreMore({
                                     title: "Luxurious Spas in Nuwara Eliya",
-                                    details: "Treat yourself to a luxury spa experience in the cool highlands of Nuwara Eliya."
+                                    details: "Treat yourself to a luxury spa experience in the cool highlands of Nuwara Eliya. Known as 'Little England,' this charming town offers a serene environment perfect for relaxation. Experience world-class spa treatments using natural products inspired by the region's lush greenery and rich biodiversity. Enjoy personalized services such as aromatherapy massages, facials, and body scrubs, all while soaking in stunning views of tea plantations and misty mountains."
                                 })}
                             />
                             <LocationCard
@@ -148,7 +149,7 @@ export default function SereneSanctuaries() {
                                 description="Experience relaxation with views of the ancient rock fortress."
                                 onExploreMore={() => handleExploreMore({
                                     title: "Spa Resorts in Sigiriya",
-                                    details: "Relax in spa resorts with magnificent views of Sigiriya."
+                                    details: "Relax in spa resorts with magnificent views of Sigiriya. Nestled at the base of the iconic Sigiriya Rock Fortress, these resorts provide a unique blend of history and luxury. Enjoy rejuvenating spa therapies that incorporate local traditions and herbs, along with breathtaking views of the surrounding landscape. Engage in yoga sessions and guided meditation, making it an ideal retreat for both mind and body."
                                 })}
                             />
                             <LocationCard
@@ -157,7 +158,7 @@ export default function SereneSanctuaries() {
                                 description="Relax in coastal resorts offering rejuvenating spa therapies."
                                 onExploreMore={() => handleExploreMore({
                                     title: "Spa Retreats in Tangalle",
-                                    details: "Unwind in coastal Tangalle with soothing spa therapies."
+                                    details: "Unwind in coastal Tangalle with soothing spa therapies. Known for its pristine beaches and tranquil environment, Tangalle is perfect for those seeking relaxation by the ocean. Indulge in treatments that combine traditional Ayurvedic techniques with modern wellness practices, including massages, body wraps, and detox programs. After your spa experience, enjoy the serene beach atmosphere or explore the vibrant marine life through snorkeling and diving."
                                 })}
                             />
                             <LocationCard
@@ -166,9 +167,10 @@ export default function SereneSanctuaries() {
                                 description="Pamper yourself at beachfront spas known for their wellness treatments."
                                 onExploreMore={() => handleExploreMore({
                                     title: "Spa Retreats in Hikkaduwa",
-                                    details: "Enjoy beachside spa treatments in Hikkaduwa's relaxing atmosphere."
+                                    details: "Enjoy beachside spa treatments in Hikkaduwa's relaxing atmosphere. Renowned for its vibrant coral reefs and clear waters, Hikkaduwa offers the perfect backdrop for a rejuvenating spa retreat. Treat yourself to a variety of wellness therapies, including seaweed wraps, herbal baths, and relaxing massages, all tailored to enhance your well-being. Unwind in a serene setting while listening to the soothing sounds of the ocean, making your spa experience truly memorable."
                                 })}
                             />
+
                         </CardContainer>
                     </Category>
 
@@ -180,7 +182,7 @@ export default function SereneSanctuaries() {
                                 description="Experience authentic Ayurvedic treatments across the island."
                                 onExploreMore={() => handleExploreMore({
                                     title: "Bentota Traditional Ayurvedic Therapies",
-                                    details: "Receive traditional Ayurvedic treatments in the calm setting of Bentota."
+                                    details: "Receive traditional Ayurvedic treatments in the calm setting of Bentota. Known for its serene beaches and lush surroundings, Bentota is an ideal place to immerse yourself in holistic healing. Enjoy personalized therapies designed to restore balance and harmony to your body and mind, including herbal massages, detoxifying treatments, and rejuvenating body scrubs using natural ingredients. Experience the tranquil ambiance that enhances relaxation and rejuvenation."
                                 })}
                             />
                             <LocationCard
@@ -189,7 +191,7 @@ export default function SereneSanctuaries() {
                                 description="Explore wellness options in the heart of the city."
                                 onExploreMore={() => handleExploreMore({
                                     title: "Wellness Centers in Colombo",
-                                    details: "Discover diverse wellness treatments in the vibrant city of Colombo."
+                                    details: "Discover diverse wellness treatments in the vibrant city of Colombo. These centers offer a range of services, from modern fitness programs to traditional healing therapies. Indulge in rejuvenating massages, yoga sessions, and nutritional counseling tailored to your individual needs. Enjoy the convenience of accessing top-tier wellness facilities while being surrounded by the dynamic culture and bustling life of the city."
                                 })}
                             />
                             <LocationCard
@@ -198,7 +200,7 @@ export default function SereneSanctuaries() {
                                 description="Revitalize your spirit at beachfront wellness centers."
                                 onExploreMore={() => handleExploreMore({
                                     title: "Beachfront Wellness Retreats in Negombo",
-                                    details: "Experience refreshing wellness therapies by the sea in Negombo."
+                                    details: "Experience refreshing wellness therapies by the sea in Negombo. Nestled along stunning coastlines, these retreats provide a perfect escape for relaxation and rejuvenation. Engage in holistic wellness programs that include Ayurvedic treatments, yoga classes, and meditation sessions while enjoying the sound of the waves. Let the calming sea breeze enhance your wellness journey, making it a revitalizing experience for your body and mind."
                                 })}
                             />
                             <LocationCard
@@ -207,9 +209,10 @@ export default function SereneSanctuaries() {
                                 description="Find tranquility and holistic healing in the historical city of Dambulla."
                                 onExploreMore={() => handleExploreMore({
                                     title: "Wellness Retreats in Dambulla",
-                                    details: "Relax and heal in Dambulla's tranquil wellness retreats."
+                                    details: "Relax and heal in Dambulla's tranquil wellness retreats. Surrounded by the rich cultural heritage and stunning rock formations of Dambulla, these retreats offer a serene atmosphere for holistic healing. Experience a blend of traditional therapies and modern wellness practices designed to promote physical and mental well-being. Enjoy meditation, herbal treatments, and wellness consultations tailored to your needs, all while soaking in the historical ambiance of this UNESCO World Heritage Site."
                                 })}
                             />
+
                         </CardContainer>
                     </Category>
                 </Categories>
