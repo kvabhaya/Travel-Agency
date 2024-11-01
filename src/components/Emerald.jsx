@@ -223,106 +223,106 @@ const Section = styled.section`
 `;
 
 const Content = styled.div`
-  max-width: 1200px;
-  margin: 0 auto;
+    max-width: 1200px;
+    margin: 0 auto;
 
-  h1 {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 800;
-    font-size: 48px;
-    color: #2c3e50;
-    margin-bottom: 0.5rem;
-  }
+    h1 {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 800;
+        font-size: 48px;
+        color: #2c3e50;
+        margin-bottom: 0.5rem;
+    }
 
-  h2 {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 600;
-    font-size: 36px;
-    color: #34495e;
-    margin-bottom: 1rem;
-  }
+    h2 {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        font-size: 36px;
+        color: #34495e;
+        margin-bottom: 1rem;
+    }
 
-  p {
-    font-size: 1.2rem;
-    color: #555;
-    margin-bottom: 2rem;
-    line-height: 1.7;
-  }
+    p {
+        font-size: 1.2rem;
+        color: #555;
+        margin-bottom: 2rem;
+        line-height: 1.7;
+    }
 `;
 
 const Categories = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
 `;
 
 const CategoryContainer = styled.div`
-  background: #fff;
-  border-radius: 12px;
-  padding: 2rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 `;
 
 const CategoryTitle = styled.h3`
-  color: #2c3e50;
-  font-size: 32px;
-  margin-bottom: 1rem;
-  font-weight: 700;
-  text-transform: uppercase;
+    color: #2c3e50;
+    font-size: 32px;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
 `;
 
 const CardContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
 `;
 
 const Card = styled.div`
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s, box-shadow 0.3s;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  position: relative; /* Enable absolute positioning for child elements */
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative; /* Enable absolute positioning for child elements */
 
-  &:hover {
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-  }
+    &:hover {
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    }
 `;
 const CardContent = styled.div`
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 `;
 const CardImage = styled.img`
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 12px 12px 0 0;
-  transition: transform 0.3s ease-in-out;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+    transition: transform 0.3s ease-in-out;
 
-  ${Card}:hover & {
-    transform: scale(1.05);
-  }
+    ${Card}:hover & {
+        transform: scale(1.05);
+    }
 `;
 
 const CardTitle = styled.h4`
-  color: #2c3e50;
-  margin: 0.75rem 0 0.5rem;
-  font-size: 22px;
-  font-weight: 700;
+    color: #2c3e50;
+    margin: 0.75rem 0 0.5rem;
+    font-size: 22px;
+    font-weight: 700;
 `;
 
 const CardDescription = styled.p`
-  font-size: 16px;
-  color: #666;
-  margin-bottom: 1.5rem;
-  line-height: 1.5;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
 `;
 
 const ExploreNowButton = styled.button`

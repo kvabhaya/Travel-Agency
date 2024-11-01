@@ -3,20 +3,20 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 
 // Importing images from assets (replace these with actual image paths)
- import bentota from "../assets/bentota.jpeg";
- import negombo from "../assets/negombo.jpeg";
- import weligama from "../assets/weligama.jpeg";
- import kandy from "../assets/kandyayur.jpeg";
+import bentota from "../assets/bentota.jpeg";
+import negombo from "../assets/negombo.jpeg";
+import weligama from "../assets/weligama.jpeg";
+import kandy from "../assets/kandyayur.jpeg";
 import yogak from "../assets/yogak.jpeg";
- import yogag from "../assets/yogag.jpeg";
- import yogae from "../assets/yogae.jpeg";
- import yogau from "../assets/yogau.jpeg"
- import nuwaras from "../assets/nuwaras.jpeg";
- import sigiriyas from "../assets/spas.jpeg";
+import yogag from "../assets/yogag.jpeg";
+import yogae from "../assets/yogae.jpeg";
+import yogau from "../assets/yogau.jpeg"
+import nuwaras from "../assets/nuwaras.jpeg";
+import sigiriyas from "../assets/spas.jpeg";
 import tangalle from "../assets/spat.jpeg";
 import hikkaduwa from "../assets/hikkaduwas.jpeg";
 import bentotas from "../assets/bentotas.jpeg"
- import colombo from "../assets/colombow.jpeg";
+import colombo from "../assets/colombow.jpeg";
 import negomboBeach from "../assets/negombos.jpeg";
 import dambulla from "../assets/dambullas.jpeg";
 
@@ -370,7 +370,7 @@ const Card = styled.div`
         font-size: 16px;
         background-color: #1b9d93;
         color: white;
-        
+
         cursor: pointer;
         transition: background-color 0.3s ease, transform 0.2s ease;
     }

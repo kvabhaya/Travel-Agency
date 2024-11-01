@@ -332,7 +332,7 @@ const Content = styled.div`
         font-size: 36px;
         color: #34495e;
         margin-bottom: 1rem;
-        
+
     }
 
     p {
