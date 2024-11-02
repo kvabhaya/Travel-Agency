@@ -22,7 +22,7 @@ export default function Footer() {
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             );
-        } else if (location.pathname === "/oceans", "/historical", "/emerald", "/safaris", "/wellness") {
+        } else if (["/oceans", "/historical", "/emerald", "/safaris", "/wellness"].includes(location.pathname)) {
             // Oceans page links
             return (
                 <ul className="section-links">

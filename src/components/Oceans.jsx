@@ -158,7 +158,7 @@ export default function Oceans() {
                                 description="Dive into thrilling water sports—surfing, snorkeling, and whale watching."
                                 onExploreMore={() => handleExploreMore({
                                     title: "Kalpitiya",
-                                    details: "Kalpitiya is a hotspot for water sports, including kitesurfing, snorkeling, and" + " dolphin watching. With its stunning lagoons and sandy beaches, it offers a perfect escape for adventure seekers. The region is known for its vibrant marine life, making it an ideal spot for snorkeling and scuba diving enthusiasts. Visitors can also take boat trips to see pods of dolphins and enjoy the pristine beauty of the surrounding nature."
+                                    details: "Kalpitiya is a hotspot for water sports, including kite-surfing, snorkeling, and dolphin watching. With its stunning lagoons and sandy beaches, it offers a perfect escape for adventure seekers. The region is known for its vibrant marine life, making it an ideal spot for snorkeling and scuba diving enthusiasts. Visitors can also take boat trips to see pods of dolphins and enjoy the pristine beauty of the surrounding nature."
                                 })}
                             />
                             <LocationCard
@@ -380,7 +380,6 @@ const Card = styled.div`
     transition: transform 0.3s, box-shadow 0.3s;
     flex: 1;
     position: relative; /* Set relative positioning for absolute child elements */
-    flex: 1; /* Allow cards to grow equally */
 
     &:hover {
         box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);

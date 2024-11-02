@@ -52,7 +52,7 @@ const Contact = () => {
 
 
     return (
-        <Section>
+        <Section id="contact">
             <div className="title">
                 <h2>Contact Us</h2>
                 <p>We'd love to hear from you!</p>
