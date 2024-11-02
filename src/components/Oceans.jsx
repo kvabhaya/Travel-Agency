@@ -281,7 +281,7 @@ export default function Oceans() {
                     <DetailsContainer ref={detailsRef}>
                         <h2>{selectedLocation.title}</h2>
                         <p>{selectedLocation.details}</p>
-                        <CloseButton onClick={handleCloseDetails}>Close</CloseButton>
+                        <CloseButton onClick={handleCloseDetails}>Close</CloseButton>z
                     </DetailsContainer>
                 )}
             </Content>
