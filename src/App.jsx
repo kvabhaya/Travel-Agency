@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Route, Routes } from "react-router-dom"; // Import Route and Routes
+import { Route, Routes } from "react-router-dom";
 import ScrollReveal from "scrollreveal";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
@@ -15,6 +15,8 @@ import Historical from "./components/Historical";
 import Emerald from "./components/Emerald";
 import Safaris from "./components/Safaris";
 import Wellness from "./components/Wellness";
+
+
 export default function App() {
     useEffect(() => {
         const sr = ScrollReveal({
@@ -56,6 +58,7 @@ export default function App() {
                 <Route path="/emerald" element={<Emerald />} />
                 <Route path="/safaris" element={<Safaris />} />
                 <Route path="/wellness" element={<Wellness />} />
+
             </Routes>
             <Footer />
         </div>
