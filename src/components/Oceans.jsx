@@ -73,7 +73,8 @@ export default function Oceans() {
                                         "For those seeking relaxation, the calm waters and soft sands of Mirissa provide an " +
                                         "idyllic backdrop for sunbathing or indulging in spa treatments at beachfront resorts." +
                                         " As the sun sets, the beach comes alive with beach parties and live music, ensuring a" +
-                                        " lively atmosphere that captivates visitors."
+                                        " lively atmosphere that captivates visitors.",
+                                    images: [unawatuna, hikkaduwa, pasikuda, madolDoova]
                                 })}
                             />
                             <LocationCard
@@ -158,7 +159,7 @@ export default function Oceans() {
                                 description="Dive into thrilling water sports—surfing, snorkeling, and whale watching."
                                 onExploreMore={() => handleExploreMore({
                                     title: "Kalpitiya",
-                                    details: "Kalpitiya is a hotspot for water sports, including kitesurfing, snorkeling, and" + " dolphin watching. With its stunning lagoons and sandy beaches, it offers a perfect escape for adventure seekers. The region is known for its vibrant marine life, making it an ideal spot for snorkeling and scuba diving enthusiasts. Visitors can also take boat trips to see pods of dolphins and enjoy the pristine beauty of the surrounding nature."
+                                    details: "Kalpitiya is a hotspot for water sports, including kite-surfing, snorkeling, and dolphin watching. With its stunning lagoons and sandy beaches, it offers a perfect escape for adventure seekers. The region is known for its vibrant marine life, making it an ideal spot for snorkeling and scuba diving enthusiasts. Visitors can also take boat trips to see pods of dolphins and enjoy the pristine beauty of the surrounding nature."
                                 })}
                             />
                             <LocationCard
@@ -279,11 +280,20 @@ export default function Oceans() {
                 {/* Displaying selected location details */}
                 {selectedLocation && (
                     <DetailsContainer ref={detailsRef}>
-                        <h2>{selectedLocation.title}</h2>
-                        <p>{selectedLocation.details}</p>
+                        <DescriptionContainer>
+                            <h2>{selectedLocation.title}</h2>
+                            <p>{selectedLocation.details}</p>
+                        </DescriptionContainer>
+                        <ImagesContainer>
+                            {selectedLocation.images.map((image, index) => (
+                                <Image key={index} src={image} alt={`${selectedLocation.title} ${index + 1}`} />
+                            ))}
+                        </ImagesContainer>
                         <CloseButton onClick={handleCloseDetails}>Close</CloseButton>
                     </DetailsContainer>
                 )}
+
+
             </Content>
         </Section>
     );
@@ -380,7 +390,6 @@ const Card = styled.div`
     transition: transform 0.3s, box-shadow 0.3s;
     flex: 1;
     position: relative; /* Set relative positioning for absolute child elements */
-    flex: 1; /* Allow cards to grow equally */
 
     &:hover {
         box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
@@ -422,9 +431,9 @@ const ExploreMoreButton = styled.button`
     cursor: pointer;
     font-size: 16px;
     position: absolute;
-    bottom: 1rem; /* Position button near the bottom */
+    bottom: 1rem;
     left: 50%;
-    transform: translateX(-50%); /* Center horizontally */
+    transform: translateX(-50%);
     transition: background 0.3s ease, transform 0.3s, box-shadow 0.3s;
 
     &:hover {
@@ -435,24 +444,73 @@ const ExploreMoreButton = styled.button`
 `;
 
 const DetailsContainer = styled.div`
+    display: flex;
+    flex-direction: row;
     margin-top: 2rem;
     padding: 2rem;
     background: #ffffff;
     border-radius: 12px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    gap: 2rem;
+    position: relative;
+`;
+
+const DescriptionContainer = styled.div`
+    flex: 1;
+    padding-right: 1rem;
+
+    h2 {
+        font-size: 1.8rem;
+        color: #2c3e50;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-size: 1rem;
+        color: #555;
+        line-height: 1.7;
+    }
+`;
+
+const ImagesContainer = styled.div`
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for equal sizing */
+    gap: 1rem;
+    padding-left: 1rem;
+`;
+
+const Image = styled.img`
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s;
+
+    &:hover {
+        transform: scale(1.05); /* Slight zoom effect */
+    }
 `;
 
 const CloseButton = styled.button`
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
     background: #e74c3c;
-    color: white;
+    color: #ffffff;
     border: none;
-    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    padding: 0.5rem 2rem; /* Make button longer */
+    cursor: pointer;
     font-size: 1rem;
     font-weight: bold;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-top: 1rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s;
+
     &:hover {
         background: #c0392b;
     }
 `;
+
+
