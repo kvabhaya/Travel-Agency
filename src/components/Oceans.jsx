@@ -18,7 +18,70 @@ import galleFort from "../assets/galle_fort.avif";
 import pasikuda from "../assets/pasikuda.webp";
 import hikkaduwaHarbour from "../assets/hikkaduwaHarbour.jpg";
 import madolDoova from "../assets/madolDuwa.jpeg";
-
+import mirissa1 from "../assets/mirissa1.webp";
+import mirissa2 from "../assets/mirissa2.webp";
+import mirissa3 from "../assets/mirissa3.jpeg";
+import mirissa4 from "../assets/mirissa4.jpeg";
+import unawatuna1 from "../assets/unawatuna1.webp";
+import unawatuna2 from "../assets/unawatuna2.webp";
+import unawatuna3 from "../assets/unawatuna3.webp";
+import unawatuna4 from "../assets/unawatuna4.webp";
+import hikkaduwa1 from "../assets/hikkaduwa1.webp";
+import hikkaduwa2 from "../assets/hikkaduwa2.webp";
+import hikkaduwa3 from "../assets/hikkaduwa3.webp";
+import hikkaduwa4 from "../assets/hikkaduwa4.jpeg";
+import pasikuda1 from "../assets/pasikuda1.jpeg";
+import pasikuda2 from "../assets/pasikuda2.jpeg";
+import pasikuda3 from "../assets/pasikuda3.jpeg";
+import pasikuda4 from "../assets/pasikuda4.jpeg";
+import kalpitiya1 from "../assets/kalpitiya1.jpeg";
+import kalpitiya2 from "../assets/kalpitiya2.jpeg";
+import kalpitiya3 from "../assets/kalpitiya3.jpeg";
+import kalpitiya4 from "../assets/kalpitiya4.jpeg";
+import trinco1 from "../assets/trinco1.jpeg";
+import trinco2 from "../assets/trinco2.jpeg";
+import trinco3 from "../assets/trinco3.jpeg";
+import trinco4 from "../assets/trinco4.jpeg";
+import hikkaduwa11 from "../assets/hikkaduwa11.jpeg";
+import hikkaduwa12 from "../assets/hikkaduwa12.jpeg";
+import hikkaduwa13 from "../assets/hikkaduwa13.jpeg";
+import hikkaduwa14 from "../assets/hikkaduwa14.jpeg";
+import bentota1 from "../assets/bentota1.jpeg";
+import bentota2 from "../assets/bentota2.jpeg";
+import bentota3 from "../assets/bentota3.jpeg";
+import bentota4 from "../assets/bentota4.jpeg";
+import pigeon1 from "../assets/pigeon1.jpeg";
+import pigeon2 from "../assets/pigeon2.jpeg";
+import pigeon3 from "../assets/pigeon3.jpeg";
+import pigeon4 from "../assets/pigeon4.jpeg";
+import delft1 from "../assets/delft1.jpeg";
+import delft2 from "../assets/delft2.jpeg";
+import delft3 from "../assets/delft3.jpeg";
+import delft4 from "../assets/delft4.jpeg";
+import katcha1 from "../assets/katchatheev1.jpeg";
+import katcha2 from "../assets/katchatheev2.jpeg";
+import katcha3 from "../assets/katchatheev3.jpeg";
+import katcha4 from "../assets/katchatheev4.jpeg";
+import madol1 from "../assets/madol1.jpeg";
+import madol2 from "../assets/madol2.jpeg";
+import madol3 from "../assets/madolduwa3.jpeg";
+import madol4 from "../assets/madolduwa4.jpeg";
+import negombo1 from "../assets/negombo1.jpeg";
+import negombo2 from "../assets/negombo2.jpeg";
+import negombo3 from "../assets/negombo3.jpeg";
+import negombo4 from "../assets/negombo4.jpeg";
+import beruwala1 from "../assets/beruwala1.jpeg";
+import beruwala2 from "../assets/beruwala2.jpeg";
+import beruwala3 from "../assets/beruwala3.jpeg";
+import beruwala4 from "../assets/beruwala4.jpeg";
+import fort1 from "../assets/gallefort1.jpeg";
+import fort2 from "../assets/gallefort2.jpeg";
+import fort3 from "../assets/gallefort3.jpeg";
+import fort4 from "../assets/gallefort4.jpeg";
+import hikka21 from "../assets/hikkaduwa21.jpeg";
+import hikka22 from "../assets/hikkaduwa22.jpeg";
+import hikka23 from "../assets/hikkaduwa23.jpeg";
+import hikka24 from "../assets/hikkaduwa24.jpeg";
 export default function Oceans() {
     const [selectedLocation, setSelectedLocation] = useState(null);
     const detailsRef = useRef(null); // Create a ref for the details container
@@ -74,7 +137,7 @@ export default function Oceans() {
                                         "idyllic backdrop for sunbathing or indulging in spa treatments at beachfront resorts." +
                                         " As the sun sets, the beach comes alive with beach parties and live music, ensuring a" +
                                         " lively atmosphere that captivates visitors.",
-                                    images: [unawatuna, hikkaduwa, pasikuda, madolDoova]
+                                    images: [mirissa1,mirissa2,mirissa3,mirissa4]
                                 })}
                             />
                             <LocationCard
@@ -96,7 +159,8 @@ export default function Oceans() {
                                         "Lankan dishes, at the many beachfront eateries. The area also features a number of " +
                                         "boutique hotels and guesthouses, providing comfortable accommodations with stunning " +
                                         "ocean views. With its unique blend of relaxation, adventure, and vibrant culture, " +
-                                        "Unawatuna is a must-visit destination for beach lovers."
+                                        "Unawatuna is a must-visit destination for beach lovers.",
+                                    images: [unawatuna1,unawatuna2,unawatuna3,unawatuna4]
                                 })}
                             />
                             <LocationCard
@@ -119,7 +183,8 @@ export default function Oceans() {
                                         " such as the Turtle Hatchery, where they can learn about sea turtle conservation and" +
                                         " even participate in releasing baby turtles into the ocean. With its unique blend of " +
                                         "adventure, relaxation, and vibrant culture, Hikkaduwa promises an unforgettable beach" +
-                                        " experience."
+                                        " experience.",
+                                    images: [hikkaduwa1,hikkaduwa2,hikkaduwa3,hikkaduwa4]
                                 })}
                             />
                             <LocationCard
@@ -144,7 +209,8 @@ export default function Oceans() {
                                         "tranquil escape, the area provides several luxury resorts and charming guesthouses that" +
                                         " offer beachfront access and stunning views of the ocean. With its combination of " +
                                         "natural beauty, water activities, and serene ambiance, Pasikuda is a perfect destination" +
-                                        " for a relaxing getaway."
+                                        " for a relaxing getaway.",
+                                    images: [pasikuda1,pasikuda2,pasikuda3,pasikuda4]
                                 })}
                             />
                         </CardContainer>
@@ -159,7 +225,9 @@ export default function Oceans() {
                                 description="Dive into thrilling water sports—surfing, snorkeling, and whale watching."
                                 onExploreMore={() => handleExploreMore({
                                     title: "Kalpitiya",
-                                    details: "Kalpitiya is a hotspot for water sports, including kite-surfing, snorkeling, and dolphin watching. With its stunning lagoons and sandy beaches, it offers a perfect escape for adventure seekers. The region is known for its vibrant marine life, making it an ideal spot for snorkeling and scuba diving enthusiasts. Visitors can also take boat trips to see pods of dolphins and enjoy the pristine beauty of the surrounding nature."
+                                    details: "Kalpitiya is a hotspot for water sports, including kite-surfing, snorkeling, and dolphin watching. With its stunning lagoons and sandy beaches, it offers a perfect escape for adventure seekers. The region is known for its vibrant marine life, making it an ideal spot for snorkeling and scuba diving enthusiasts. Visitors can also take boat trips to see pods of dolphins and enjoy the pristine beauty of the surrounding nature.",
+                                    images: [kalpitiya1,kalpitiya2,kalpitiya3,kalpitiya4]
+
                                 })}
                             />
                             <LocationCard
@@ -168,7 +236,8 @@ export default function Oceans() {
                                 description="Spot majestic blue whales and playful dolphins as they swim in the tranquil waters of Trincomalee, a top whale-watching spot."
                                 onExploreMore={() => handleExploreMore({
                                     title: "Trincomalee",
-                                    details: "Trincomalee offers incredible opportunities for whale watching, especially from May to October. It is known for its clear waters and stunning beaches, such as Nilaveli and Uppuveli. In addition to whale watching, visitors can explore historical sites, such as Fort Frederick and Koneswaram Temple, or relax on the beautiful beaches while enjoying fresh seafood from local restaurants."
+                                    details: "Trincomalee offers incredible opportunities for whale watching, especially from May to October. It is known for its clear waters and stunning beaches, such as Nilaveli and Uppuveli. In addition to whale watching, visitors can explore historical sites, such as Fort Frederick and Koneswaram Temple, or relax on the beautiful beaches while enjoying fresh seafood from local restaurants.",
+                                    images: [trinco1,trinco2,trinco3,trinco4]
                                 })}
                             />
                             <LocationCard
@@ -177,7 +246,8 @@ export default function Oceans() {
                                 description="Explore vibrant coral reefs and swim among tropical fish in Hikkaduwa's crystal-clear waters, perfect for snorkeling enthusiasts."
                                 onExploreMore={() => handleExploreMore({
                                     title: "Hikkaduwa",
-                                    details: "Hikkaduwa is a snorkeling paradise known for its beautiful coral reefs and rich marine life. The calm, warm waters make it an ideal spot for beginners and experienced snorkelers alike. Visitors can also enjoy glass-bottom boat rides, diving adventures, and explore the nearby Hikkaduwa National Park, which is home to a variety of marine species, including sea turtles and colorful fish."
+                                    details: "Hikkaduwa is a snorkeling paradise known for its beautiful coral reefs and rich marine life. The calm, warm waters make it an ideal spot for beginners and experienced snorkelers alike. Visitors can also enjoy glass-bottom boat rides, diving adventures, and explore the nearby Hikkaduwa National Park, which is home to a variety of marine species, including sea turtles and colorful fish.",
+                                    images: [hikkaduwa11,hikkaduwa12,hikkaduwa13,hikkaduwa14]
                                 })}
                             />
                             <LocationCard
@@ -186,7 +256,8 @@ export default function Oceans() {
                                 description="Experience the thrill of jet skiing on the Bentota River and ocean, a hub for exciting water sports and scenic coastal views."
                                 onExploreMore={() => handleExploreMore({
                                     title: "Bentota",
-                                    details: "Bentota is famous for its water sports, including jet skiing, banana boat rides, and parasailing. The picturesque Bentota River and the beach provide a stunning backdrop for adventure activities. Visitors can also relax on the sandy shores or visit the nearby turtle hatchery to learn about sea turtle conservation efforts. The area is well-known for its luxurious resorts and vibrant nightlife."
+                                    details: "Bentota is famous for its water sports, including jet skiing, banana boat rides, and parasailing. The picturesque Bentota River and the beach provide a stunning backdrop for adventure activities. Visitors can also relax on the sandy shores or visit the nearby turtle hatchery to learn about sea turtle conservation efforts. The area is well-known for its luxurious resorts and vibrant nightlife.",
+                                    images: [bentota1,bentota2,bentota3,bentota4]
                                 })}
                             />
                         </CardContainer>
@@ -200,7 +271,8 @@ export default function Oceans() {
                                 description="Discover the secluded beauty and vibrant marine life at Pigeon Island, famous for snorkeling and coral reefs."
                                 onExploreMore={() => handleExploreMore({
                                     title: "Pigeon Island",
-                                    details: "Pigeon Island is renowned for its stunning coral reefs and clear waters, making it a premier snorkeling destination. The island is home to a variety of marine species, including colorful fish and sea turtles. Visitors can enjoy guided snorkeling tours and explore the vibrant underwater ecosystems while also relaxing on its pristine beaches."
+                                    details: "Pigeon Island is renowned for its stunning coral reefs and clear waters, making it a premier snorkeling destination. The island is home to a variety of marine species, including colorful fish and sea turtles. Visitors can enjoy guided snorkeling tours and explore the vibrant underwater ecosystems while also relaxing on its pristine beaches.",
+                                    images: [pigeon1,pigeon2,pigeon3,pigeon4]
                                 })}
                             />
                             <LocationCard
@@ -209,7 +281,8 @@ export default function Oceans() {
                                 description="Explore the untouched beauty and historical significance of Delft Island, known for its wild ponies and colonial heritage."
                                 onExploreMore={() => handleExploreMore({
                                     title: "Delft Island",
-                                    details: "Delft Island is a serene getaway known for its scenic landscapes and rich history. The island features wild ponies roaming freely, adding to its charm. Visitors can explore ancient churches and ruins, enjoy picturesque views of the ocean, and learn about the island's colonial past while experiencing its unique culture."
+                                    details: "Delft Island is a serene getaway known for its scenic landscapes and rich history. The island features wild ponies roaming freely, adding to its charm. Visitors can explore ancient churches and ruins, enjoy picturesque views of the ocean, and learn about the island's colonial past while experiencing its unique culture.",
+                                    images: [delft1,delft2,delft3,delft4]
                                 })}
                             />
                             <LocationCard
@@ -218,7 +291,8 @@ export default function Oceans() {
                                 description="An island of historical importance, featuring stunning coastal scenery and vibrant religious festivals."
                                 onExploreMore={() => handleExploreMore({
                                     title: "Katchatheevu",
-                                    details: "Katchatheevu is famous for its stunning coastal scenery and is a site of significant cultural and religious importance. The island hosts vibrant religious festivals, attracting pilgrims and tourists alike. Visitors can explore the beautiful beaches, experience local traditions, and enjoy the tranquil environment that this island offers."
+                                    details: "Katchatheevu is famous for its stunning coastal scenery and is a site of significant cultural and religious importance. The island hosts vibrant religious festivals, attracting pilgrims and tourists alike. Visitors can explore the beautiful beaches, experience local traditions, and enjoy the tranquil environment that this island offers.",
+                                    images: [katcha1,katcha2,katcha3,katcha4]
                                 })}
                             />
                             <LocationCard
@@ -227,7 +301,8 @@ export default function Oceans() {
                                 description="A literary gem and serene island, Madol Doova offers a tranquil escape amidst lush greenery and quiet waters."
                                 onExploreMore={() => handleExploreMore({
                                     title: "Madol Doova",
-                                    details: "Madol Doova is celebrated for its natural beauty and its connection to Sri Lankan literature. This tranquil island is surrounded by serene waters and lush greenery, making it an ideal spot for relaxation and exploration. Visitors can enjoy boat rides, explore the picturesque landscapes, and immerse themselves in the stories inspired by this charming location."
+                                    details: "Madol Doova is celebrated for its natural beauty and its connection to Sri Lankan literature. This tranquil island is surrounded by serene waters and lush greenery, making it an ideal spot for relaxation and exploration. Visitors can enjoy boat rides, explore the picturesque landscapes, and immerse themselves in the stories inspired by this charming location.",
+                                    images: [madol1,madol2,madol3,madol4]
                                 })}
                             />
 
@@ -242,7 +317,8 @@ export default function Oceans() {
                                 description="Experience the coastal life and traditions at Negombo's vibrant beaches."
                                 onExploreMore={() => handleExploreMore({
                                     title: "Negombo",
-                                    details: "Negombo is a bustling coastal town renowned for its rich fishing heritage and beautiful beaches. Just a short drive from Colombo, it offers a perfect getaway for travelers. The town is famous for its vibrant fish market, where you can witness local fishermen bringing in their catch each morning. Enjoy a boat ride on the tranquil lagoon, where you can spot various bird species and experience the stunning sunset views. Negombo also boasts several historical churches, such as St. Mary's Church, and lively local festivals, offering visitors an immersive cultural experience."
+                                    details: "Negombo is a bustling coastal town renowned for its rich fishing heritage and beautiful beaches. Just a short drive from Colombo, it offers a perfect getaway for travelers. The town is famous for its vibrant fish market, where you can witness local fishermen bringing in their catch each morning. Enjoy a boat ride on the tranquil lagoon, where you can spot various bird species and experience the stunning sunset views. Negombo also boasts several historical churches, such as St. Mary's Church, and lively local festivals, offering visitors an immersive cultural experience.",
+                                    images: [negombo1,negombo2,negombo3,negombo4]
                                 })}
                             />
                             <LocationCard
@@ -251,7 +327,8 @@ export default function Oceans() {
                                 description="Enjoy the peaceful beaches and rich cultural heritage of Beruwala."
                                 onExploreMore={() => handleExploreMore({
                                     title: "Beruwala",
-                                    details: "Beruwala is a picturesque coastal town famous for its pristine beaches and rich cultural history. The area is known for its historical significance as one of the earliest Muslim settlements in Sri Lanka, reflected in its architecture and local customs. Visit the famous Beruwala Lighthouse, which offers breathtaking views of the coastline. The town is also an ideal spot for water sports, including jet skiing and banana boat rides. Enjoy a leisurely day on the beach, where you can relax under palm trees or explore nearby cultural sites, including ancient mosques and traditional fishing villages."
+                                    details: "Beruwala is a picturesque coastal town famous for its pristine beaches and rich cultural history. The area is known for its historical significance as one of the earliest Muslim settlements in Sri Lanka, reflected in its architecture and local customs. Visit the famous Beruwala Lighthouse, which offers breathtaking views of the coastline. The town is also an ideal spot for water sports, including jet skiing and banana boat rides. Enjoy a leisurely day on the beach, where you can relax under palm trees or explore nearby cultural sites, including ancient mosques and traditional fishing villages.",
+                                    images: [beruwala1,beruwala2,beruwala3,beruwala4]
                                 })}
                             />
                             <LocationCard
@@ -260,7 +337,8 @@ export default function Oceans() {
                                 description="Explore the historical Galle Fort, a UNESCO World Heritage site with stunning coastal views."
                                 onExploreMore={() => handleExploreMore({
                                     title: "Galle Fort",
-                                    details: "Galle Fort is a UNESCO World Heritage site known for its remarkable blend of architectural styles and rich history. Built by the Portuguese in the 16th century and later fortified by the Dutch, the fort showcases cobblestone streets, colonial buildings, and charming boutiques. Visit the National Maritime Museum to learn about the area’s maritime history and the Galle Lighthouse for panoramic views of the Indian Ocean. As you wander through the fort, you can enjoy local cuisine at waterfront cafes, making it a perfect spot for history buffs and food lovers alike."
+                                    details: "Galle Fort is a UNESCO World Heritage site known for its remarkable blend of architectural styles and rich history. Built by the Portuguese in the 16th century and later fortified by the Dutch, the fort showcases cobblestone streets, colonial buildings, and charming boutiques. Visit the National Maritime Museum to learn about the area’s maritime history and the Galle Lighthouse for panoramic views of the Indian Ocean. As you wander through the fort, you can enjoy local cuisine at waterfront cafes, making it a perfect spot for history buffs and food lovers alike.",
+                                    images: [fort1,fort2,fort3,fort4]
                                 })}
                             />
                             <LocationCard
@@ -269,7 +347,8 @@ export default function Oceans() {
                                 description="Experience the local culture and heritage while enjoying the scenic beaches."
                                 onExploreMore={() => handleExploreMore({
                                     title: "Hikkaduwa Heritage",
-                                    details: "Hikkaduwa Heritage is a vibrant beach destination that offers a perfect combination of relaxation and cultural immersion. Known for its stunning coral reefs, Hikkaduwa is a haven for snorkeling and diving enthusiasts who wish to explore the rich marine biodiversity. The local craft markets showcase traditional Sri Lankan handicrafts, allowing you to take home unique souvenirs. In addition to water sports, visitors can enjoy beachside yoga sessions or partake in local cooking classes to learn about Sri Lankan cuisine. The town also hosts lively nightlife with beachfront bars and restaurants that offer a taste of local flavors."
+                                    details: "Hikkaduwa Heritage is a vibrant beach destination that offers a perfect combination of relaxation and cultural immersion. Known for its stunning coral reefs, Hikkaduwa is a haven for snorkeling and diving enthusiasts who wish to explore the rich marine biodiversity. The local craft markets showcase traditional Sri Lankan handicrafts, allowing you to take home unique souvenirs. In addition to water sports, visitors can enjoy beachside yoga sessions or partake in local cooking classes to learn about Sri Lankan cuisine. The town also hosts lively nightlife with beachfront bars and restaurants that offer a taste of local flavors.",
+                                    images: [hikka21,hikka22,hikka23,hikka24]
                                 })}
                             />
 
@@ -453,6 +532,12 @@ const DetailsContainer = styled.div`
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     gap: 2rem;
     position: relative;
+
+    /* Stack items in a column on smaller screens */
+    @media (max-width: 768px) {
+        flex-direction: column;
+        padding: 1rem;
+    }
 `;
 
 const DescriptionContainer = styled.div`
@@ -469,6 +554,12 @@ const DescriptionContainer = styled.div`
         font-size: 1rem;
         color: #555;
         line-height: 1.7;
+        text-align: justify;
+    }
+
+    /* Adjust padding on smaller screens */
+    @media (max-width: 768px) {
+        padding-right: 0;
     }
 `;
 
@@ -478,6 +569,12 @@ const ImagesContainer = styled.div`
     grid-template-columns: repeat(2, 1fr); /* 2 columns for equal sizing */
     gap: 1rem;
     padding-left: 1rem;
+
+    /* Switch to single column on smaller screens */
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        padding-left: 0;
+    }
 `;
 
 const Image = styled.img`
@@ -495,7 +592,7 @@ const Image = styled.img`
 const CloseButton = styled.button`
     position: absolute;
     bottom: 1rem;
-    left: 50%;
+    left: 25%;
     transform: translateX(-50%);
     background: #e74c3c;
     color: #ffffff;
@@ -511,6 +608,11 @@ const CloseButton = styled.button`
     &:hover {
         background: #c0392b;
     }
+
+    /* Center button for smaller screens */
+    @media (max-width: 768px) {
+        position: static;
+        margin: 1rem auto 0;
+        transform: none;
+            }
 `;
-
-
