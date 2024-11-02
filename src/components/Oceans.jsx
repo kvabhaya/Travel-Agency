@@ -613,6 +613,6 @@ const CloseButton = styled.button`
     @media (max-width: 768px) {
         position: static;
         margin: 1rem auto 0;
-        transform: none;
-            }
+        transform: none;
+    }
 `;
