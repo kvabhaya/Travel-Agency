@@ -207,7 +207,11 @@ export default function Packages() {
                             <img src={activeDestination.image} alt={activeDestination.name}
                                  className="destination-image"/>
                             <div className="parent-container">
-                                <button className="book-now">Book Now</button>
+
+                                <button  className="book-now"
+                                    onClick={() => document.getElementById('contact').scrollIntoView({behavior: 'smooth'})}>
+                                    Book Now
+                                </button>
                             </div>
                         </div>
                     )}
