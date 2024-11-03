@@ -55,6 +55,38 @@ import dambulla1 from "../assets/dambulla1.jpeg";
 import dambulla2 from "../assets/dambulla2.jpeg";
 import dambulla3 from "../assets/dambulla3.jpeg";
 import dambulla4 from "../assets/dambulla4.jpeg";
+import yoga1 from "../assets/yoga1.jpeg";
+import yoga2 from "../assets/yoga2.jpeg";
+import yoga3 from "../assets/yoga3.jpeg";
+import yoga4 from "../assets/yoga4.jpeg";
+import yogag1 from "../assets/yogag1.jpeg";
+import yogag2 from "../assets/yogag2.jpeg";
+import yogag3 from "../assets/yogag3.jpeg";
+import yogag4 from "../assets/yogag4.jpeg";
+import yogae1 from "../assets/yogae1.jpeg";
+import yogae2 from "../assets/yogae2.jpeg";
+import yogae3 from "../assets/yogae3.jpeg";
+import yogae4 from "../assets/yogae4.jpeg";
+import yogau1 from "../assets/yogau1.jpeg";
+import yogau2 from "../assets/yogau2.jpeg";
+import yogau3 from "../assets/yogau3.jpeg";
+import yogau4 from "../assets/yogau4.jpeg";
+import nuwaraeliyas1 from "../assets/nuwaraEliyas1.jpeg";
+import nuwaraeliyas2 from "../assets/nuwaraEliyas2.jpeg";
+import nuwaraeliyas3 from "../assets/nuwaraEliyas3.jpeg";
+import nuwaraeliyas4 from "../assets/nuwaraEliyas4.jpeg";
+import sigiriyas1 from "../assets/sigiriyas1.jpeg";
+import sigiriyas2 from "../assets/sigiriyas2.jpeg";
+import sigiriyas3 from "../assets/sigiriyas3.jpeg";
+import sigiriyas4 from "../assets/sigiriyas4.jpeg";
+import tangalle1 from "../assets/tangalle1.jpeg";
+import tangalle2 from "../assets/tangalle2.jpeg";
+import tangalle3 from "../assets/tangalle3.jpeg";
+import tangalle4 from "../assets/tangalle4.jpeg";
+import hikkaduwas1 from "../assets/hikkaduwas1.jpeg";
+import hikkaduwas2 from "../assets/hikkaduwas2.jpeg";
+import hikkaduwas3 from "../assets/hikkaduwas3.jpeg";
+import hikkaduwas4 from "../assets/hikkaduwas4.jpeg";
 
 export default function SereneSanctuaries() {
     const [selectedLocation, setSelectedLocation] = useState(null);
@@ -140,7 +172,7 @@ export default function SereneSanctuaries() {
                                 onExploreMore={() => handleExploreMore({
                                     title: "Yoga Retreats in Kandy",
                                     details: "Achieve inner harmony surrounded by the beauty of Kandy's landscapes. Nestled in the heart of Sri Lanka's hill country, Kandy offers a tranquil setting for yoga retreats. Participants can engage in daily yoga sessions led by experienced instructors, focusing on various styles such as Hatha, Vinyasa, and Yin Yoga. Enjoy breathtaking views of the surrounding hills and the serene Kandy Lake, while also exploring local attractions such as the Temple of the Tooth and lush botanical gardens during your free time.",
-                                    images: [mirissa1,mirissa2,mirissa3,mirissa4]
+                                    images: [yoga1, yoga2, yoga3, yoga4]
                                 })}
                             />
                             <LocationCard
@@ -150,7 +182,7 @@ export default function SereneSanctuaries() {
                                 onExploreMore={() => handleExploreMore({
                                     title: "Meditation Retreats in Galle",
                                     details: "Explore meditative practices in the historic and serene town of Galle. This retreat offers a perfect blend of meditation, mindfulness, and local culture. Participate in guided meditation sessions that enhance self-awareness and emotional balance while enjoying the calming sound of waves crashing on the shore. Explore Galle's rich history by visiting its iconic lighthouse, ancient fortifications, and charming streets, making your meditation experience both enriching and memorable.",
-                                    images: [mirissa1,mirissa2,mirissa3,mirissa4]
+                                    images: [yogag1, yogag2, yogag3, yogag4]
                                 })}
                             />
                             <LocationCard
@@ -160,7 +192,7 @@ export default function SereneSanctuaries() {
                                 onExploreMore={() => handleExploreMore({
                                     title: "Wellness Retreats in Ella",
                                     details: "Experience peaceful wellness retreats in Ella's lush, green surroundings. Known for its breathtaking landscapes, Ella provides an ideal environment for rejuvenation and relaxation. Enjoy daily yoga and meditation sessions, alongside holistic wellness treatments such as Ayurvedic therapies and herbal baths. Take time to explore nearby attractions, such as the Nine Arches Bridge and Little Adam's Peak, creating a perfect balance between physical activity and relaxation.",
-                                    images: [mirissa1,mirissa2,mirissa3,mirissa4]
+                                    images: [yogae1, yogae2, yogae3, yogae4]
                                 })}
                             />
                             <LocationCard
@@ -170,7 +202,7 @@ export default function SereneSanctuaries() {
                                 onExploreMore={() => handleExploreMore({
                                     title: "Holistic Retreats in Unawatuna",
                                     details: "Relax by the beach with holistic yoga and meditation sessions. Unawatuna's sandy shores and clear blue waters set the stage for a transformative retreat experience. Engage in daily yoga practices tailored to all levels, alongside meditation sessions that focus on mindfulness and self-discovery. Indulge in healthy meals prepared with fresh, local ingredients, and take advantage of opportunities for beach activities, ensuring a holistic approach to wellness and relaxation.",
-                                    images: [mirissa1,mirissa2,mirissa3,mirissa4]
+                                    images: [yogau1, yogau2, yogau3, yogau4]
                                 })}
                             />
 
@@ -186,7 +218,7 @@ export default function SereneSanctuaries() {
                                 onExploreMore={() => handleExploreMore({
                                     title: "Luxurious Spas in Nuwara Eliya",
                                     details: "Treat yourself to a luxury spa experience in the cool highlands of Nuwara Eliya. Known as 'Little England,' this charming town offers a serene environment perfect for relaxation. Experience world-class spa treatments using natural products inspired by the region's lush greenery and rich biodiversity. Enjoy personalized services such as aromatherapy massages, facials, and body scrubs, all while soaking in stunning views of tea plantations and misty mountains.",
-                                    images: [mirissa1,mirissa2,mirissa3,mirissa4]
+                                    images: [nuwaraeliyas1, nuwaraeliyas2, nuwaraeliyas3, nuwaraeliyas4]
                                 })}
                             />
                             <LocationCard
@@ -196,7 +228,7 @@ export default function SereneSanctuaries() {
                                 onExploreMore={() => handleExploreMore({
                                     title: "Spa Resorts in Sigiriya",
                                     details: "Relax in spa resorts with magnificent views of Sigiriya. Nestled at the base of the iconic Sigiriya Rock Fortress, these resorts provide a unique blend of history and luxury. Enjoy rejuvenating spa therapies that incorporate local traditions and herbs, along with breathtaking views of the surrounding landscape. Engage in yoga sessions and guided meditation, making it an ideal retreat for both mind and body.",
-                                    images: [mirissa1,mirissa2,mirissa3,mirissa4]
+                                    images: [sigiriyas1, sigiriyas2, sigiriyas3, sigiriyas4]
                                 })}
                             />
                             <LocationCard
@@ -206,7 +238,7 @@ export default function SereneSanctuaries() {
                                 onExploreMore={() => handleExploreMore({
                                     title: "Spa Retreats in Tangalle",
                                     details: "Unwind in coastal Tangalle with soothing spa therapies. Known for its pristine beaches and tranquil environment, Tangalle is perfect for those seeking relaxation by the ocean. Indulge in treatments that combine traditional Ayurvedic techniques with modern wellness practices, including massages, body wraps, and detox programs. After your spa experience, enjoy the serene beach atmosphere or explore the vibrant marine life through snorkeling and diving.",
-                                    images: [mirissa1,mirissa2,mirissa3,mirissa4]
+                                    images: [tangalle1, tangalle2, tangalle3, tangalle4]
                                 })}
                             />
                             <LocationCard
@@ -216,7 +248,7 @@ export default function SereneSanctuaries() {
                                 onExploreMore={() => handleExploreMore({
                                     title: "Spa Retreats in Hikkaduwa",
                                     details: "Enjoy beachside spa treatments in Hikkaduwa's relaxing atmosphere. Renowned for its vibrant coral reefs and clear waters, Hikkaduwa offers the perfect backdrop for a rejuvenating spa retreat. Treat yourself to a variety of wellness therapies, including seaweed wraps, herbal baths, and relaxing massages, all tailored to enhance your well-being. Unwind in a serene setting while listening to the soothing sounds of the ocean, making your spa experience truly memorable.",
-                                    images: [mirissa1,mirissa2,mirissa3,mirissa4]
+                                    images: [hikkaduwas1, hikkaduwas2, hikkaduwas3, hikkaduwas4]
                                 })}
                             />
 
