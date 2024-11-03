@@ -27,9 +27,9 @@ const Contact = () => {
 
             // Send email using EmailJS
             const emailParams = {
-                to_name: "SkyWingTravels Team", // Placeholder for the recipient name in the template
+                to_name: "SkyWingTravels Team",
                 name: formData.name,
-                reply_to: formData.email,  // Ensure the parameter matches the template variable
+                reply_to: formData.email,
                 phone: formData.phone,
                 message: formData.message
             };
@@ -41,15 +41,15 @@ const Contact = () => {
                 })
                 .catch(error => {
                     console.error("There was an error sending the email:", error);
+                    alert("There was an error sending your message. Please try again later.");
                 });
 
-            // Reset form after submission
             setFormData({ name: '', email: '', phone: '', message: '' });
         } catch (error) {
             console.error("Error adding document: ", error);
+            alert("There was an error submitting your form. Please try again.");
         }
     };
-
 
     return (
         <Section id="contact">
@@ -65,6 +65,7 @@ const Contact = () => {
                         placeholder="Your Name"
                         value={formData.name}
                         onChange={handleChange}
+                        required
                     />
                     <Input
                         type="email"
@@ -72,19 +73,22 @@ const Contact = () => {
                         placeholder="Your Email"
                         value={formData.email}
                         onChange={handleChange}
+                        required
                     />
                     <Input
-                        type="number"
+                        type="tel"
                         name="phone"
                         placeholder="Your Phone Number with Country Code"
                         value={formData.phone}
                         onChange={handleChange}
+                        required
                     />
                     <Textarea
                         name="message"
                         placeholder="Your Message"
                         value={formData.message}
                         onChange={handleChange}
+                        required
                     />
                     <Button type="submit">Submit</Button>
                 </Form>
@@ -112,16 +116,17 @@ const Contact = () => {
         </Section>
     );
 };
-// Styled components
+
+// Styled components with enhanced responsiveness
 const Section = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh; /* Full height of the viewport */
+    min-height: 100vh;
     background-color: #f0f0f0;
-    position: relative;
-    overflow: hidden;
+    padding: 1rem 2rem; /* Increased horizontal padding for small screens */
+    box-sizing: border-box;
 
     .title {
         text-align: center;
@@ -136,49 +141,74 @@ const Section = styled.section`
             font-size: 1.1rem;
             color: #6c757d;
         }
+
+        @media (max-width: 480px) {
+            h2 {
+                font-size: 2rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+        }
     }
 
     .contact-form {
         background-color: #f7f8fa;
-        padding: 2rem;
+        padding: 2rem 2.5rem;
         border-radius: 10px;
         box-shadow: rgba(52, 152, 219, 0.4) 0px 8px 20px;
         width: 100%;
         max-width: 600px;
-        margin: 0 auto;
-        margin-bottom: 3rem; /* Space below */
+        margin: 0 auto 3rem auto;
+        box-sizing: border-box;
+
+        @media (max-width: 768px) {
+            padding: 1.5rem 1.5rem;
+            max-width: 90%;
+        }
+
+        @media (max-width: 480px) {
+            padding: 1rem 1rem;
+            max-width: 100%;
+        }
     }
 
     .bottom-upbar {
         width: 100%;
         background-color: #b2c7d5;
-        z-index: 1;
-        padding: 1rem;
+        padding: 1.5rem 2rem;
+        box-sizing: border-box;
 
         .info {
             display: flex;
-            justify-content: space-around; /* Space items evenly */
+            justify-content: space-around;
             align-items: center;
-            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+            flex-wrap: wrap;
+            gap: 1.5rem;
+
+            @media (max-width: 768px) {
+                flex-direction: column;
+                align-items: center;
+            }
 
             .info-item {
                 display: flex;
+                flex-direction: column;
                 align-items: center;
-                gap: 0.5rem; /* Smaller gap */
-                flex: 1 1 200px; /* Flex grow, shrink, and basis for responsive behavior */
-                text-align: center; /* Center text */
-                margin: 1rem; /* Margin for spacing */
+                gap: 0.5rem;
+                flex: 1 1 200px;
+                text-align: center;
 
                 .icon {
                     background-color: #2d4059;
-                    width: 50px; /* Adjust size */
-                    height: 50px; /* Adjust size */
+                    width: 50px;
+                    height: 50px;
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     border-radius: 50%;
                     color: white;
-                    font-size: 1.2rem; /* Smaller icon size */
+                    font-size: 1.5rem;
                 }
 
                 h4 {
@@ -187,17 +217,34 @@ const Section = styled.section`
                 }
 
                 p {
-                    font-size: 0.9rem; /* Smaller text */
+                    font-size: 1rem;
                     color: #34495e;
+                }
+            }
+        }
+
+        @media (max-width: 480px) {
+            padding: 1rem 1rem;
+
+            .info-item {
+                .icon {
+                    width: 40px;
+                    height: 40px;
+                    font-size: 1.2rem;
+                }
+
+                h4 {
+                    font-size: 1rem;
+                }
+
+                p {
+                    font-size: 0.9rem;
                 }
             }
         }
     }
 
     .bottom-bar {
-        position: absolute;
-        bottom: 0;
-        left: 0;
         width: 100%;
         height: 150px;
         background-color: #2d4059;
@@ -205,60 +252,122 @@ const Section = styled.section`
         background-size: cover;
         background-repeat: no-repeat;
         background-position: bottom;
+
+        @media (max-width: 480px) {
+            height: 100px;
+        }
     }
 
-    @media screen and (max-width: 768px) {
-        .title h2 {
-            font-size: 2rem; /* Adjust font size for smaller screens */
-        }
-        .title p {
-            font-size: 1rem; /* Adjust font size for smaller screens */
-        }
+    @media (max-width: 480px) {
+        padding: 0.5rem 1rem;
     }
 `;
 
-// Styled input components
 const Form = styled.form`
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
     align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+
+    @media (max-width: 768px) {
+        gap: 1rem;
+    }
+
+    @media (max-width: 480px) {
+        gap: 0.75rem;
+    }
 `;
 
 const Input = styled.input`
-    padding: 0.75rem;
+    padding: 0.75rem 1rem;
     border: none;
     border-radius: 5px;
-    width: 90%; /* Responsive width */
-    max-width: 500px; /* Maximum width for input fields */
+    width: 100%;
+    max-width: 500px;
     background-color: #ecf0f1;
     font-family: inherit;
     font-size: 1rem;
+    box-sizing: border-box;
+
+    &:focus {
+        outline: 2px solid #3498db;
+    }
+
+    @media (max-width: 768px) {
+        padding: 0.65rem 0.9rem;
+        font-size: 0.95rem;
+    }
+
+    @media (max-width: 480px) {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.9rem;
+    }
 `;
 
 const Textarea = styled.textarea`
-    padding: 0.75rem;
+    padding: 0.75rem 1rem;
     border: none;
     border-radius: 5px;
-    width: 90%; /* Responsive width */
-    max-width: 500px; /* Maximum width for input fields */
+    width: 100%;
+    max-width: 500px;
     background-color: #ecf0f1;
     font-family: inherit;
     font-size: 1rem;
-    resize: none; /* Prevent resizing */
+    resize: vertical;
+    min-height: 120px;
+    box-sizing: border-box;
+
+    &:focus {
+        outline: 2px solid #3498db;
+    }
+
+    @media (max-width: 768px) {
+        padding: 0.65rem 0.9rem;
+        font-size: 0.95rem;
+        min-height: 100px;
+    }
+
+    @media (max-width: 480px) {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.9rem;
+        min-height: 80px;
+    }
 `;
 
 const Button = styled.button`
-    padding: 0.75rem 2rem; /* Adjust button padding */
+    padding: 0.75rem 2rem;
     background-color: #2d4059;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 200px;
+    box-sizing: border-box;
 
     &:hover {
         background-color: #3498db;
+        transform: translateY(-2px);
+    }
+
+    &:active {
+        transform: translateY(0);
+    }
+
+    @media (max-width: 768px) {
+        padding: 0.65rem 1.8rem;
+        font-size: 0.95rem;
+        max-width: 180px;
+    }
+
+    @media (max-width: 480px) {
+        padding: 0.5rem 1.5rem;
+        font-size: 0.9rem;
+        max-width: 150px;
     }
 `;
 

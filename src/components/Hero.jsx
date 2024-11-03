@@ -32,7 +32,8 @@ export default function Hero() {
 
 const Section = styled.section`
     position: relative;
-    margin-top: 1rem;
+    /* Adjust this margin to the Navbar height */
+    margin-top: 80px; /* Adjust this to match the Navbar's height */
     width: 100%;
     height: 80vh;
 
@@ -55,7 +56,6 @@ const Section = styled.section`
             filter: brightness(40%);
             border-radius: 25px;
             animation: fadeImage ease-in-out 25s infinite;
-            
         }
 
         .image1 {
@@ -161,3 +161,4 @@ const Section = styled.section`
         }
     }
 `;
+

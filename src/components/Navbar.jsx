@@ -245,39 +245,38 @@ const Nav = styled.nav`
 
 
 const ResponsiveNav = styled.div`
-  display: flex;
-  position: absolute;
-  z-index: 1;
-  top: ${({ state }) => (state ? "50px" : "-400px")};
-  background-color: white;
-  height: 45vh;
-  width: 100%;
-  align-items: center;
-  transition: 0.3s ease-in-out;
-  ul {
-    margin-top: 10px;
-    list-style-type: none;
-    width: 100%;
-    li {
-      width: 100%;
-      margin: 1rem 0;
-      margin-left: 2rem;
+    position: fixed; /* Changed from absolute to fixed */
+    top: ${({ state }) => (state ? "0" : "-100vh")}; /* Start off-screen and slide down */
+    left: 0;
+    right: 0;
+    z-index: 20; /* Higher than other components */
+    background-color: white;
+    height: 100vh; /* Full-screen on mobile */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: top 0.3s ease-in-out; /* Smooth transition */
 
-      a {
-        text-decoration: none;
-        color: #0077b6;
-        font-size: 1.2rem;
-        transition: 0.1s ease-in-out;
-        &:hover {
-          color: #023e8a;
+    ul {
+        list-style-type: none;
+        width: 100%;
+        padding: 0;
+        text-align: center;
+
+        li {
+            margin: 1.5rem 0;
+            a {
+                text-decoration: none;
+                color: #0077b6;
+                font-size: 1.5rem; /* Larger font for mobile */
+                font-weight: 500;
+                transition: color 0.1s ease-in-out;
+
+                &:hover {
+                    color: #023e8a;
+                }
+            }
         }
-      }
-      &:first-of-type {
-        a {
-          color: #023e8a;
-          font-weight: 900;
-        }
-      }
     }
-  }
 `;
+
