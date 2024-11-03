@@ -141,10 +141,10 @@ const Section = styled.section`
       background-color: aliceblue;
       padding: 1.5rem;
       border-radius: 0.5rem;
-      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0px;
       transition: 0.3s ease-in-out;
       width: 100%;
-      max-width: 280px; /* Set max-width for smaller screens */
+      max-width: 280px;
       height: auto;
       display: flex;
       flex-direction: column;
@@ -201,6 +201,7 @@ const Section = styled.section`
     }
   }
 
+  /* Adjustments for smaller screens */
   @media screen and (max-width: 768px) {
     .testimonials {
       flex-direction: column;
@@ -219,7 +220,7 @@ const Section = styled.section`
 
       .testimonial {
         padding: 1rem;
-        max-width: 100%;
+        max-width: 90%;
       }
     }
 
@@ -279,6 +280,7 @@ const Form = styled.form`
     }
   }
 `;
+
 
 
 const Star = styled.span`

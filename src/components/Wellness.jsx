@@ -19,10 +19,6 @@ import bentotas from "../assets/bentotas.jpeg"
 import colombo from "../assets/colombow.jpeg";
 import negomboBeach from "../assets/negombos.jpeg";
 import dambulla from "../assets/dambullas.jpeg";
-import mirissa1 from "../assets/mirissa1.webp";
-import mirissa2 from "../assets/mirissa2.webp";
-import mirissa3 from "../assets/mirissa3.jpeg";
-import mirissa4 from "../assets/mirissa4.jpeg";
 import bentotar1 from "../assets/bentotar1.jpg";
 import bentotar2 from "../assets/bentotar2.jpg";
 import bentotar3 from "../assets/bentotar3.jpg";
