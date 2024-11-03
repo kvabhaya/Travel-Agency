@@ -31,6 +31,30 @@ import bentotaspa1 from "../assets/bentotaspa1.jpg";
 import bentotaspa2 from "../assets/bentotaspa2.jpg";
 import bentotaspa3 from "../assets/bentotaspa3.jpg";
 import bentotaspa4 from "../assets/bentotaspa4.jpg";
+import neombos1 from "../assets/negombos1.jpeg";
+import neombos2 from "../assets/negombos2.jpeg";
+import neombos3 from "../assets/negombos3.jpeg";
+import neombos4 from "../assets/negombos4.jpeg";
+import waligama1 from "../assets/waligama1.jpeg";
+import waligama2 from "../assets/waligama2.jpeg";
+import waligama3 from "../assets/waligama3.jpeg";
+import waligama4 from "../assets/waligama4.jpeg";
+import nuwara1 from "../assets/nuwara1.jpeg";
+import nuwara2 from "../assets/nuwara2.jpeg";
+import nuwara3 from "../assets/nuwara3.jpeg";
+import nuwara4 from "../assets/nuwara4.jpeg";
+import colombo1 from "../assets/colombo1.jpeg";
+import colombo2 from "../assets/colombo2.jpeg";
+import colombo3 from "../assets/colombo3.jpeg";
+import colombo4 from "../assets/colombo4.jpeg";
+import negombo_beach1 from "../assets/negombo_beach.jpeg";
+import negombo_beach2 from "../assets/negombo_beach1.jpeg";
+import negombo_beach3 from "../assets/negombo_beach2.jpeg";
+import negombo_beach4 from "../assets/negombo_beach3.jpeg";
+import dambulla1 from "../assets/dambulla1.jpeg";
+import dambulla2 from "../assets/dambulla2.jpeg";
+import dambulla3 from "../assets/dambulla3.jpeg";
+import dambulla4 from "../assets/dambulla4.jpeg";
 
 export default function SereneSanctuaries() {
     const [selectedLocation, setSelectedLocation] = useState(null);
@@ -81,7 +105,7 @@ export default function SereneSanctuaries() {
                                 onExploreMore={() => handleExploreMore({
                                     title: "Ayurveda Resorts in Negombo",
                                     details: "Enjoy holistic healing therapies with a view of the coast in Negombo. Known for its vibrant fishing community, Negombo is home to Ayurveda resorts that offer authentic Ayurvedic treatments. Engage in therapeutic massages, herbal baths, and dietary consultations while being enveloped in the coastal breeze. The proximity to beautiful beaches allows you to unwind after your treatments, making Negombo an ideal destination for relaxation and rejuvenation.",
-                                    images: [mirissa1,mirissa2,mirissa3,mirissa4]
+                                    images: [neombos1, neombos2, neombos3, neombos4]
                                 })}
                             />
                             <LocationCard
@@ -91,7 +115,7 @@ export default function SereneSanctuaries() {
                                 onExploreMore={() => handleExploreMore({
                                     title: "Ayurveda Resorts in Weligama",
                                     details: "Rejuvenate your body and soul with seaside Ayurveda treatments in Weligama. Famous for its surf beaches, Weligama also hosts renowned Ayurveda resorts where you can experience the healing power of nature. With expert therapists, indulge in various treatments, including aromatherapy and wellness consultations, all while enjoying breathtaking views of the ocean. Experience the harmony of mind and body as you soak in the tranquil ambiance and soothing sounds of the waves.",
-                                    images: [mirissa1,mirissa2,mirissa3,mirissa4]
+                                    images: [waligama1, waligama2, waligama3, waligama4]
                                 })}
                             />
                             <LocationCard
@@ -101,7 +125,7 @@ export default function SereneSanctuaries() {
                                 onExploreMore={() => handleExploreMore({
                                     title: "Ayurveda Retreats in Kandy",
                                     details: "Connect with nature and explore Ayurvedic therapies in the hills of Kandy, a UNESCO World Heritage Site. The lush greenery and cool climate provide the perfect backdrop for rejuvenating retreats. Participate in Ayurvedic workshops, herbal medicine preparation, and serene yoga sessions. Many retreats also offer guided tours to explore the rich culture and history of Kandy, including visits to the Temple of the Tooth and beautiful botanical gardens, enhancing your wellness journey.",
-                                    images: [mirissa1,mirissa2,mirissa3,mirissa4]
+                                    images: [nuwara1, nuwara2, nuwara3, nuwara4]
                                 })}
                             />
                         </CardContainer>
@@ -218,7 +242,7 @@ export default function SereneSanctuaries() {
                                 onExploreMore={() => handleExploreMore({
                                     title: "Wellness Centers in Colombo",
                                     details: "Discover diverse wellness treatments in the vibrant city of Colombo. These centers offer a range of services, from modern fitness programs to traditional healing therapies. Indulge in rejuvenating massages, yoga sessions, and nutritional counseling tailored to your individual needs. Enjoy the convenience of accessing top-tier wellness facilities while being surrounded by the dynamic culture and bustling life of the city.",
-                                    images: [mirissa1,mirissa2,mirissa3,mirissa4]
+                                    images: [colombo1, colombo2, colombo3, colombo4]
                                 })}
                             />
                             <LocationCard
@@ -228,7 +252,7 @@ export default function SereneSanctuaries() {
                                 onExploreMore={() => handleExploreMore({
                                     title: "Beachfront Wellness Retreats in Negombo",
                                     details: "Experience refreshing wellness therapies by the sea in Negombo. Nestled along stunning coastlines, these retreats provide a perfect escape for relaxation and rejuvenation. Engage in holistic wellness programs that include Ayurvedic treatments, yoga classes, and meditation sessions while enjoying the sound of the waves. Let the calming sea breeze enhance your wellness journey, making it a revitalizing experience for your body and mind.",
-                                    images: [mirissa1,mirissa2,mirissa3,mirissa4]
+                                    images: [negombo_beach1, negombo_beach2, negombo_beach3, negombo_beach4]
                                 })}
                             />
                             <LocationCard
@@ -238,7 +262,7 @@ export default function SereneSanctuaries() {
                                 onExploreMore={() => handleExploreMore({
                                     title: "Wellness Retreats in Dambulla",
                                     details: "Relax and heal in Dambulla's tranquil wellness retreats. Surrounded by the rich cultural heritage and stunning rock formations of Dambulla, these retreats offer a serene atmosphere for holistic healing. Experience a blend of traditional therapies and modern wellness practices designed to promote physical and mental well-being. Enjoy meditation, herbal treatments, and wellness consultations tailored to your needs, all while soaking in the historical ambiance of this UNESCO World Heritage Site.",
-                                    images: [mirissa1,mirissa2,mirissa3,mirissa4]
+                                    images: [dambulla1, dambulla2, dambulla3, dambulla4]
                                 })}
                             />
 
