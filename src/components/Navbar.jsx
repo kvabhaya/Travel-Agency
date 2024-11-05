@@ -11,73 +11,78 @@ export default function Navbar() {
 
   return (
       <>
-        <Nav>
-          <div className="brand">
-            <div className="container">
-              <img src={logo} alt="" />
-              SkyWingTravel
-            </div>
-            <div className="toggle">
-              {navbarState ? (
-                  <VscChromeClose onClick={() => setNavbarState(false)} />
-              ) : (
-                  <GiHamburgerMenu onClick={() => setNavbarState(true)} />
-              )}
-            </div>
-          </div>
+          <Nav>
+              <div className="brand">
+                  <div className="container">
+                      <img src={logo} alt=""/>
+                      SkyWingTravel
+                  </div>
+                  <div className="toggle">
+                      {navbarState ? (
+                          <VscChromeClose onClick={() => setNavbarState(false)}/>
+                      ) : (
+                          <GiHamburgerMenu onClick={() => setNavbarState(true)}/>
+                      )}
+                  </div>
+              </div>
 
-          <ul>
-            {location.pathname === "/" ? (
-                <>
-                  <li>
-                    <a href="#hero">Home</a>
-                  </li>
-                  <li>
-                    <a href="#services">Services</a>
-                  </li>
-                  <li>
-                    <a href="#recommend">Destinations</a>
-                  </li>
-                  <li>
-                    <a href="#packages">Packages</a>
-                  </li>
-                  <li>
-                    <a href="#testimonials">Testimonials</a>
-                  </li>
-                  <li>
-                    <a href="#contact">Contact</a>
-                  </li>
-                </>
-            ) : (
-                <>
-                  <li>
-                    <Link to="/">Home</Link>
-                  </li>
-                  <li>
-                    <Link to="/oceans">Oceans</Link>
-                  </li>
-                  <li>
-                    <Link to="/historical">Historical</Link>
-                  </li>
-                  <li>
-                    <Link to="/emerald">Emerald</Link>
-                  </li>
-                  <li>
-                    <Link to="/safaris">Safaris</Link>
-                  </li>
-                  <li>
-                    <Link to="/wellness">Wellness</Link>
-                  </li>
-                </>
-            )}
-          </ul>
-          <button>Connect</button>
-        </Nav>
+              <ul>
+                  {location.pathname === "/" ? (
+                      <>
+                          <li>
+                              <a href="#hero">Home</a>
+                          </li>
+                          <li>
+                              <a href="#services">Services</a>
+                          </li>
+                          <li>
+                              <a href="#recommend">Destinations</a>
+                          </li>
+                          <li>
+                              <a href="#packages">Packages</a>
+                          </li>
+                          <li>
+                              <a href="#testimonials">Testimonials</a>
+                          </li>
+                          <li>
+                              <a href="#contact">Contact</a>
+                          </li>
 
-        <ResponsiveNav state={navbarState}>
-          <ul>
-            {location.pathname === "/" ? (
-                <>
+                          <button
+                              onClick={() => document.getElementById('contact').scrollIntoView({behavior: 'smooth'})}>
+                              Connect
+                          </button>
+                      </>
+
+                  ) : (
+                      <>
+                          <li>
+                              <Link to="/">Home</Link>
+                          </li>
+                          <li>
+                              <Link to="/oceans">Oceans</Link>
+                          </li>
+                          <li>
+                              <Link to="/historical">Historical</Link>
+                          </li>
+                          <li>
+                              <Link to="/emerald">Emerald</Link>
+                          </li>
+                          <li>
+                              <Link to="/safaris">Safaris</Link>
+                          </li>
+                          <li>
+                              <Link to="/wellness">Wellness</Link>
+                          </li>
+                      </>
+                  )}
+              </ul>
+          </Nav>
+
+          <ResponsiveNav state={navbarState}>
+              <ul>
+                  {location.pathname === "/" ? (
+                      <>
                   <li>
                     <a href="#hero" onClick={() => setNavbarState(false)}>
                       Home
